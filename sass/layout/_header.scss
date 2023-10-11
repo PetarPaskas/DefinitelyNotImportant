@@ -1,0 +1,15 @@
+.header{
+    &__main{
+        display:flex;
+        padding:10rem 0;
+    }
+    &__text-box{
+        
+    }
+    &__content-box{
+        flex-grow:1;
+    }
+    &__main &__text-box{
+        max-width: 38rem;
+    }
+}

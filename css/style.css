@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+:root {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  padding: 0 10rem; }
+
+.heading-primary {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 6rem; }
+
+.header__main {
+  display: flex;
+  padding: 10rem 0; }
+
+.header__content-box {
+  flex-grow: 1; }
+
+.header__main .header__text-box {
+  max-width: 38rem; }
+
+.navigation__list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row; }
+
+.navigation__item {
+  display: inline-block;
+  margin: 1rem; }
+
+.navigation__link, .navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem; }
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .menu__logo__logo-img {
+    width: 100%;
+    height: auto; }
+
+.gallery {
+  width: 100%;
+  position: relative; }
+  .gallery__item {
+    display: inline-block;
+    position: absolute;
+    border: 1px solid red;
+    border-radius: 10rem;
+    width: 20rem;
+    height: 48rem;
+    overflow: hidden; }
+    .gallery__item--1 {
+      top: 0;
+      left: 0;
+      background-size: 35rem;
+      background-image: url(../../img/covers/covers-case-studies-ian.png);
+      background-position: center;
+      background-repeat: no-repeat; }
+    .gallery__item--2 {
+      top: 0;
+      left: 20rem;
+      background-size: 35rem;
+      background-image: url(../../img/covers/covers-case-studies-ian.png);
+      background-position: center;
+      background-repeat: no-repeat; }
+    .gallery__item--3 {
+      top: 0;
+      left: 40rem;
+      background-size: 35rem;
+      background-image: url(../../img/covers/covers-case-studies-ian.png);
+      background-position: center;
+      background-repeat: no-repeat; }
+  .gallery__image-title {
+    display: inline-block;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 3rem; }

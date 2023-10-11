@@ -1,0 +1,13 @@
+.menu{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        &__logo-img{
+            width:100%;
+            height: auto;
+        }
+    }
+}
