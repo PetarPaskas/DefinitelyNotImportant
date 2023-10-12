@@ -203,14 +203,14 @@ body {
     .composition__item--1 {
       top: 0;
       background-size: 35rem;
-      background-image: url(../../img/covers/ian.png);
+      background-image: url("../img/covers/ian.png");
       background-position: center;
       background-repeat: no-repeat;
       transform: translateX(-50%) translateX(-20rem); }
     .composition__item--2 {
       top: 0;
       background-size: 35rem;
-      background-image: url(../../img/covers/ian.png);
+      background-image: url("../img/covers/ian.png");
       background-position: center;
       background-repeat: no-repeat;
       transform: translateX(-50%) scale(1.2);
@@ -218,7 +218,7 @@ body {
     .composition__item--3 {
       top: 0;
       background-size: 35rem;
-      background-image: url(../../img/covers/ian.png);
+      background-image: url("../img/covers/ian.png");
       background-position: center;
       background-repeat: no-repeat;
       transform: translateX(-50%) translateX(20rem); }
