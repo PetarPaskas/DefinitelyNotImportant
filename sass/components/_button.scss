@@ -1,0 +1,13 @@
+.button{
+    border-radius:50px;
+    padding:1rem 1.7rem;
+    font-size:1.5rem;
+    display:inline-block;
+    outline:none;
+    border: none;
+
+    &--green{
+        text-transform: uppercase;
+        background-color:forestgreen;
+    }
+}

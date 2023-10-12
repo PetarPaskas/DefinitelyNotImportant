@@ -1,0 +1,15 @@
+.notch-title{
+    display:inline-block;
+    transform: translateY(-50%);
+    padding: 1rem 2rem;
+    border-radius:5px;
+
+    &--green{
+        background-color: greenyellow;
+    }
+    &__text{
+        text-transform: uppercase;
+        font-size:2rem;
+        color:white;
+    }
+}

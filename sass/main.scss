@@ -1,3 +1,24 @@
+@import './abstracts/_variables.scss';
+
 @import './base/_base.scss';
+@import './base/_typography.scss';
+@import './base/_utilities.scss';
+@import './base/_animations.scss';
+ 
+@import './layout/_header.scss';
+@import './layout/_navigation.scss'; 
+@import './layout/_footer.scss';
 
+@import './pages/_home.scss';
 
+@import './components/_button.scss';
+@import './components/_menu.scss';       
+@import './components/_composition.scss';
+@import './components/_offerings.scss';   
+@import './components/_gallery.scss';      
+@import './components/_notch-title.scss'; 
+@import './components/_content-items.scss'; 
+@import './components/_carousel.scss';                
+@import './components/_form.scss';  
+       
+                  

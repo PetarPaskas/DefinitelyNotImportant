@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+:root{
+    font-size:62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    padding:0 10rem;
+}
+
+.wrapper{
+    max-width: 114rem;
+    margin: 0 auto; 
+}

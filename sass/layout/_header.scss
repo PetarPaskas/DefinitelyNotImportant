@@ -1,0 +1,41 @@
+.header{
+    background-color: blue;
+
+    &__main{
+        display:flex;
+        margin:0 auto;
+        padding:10rem 0 40rem 0;
+    }
+    &__text-box{
+        
+    }
+    &__content-box{
+        flex-grow:1;
+    }
+    &__main &__text-box{
+        max-width: 38rem;
+    }
+
+    &__offerings{
+        text-align: center;
+    }
+
+    &__notch{
+        display:flex;
+        position:relative;
+        align-items: center;
+        justify-content: center;
+
+        &-image{
+            object-fit: contain;
+        }
+        &-button{
+            position:absolute;
+            top:92%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            z-index:2;
+        }
+    }
+}
+
