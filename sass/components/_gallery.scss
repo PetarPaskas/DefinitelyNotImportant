@@ -1,52 +1,44 @@
 .gallery{
-    //height: 100%;
-    width:100%;
-    position:relative;
+    display:grid;
+    grid-template-columns: [start] repeat(7, [col] 1fr [col]) [end];
+    grid-template-rows: repeat(12, 3rem);
+    grid-row-gap: 4rem;
+    grid-column-gap:3rem;
+    width:100rem;
 
     &__item{
-        display:inline-block;
-        position:absolute;
-        border:1px solid red;
-        border-radius:10rem;
-        width: 20rem;
-        height: 48rem;
-        overflow: hidden;
+        position:relative;
+    }
 
-        &--1{
-            top:0;
-            left:0;
-            background-size: 35rem;
-            background-image:url(../../img/covers/covers-case-studies-ian.png);
-            background-position:center;
-            background-repeat:no-repeat;
-        }
-        &--2{
-            top:0;
-            left:20rem;
-            background-size: 35rem;
-            background-image:url(../../img/covers/covers-case-studies-ian.png);
-            background-position:center;
-            background-repeat:no-repeat;
-        }
-        &--3{
-            top:0;
-            left:40rem;
-            background-size: 35rem;
-            background-image:url(../../img/covers/covers-case-studies-ian.png);
-            background-position:center;
-            background-repeat:no-repeat;
-        }
+    &__description{
+        text-transform: uppercase;
+        font-size:2rem;
     }
 
     &__image{
+        object-fit: cover;
+        width:100%;
+        height: 100%;
+        display:block;
+        transform-origin:bottom;
+        transition:transform .3s;
+
+        &:hover{
+            transform:scale(1.04);
+        }
     }
 
-    &__image-title{
-        display:inline-block;
+    &__button{
+        text-transform: uppercase;
         position:absolute;
-        top:67%;
-        left:50%;
-        transform:translate(-50%,-50%) rotate(-90deg);
-        font-size: 3rem;
+        bottom:5%;
+        right:0;
+        transform:translateX(10%);
+        padding:1rem 1.7rem;
+        background-color: tomato;
+        font-weight: 600;
+        color:white;
+        border-radius:50px;
+        font-size:1.5rem;
     }
 }

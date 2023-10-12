@@ -1,0 +1,52 @@
+.section-projects{
+    padding-top:10rem;
+    padding-bottom:10rem;
+    & .gallery{
+        margin:0 auto; 
+        padding-bottom:7rem;
+    }
+    & .gallery__item{
+       &--1{
+        grid-column: start / col 3;
+        grid-row: 1 / 7;
+       } 
+       &--2{
+        grid-column:start / col 3;
+        grid-row: 7 / 13;
+       } 
+       &--3{
+        grid-column: col 3 / col 6;
+        grid-row: 1 / 5;
+       } 
+       &--4{
+        grid-column: col 3 / col 6;
+        grid-row: 5 / 9;
+       } 
+       &--5{
+        grid-column: col 3 / col 6;
+        grid-row: 9 / 13;
+       } 
+       &--6{
+        grid-column: col 6 / col 8;
+        grid-row: 1 / 7;
+       } 
+       &--7{
+        grid-column: col 6 / col 8;
+        grid-row: 7 / 13; 
+       } 
+    }
+}
+
+.section-clients{
+    padding:1rem 1rem;
+    border:1px solid red;
+    background-color: green;
+
+    & .notch-title{
+        transform:translate(4rem,-1rem) translateY(-50%);
+    }
+} 
+
+.section-blog{
+    padding: 2rem 0 10rem 0;
+}

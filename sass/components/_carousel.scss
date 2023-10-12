@@ -1,0 +1,47 @@
+.carousel{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+    overflow: hidden;
+
+    &__item{
+        height:15rem;
+        border:1px solid red;
+        margin-right:1rem;
+        background-position:center;
+        background-repeat: no-repeat;
+        background-size:contain;
+        &>img{
+            height: 100%;
+            display:block;
+        }
+    }
+
+    &--animated{
+        flex-wrap:nowrap;
+        animation: carousel-spin 10s linear infinite;
+    }
+
+    &-animation-wrapper{
+        & .carousel{
+            display:inline-flex;
+        }
+    }
+}
+
+.logos{
+    position:relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &__slide{
+        display: inline-block;
+        animation:10s spin linear infinite;
+    }
+
+    &__image{
+        height:15rem;
+        margin: 0 4rem;
+    }
+}
