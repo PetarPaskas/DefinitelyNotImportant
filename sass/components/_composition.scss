@@ -1,48 +1,80 @@
 .composition{
     position:relative;
+    height:48rem;
+
+    &:not(:hover){
+        .composition__item--2{
+            transform:translateY(-5rem);
+        }
+    }
+
+    &:hover{
+        .composition__item{
+            filter:blur(1px);
+        }
+    }
 
     &__item{
         display:inline-block;
         position:absolute;
+
         border-radius:10rem;
-        width: 20rem;
+        width: 18rem;
         height: 48rem;
-        left:50%;
-        
+        background-position:center;
+        background-repeat:no-repeat;
+        background-size: 35rem;
+        transition: transform .3s, filter .2s;
+
+        &:hover{
+            z-index:3;
+            transform: translateY(-5rem) scale(1.1);
+            filter:blur(0px) !important;
+
+        }
 
         &--1{
             top:0;
-            background-size: 35rem;
-            background-image:url("../img/covers/ian.png");
-            background-position:center;
-            background-repeat:no-repeat;
-            transform:translateX(-50%) translateX(-20rem);
+            left:0rem;
+            background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
+            linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
+
+            &:hover{
+                background-image: url("../img/covers/pp.png");
+            }
         }
         &--2{
             top:0;
-            background-size: 35rem;
-            background-image:url("../img/covers/ian.png");
-            background-position:center;
-            background-repeat:no-repeat;
-            transform:translateX(-50%) scale(1.2);
-            z-index:5;
+            left:17rem;
+            background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
+            linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
+
+            &:hover{
+                background-image: url("../img/covers/pp.png");
+            }
         }
         &--3{
             top:0;
-            background-size: 35rem;
-            background-image:url("../img/covers/ian.png");
-            background-position:center;
-            background-repeat:no-repeat;
-            transform:translateX(-50%) translateX(20rem)
+            left:34rem;
+            background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
+            linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
+
+            &:hover{
+                background-image: url("../img/covers/pp.png");
+            }
         }
     }
 
     &__image-title{
         display:inline-block;
         position:absolute;
-        top:67%;
+        top:60%;
         left:50%;
         transform:translate(-50%,-50%) rotate(-90deg);
-        font-size: 3rem;
+    }
+
+    &__item:hover &__image-title{
+        opacity: 0;
+        visibility: hidden;
     }
 }

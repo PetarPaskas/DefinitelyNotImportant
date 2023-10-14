@@ -1,15 +1,15 @@
 .content-items{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
 
     &__item{
         flex-grow:1;
-        overflow: hidden;
         list-style-type: none;
-        max-width: 50rem;
+        max-width: 60rem;
+        padding:0 2.5rem;
     }
 
     &__header{
@@ -23,29 +23,35 @@
         height: auto;
     }
 
+    &__text{
+        padding-left:1rem;
+    }
+
     &__decorative-text{
-        position:relative;
-        font-size:1.4rem;
-        font-weight: 400;
-        color:red;
-        display:block;
-        padding-left:11rem;
+        display:flex;
+        justify-content: start;
+        align-items: center;
+        padding-top:1rem;
+
+        vertical-align: middle;
+        font-size: $text-small;
+        font-weight: 600;
+        color:$color-green;
 
         &::before{
             content:'';
             display:inline-block;
-            border-bottom:2px solid red;
+            border-bottom:1px solid $color-green;
             width:10rem;
-            position:absolute;
-            transform:translateY(-50%);    
-            top:50%;
-            left:0;      
         }
     }
 
     &__description{
-        font-weight: 600;
+        font-weight: 400;
         text-transform: uppercase;
-        font-size:2rem;
+        font-size: $text-small-min;
+        color:$color-light;
+        padding-top:1rem;
+        transform: scale(1,1.5);
     }
 }

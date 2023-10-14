@@ -2,7 +2,10 @@
     &-primary{
         text-transform: uppercase;
         font-weight: 600;
-        font-size:6rem;
+        font-size:7rem;
+        line-height: 77.5%;
+        letter-spacing: 10%;
+        color: $color-black;
     }
 }
 
@@ -16,6 +19,33 @@
 .h-3{
     display:inline-block;
     font-weight: 600;
-    font-size:2.5rem;
+    font-size:$text-small-med;
     text-transform: uppercase;
+}
+
+.text{
+    text-transform: uppercase;
+    display:inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    text-align: center;
+    &--top,
+    &--main{
+        display: inline-block;
+    }
+
+    &--top{
+        color: $color-orange;
+        font-size: $text-small;
+        padding-bottom:.1rem;
+    }
+    &--main{
+        color: $color-light;
+        font-size:$text-med-small;
+        font-weight: 600;
+        transform: scale(1, 1.2);
+        letter-spacing: -0.1rem;
+    }
 }

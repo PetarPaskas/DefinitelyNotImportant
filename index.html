@@ -7,118 +7,149 @@
     <link rel="stylesheet" href="./css/style.css"/>
 </head>
 <body>
-    <p>Hello FWRD!</p>
     <header class="header">
-        <!-- navigation items and logo-->
-        <div class="menu"> 
-            <div class="menu__logo">
-                <img src="./img/icons/fwrd-logo.png" alt="Logo image" class="menu__logo-img">
+        <div class="header__content">
+            <img src="./img/svg/bg-orange-wave.svg" alt="Orange wave decorative image" class="header__logo-wave"/>
+            <!-- navigation items and logo-->
+            <div class="menu"> 
+                <div class="menu__logo">
+                    <img src="./img/icons/fwrd-logo.png" alt="Logo image" class="menu__logo-img">
+                </div>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Testimonials</a></li>
+                        <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Testimonials</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-        <!-- gallery and h1 -->
-        <div class="header__main">
-            <div class="header__text-box">
-                <h1 class="heading-primary">Bringing products to life</h1>
-            </div>
-            <div class="header__content-box">
-                <div class="composition">
-                    <figure class="composition__item composition__item--1">
-                        <figcaption class="composition__image-title">Kreekcraft</figcaption>
-                    </figure>
-                    <figure class="composition__item composition__item--2">
-                        <figcaption class="composition__image-title">Pixel playground</figcaption>
-                    </figure>
-                    <figure class="composition__item composition__item--3">
-                        <figcaption class="composition__image-title">Ian Bick</figcaption>
-                    </figure>
+            <!-- gallery and h1 -->
+            <div class="header__main">
+                <div class="header__text-box">
+                    <h1 class="heading-primary">Bringing products to life</h1>
+                </div>
+                <div class="header__content-box">
+                    <div class="composition">
+                        <figure class="composition__item composition__item--1">
+                            <figcaption class="composition__image-title">
+                                <span class="text">
+                                    <span class="text--top">Store spotlight</span>
+                                    <span class="text--main">Kreekcraft</span>
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <figure class="composition__item composition__item--3">
+                            <figcaption class="composition__image-title">
+                                <span class="text">
+                                    <span class="text--top">Website & product spotlight</span>
+                                    <span class="text--main">Ian Bick</span>
+                                </span>
+                            </figcaption>
+                        </figure>
+                        <figure class="composition__item composition__item--2">
+                            <figcaption class="composition__image-title">
+                                <span class="text">
+                                    <span class="text--top">Website & store spotlight</span>
+                                    <span class="text--main">Pixel playground</span>
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
             </div>
+            <div class="header__offerings">
+                <ul class="offerings">
+                    <li class="offerings__item">
+                        <span class="offerings__item-icon">
+                            <object data="./img/svg/star-icon.svg" type="image/svg+xml" class="offerings__icon"></object>
+                        </span>
+                        <span class="offerings__item-description">
+                            <a href="#" class="offerings__link">Brand and creative</a>
+                        </span>
+                    </li>
+                    <li class="offerings__item">
+                        <span class="offerings__item-icon">
+                            <object data="./img/svg/digi-product-icon.svg" type="image/svg+xml" class="offerings__icon"></object>
+                        </span>
+                        <span class="offerings__item-description">
+                            <a href="#" class="offerings__link">Web design</a>
+                        </span>
+                    </li>
+                    <li class="offerings__item">
+                        <span class="offerings__item-icon">
+                            <object data="./img/svg/shirt-icon.svg" type="image/svg+xml" class="offerings__icon"></object>
+                        </span>
+                        <span class="offerings__item-description">
+                            <a href="#" class="offerings__link">Merchandise</a>
+                        </span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="header__offerings">
-            <ul class="offerings">
-                <li class="offerings__item">
-                    <span class="offerings__item-icon">X</span>
-                    <span class="offerings__item-description">Digital product</span>
-                </li>
-                <li class="offerings__item">
-                    <span class="offerings__item-icon">X</span>
-                    <span class="offerings__item-description">Product strategy</span>
-                </li>
-                <li class="offerings__item">
-                    <span class="offerings__item-icon">X</span>
-                    <span class="offerings__item-description">Supply chain</span>
-                </li>
-                <li class="offerings__item">
-                    <span class="offerings__item-icon">X</span>
-                    <span class="offerings__item-description">Customer support</span>
-                </li>
-            </ul>
-        </div>
-        <div class="header__notch">
-            <img class="header__notch-img" src="./img/svg/bg-green-low.svg">
-            <div class="header__notch-button">
-                <img src="./img/svg/header-arrow.svg">
+        <div class="header__background">
+            <img src="./img/svg/bg-green-wave.svg" class="header__background-image">
+            <div class="header__notch">
+                <img class="header__notch-img" src="./img/svg/bg-green-low.svg">
+                <div class="header__notch-button">
+                    <img src="./img/svg/header-arrow.svg">
+                </div>
             </div>
         </div>
     </header>
     <main>
         <section class="section-projects">
+            <img src="./img/svg/bg-purple-wave.svg" alt="Orange wave decorative image" class="section-projects__wave"/>
             <div class="wrapper">
                 <div class="gallery">
                     <figure class="gallery__item gallery__item--1">
                         <img src="./img/covers/pp.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Pixel playground</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                     <figure class="gallery__item gallery__item--2">
                         <img src="./img/covers/promo-examples-4.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Promo example frwd</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                     <figure class="gallery__item gallery__item--3">
                         <img src="./img/covers/reactive.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Re:active</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                     <figure class="gallery__item gallery__item--4">
                         <img src="./img/covers/nyp.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Name your price</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                     <figure class="gallery__item gallery__item--5">
                         <img src="./img/covers/kreekcraft.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Kreekcraft</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                     <figure class="gallery__item gallery__item--6">
                         <img src="./img/covers/ian.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Ian bick</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                     <figure class="gallery__item gallery__item--7">
                         <img src="./img/covers/promo-examples-1.png" alt="" class="gallery__image">
                         <figcaption class="gallery__description">Promo example frwd</figcaption>
-                        <div class="gallery__button">View project</div>
+                        <div class="button gallery__button button--orange"><span class="button__text">View project</span></div>
                     </figure>
                 </div>
                 <div class="u-center-text">
-                    <div class="button button--green">
-                        View more projects
-                    </div>
+                    <button class="button button--green section-projects__button ">
+                        <span class="button__text">
+                            View more projects
+                        </span>
+                    </button>
                 </div>
             </div>
         </section>
         <section class="section-clients">
-            <div class="notch-title notch-title--green">
+            <div class="notch-title notch-title--green notch-title--top-left">
                 <span class="notch-title__text">
                     Our clients
                 </span>
@@ -136,6 +167,7 @@
         </section>
 
         <section class="section-blog">
+            <img src="./img/svg/bg-green-corner-wave.svg" alt="Green wave decorative image" class="section-blog__wave"/>
             <div class="wrapper">
                 <div class="u-center-text u-section-title">
                     <h3 class="h-3">
@@ -148,8 +180,8 @@
                             <img src="./img/blog/blog-placeholder.png" alt="" class="content-items__image">
                         </div>
                         <div class="content-items__body">
-                            <span class="content-items__decorative-text">12. 07. 2023.</span>
-                            <p class="content-items__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="content-items__decorative-text"><span class="content-items__text">12. 07. 2023.</span></span>
+                            <p class="content-items__description">Typing with toddlers: making remote work, work</p>
                         </div>
                     </li>
                     <li class="content-items__item">
@@ -157,11 +189,18 @@
                             <img src="./img/blog/blog-placeholder.png" alt="" class="content-items__image">
                         </div>
                         <div class="content-items__body">
-                            <span class="content-items__decorative-text">12. 07. 2023.</span>
-                            <p class="content-items__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <span class="content-items__decorative-text"><span class="content-items__text">12. 07. 2023.</span></span>
+                            <p class="content-items__description">Lorem, ipsum dolor sit amet </p>
                         </div>
                     </li>
                 </ul>
+                <div class="u-center-text">
+                    <button class="button button--green section-blog__button">
+                        <span class="button__text">
+                            More stories
+                        </span>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -202,7 +241,7 @@
                     </div>
                     <div class="form__row">
                         <div class="form__group u-center-text">
-                            <button class="button form__button" type="submit">Submit</button>
+                            <button class="button button--orange form__button" type="submit">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -258,7 +297,7 @@
                     </span>
                 </li>
                 <li class="footer__list-item u-left-padding-zero">
-                    <a href="" class="button footer__button footer__link">Inquire</a>
+                    <a href="" class="button button--green footer__button footer__link">Inquire</a>
                 </li>
             </div>
 

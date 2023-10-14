@@ -1,13 +1,31 @@
 .button{
+
+    &,
+    &__text{
+        display:inline-block;
+        font-size:1.5rem;
+        font-weight: 600;
+    }
+
     border-radius:50px;
     padding:1rem 1.7rem;
-    font-size:1.5rem;
-    display:inline-block;
+
     outline:none;
     border: none;
 
     &--green{
         text-transform: uppercase;
-        background-color:forestgreen;
+        background-color:$color-green;
+        color:$color-light;
+    }
+
+    &--orange{
+        text-transform: uppercase;
+        background-color:$color-orange;
+        color:$color-light;
+    }
+
+    &:hover{
+        cursor: pointer;
     }
 }
