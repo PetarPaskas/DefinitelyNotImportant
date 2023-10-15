@@ -1,8 +1,10 @@
 .menu{
+    margin:0 auto;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    max-width:175rem;
 
     &__logo{
         &__logo-img{

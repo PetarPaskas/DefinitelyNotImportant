@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: burlywood;
 
     &__row{
         display:flex;
@@ -26,7 +25,7 @@
         border:none;
         outline:none;
         padding-left:.5rem;
-        border-bottom:2px solid green;
+        border-bottom:2px solid $color-green;
         font-size: 2rem;
         background-color: transparent;
 
@@ -34,19 +33,20 @@
             outline:none;
         }
         &::placeholder{
-            color:whitesmoke;
-            font-size: 2rem;
+            color:$color-black-transparent;
+            font-size: $text-small-med;
             text-transform: uppercase;
         }
 
     }
     &__label{
         display:inline-block;
-        font-size:2rem;
+        font-size:$text-med-small;
         padding-left:.5rem;
         text-transform: uppercase;
         transition:all .5s;
         transform:translateY(-3rem);
+        color:$color-black;
     }
 
     &__input:placeholder-shown + &__label{
@@ -61,8 +61,12 @@
     }
 
     &__button{
-        background-color: tomato;
         text-transform: uppercase;
+        font-size: $text-med-small;
+        padding:1rem 2.5rem;
+        &:hover{
+            background-color: $color-purple;
+        }
     }
 
 }

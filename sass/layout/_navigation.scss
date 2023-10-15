@@ -1,5 +1,4 @@
 .navigation{
-
     &__list{
         display:flex;
         justify-content: space-evenly;
@@ -12,13 +11,22 @@
     }
 
     &__link{
+        transition:transform .2s;
+        backface-visibility: hidden;
+
         &,
         &:link,
         &:visited{
             display:inline-block;
             text-decoration:none;
-            text-transform: uppercase;
-            font-size:2rem;
+            color: $color-black;
+            @include text-standard($text-small);
+            font-weight: 800;
+        }
+
+        &:hover{
+            color: $color-orange;
+            cursor:pointer;
         }
 
 

@@ -2,7 +2,7 @@
     display:grid;
     grid-template-columns: [start] repeat(7, [col] 1fr [col]) [end];
     grid-template-rows: repeat(12, 3rem);
-    grid-row-gap: 4rem;
+    grid-row-gap: 4.5rem;
     grid-column-gap:3rem;
     width:100rem;
 
@@ -11,8 +11,13 @@
     }
 
     &__description{
+        padding-top:.5rem;
         text-transform: uppercase;
-        font-size:2rem;
+        font-size:$text-small-med;
+        transform: scale(1, 1.1);
+        letter-spacing: -1px;
+        color:$color-purple;
+        font-weight: 600;
     }
 
     &__image{
@@ -22,6 +27,7 @@
         display:block;
         transform-origin:bottom;
         transition:transform .3s;
+        filter: drop-shadow(0 1px .4rem $color-black);
 
         &:hover{
             transform:scale(1.04);
@@ -29,16 +35,20 @@
     }
 
     &__button{
-        text-transform: uppercase;
         position:absolute;
         bottom:5%;
         right:0;
         transform:translateX(10%);
-        padding:1rem 1.7rem;
-        background-color: tomato;
-        font-weight: 600;
-        color:white;
-        border-radius:50px;
-        font-size:1.5rem;
+        transition:background-color .2s;
+        
+
+        &:hover{
+            background-color:$color-purple;
+        }
+
+        & .button__text{
+            text-transform: uppercase;
+            transform:scale(1, 1.2);
+        }
     }
 }

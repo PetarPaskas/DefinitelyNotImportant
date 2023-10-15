@@ -1,6 +1,21 @@
 .section-projects{
-    padding-top:10rem;
-    padding-bottom:10rem;
+    background-color: $color-light;
+    padding-top:20rem;
+    padding-bottom:15rem;
+
+    &__overflow-container{
+        overflow:hidden;
+        &--wave{
+            position:absolute;
+            top:0;
+            right:0;
+            z-index:5;
+        }            
+    }
+    &__wave{
+        transform: translateY(-20%);
+    }
+
     & .gallery{
         margin:0 auto; 
         padding-bottom:7rem;
@@ -35,18 +50,84 @@
         grid-row: 7 / 13; 
        } 
     }
+
+    &__button{
+        transition:background-color .2s;
+        &.button{
+            padding:1rem 2.5rem;
+        }
+
+        & .button__text{
+            font-size: $text-med-small;
+            transform:scale(1, 1.4);
+            letter-spacing: -1px;
+        }
+
+        &:hover{
+            background-color:$color-orange;
+        }
+
+    }
 }
 
 .section-clients{
     padding:1rem 1rem;
-    border:1px solid red;
-    background-color: green;
+    background-color: $color-green;
+    position:relative;
 
     & .notch-title{
-        transform:translate(4rem,-1rem) translateY(-50%);
+    }
+}  
+
+.section-blog{
+    background-color: $color-purple;
+    padding: 2rem 0 5rem 0;
+    position:relative;
+
+    &__wave{
+        position:absolute;
+        top:0;
+        right:0;
+    }
+    &__bottom-wave{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width: 100%;
+        transform: translateY(100%);
+    }
+
+    & .h-3{
+        color: $color-light;
+        transform:scale(1,1.6);
+        letter-spacing: -1px;
+    }
+
+    & .content-items{
+        padding-bottom:6rem;
+    }
+
+    &__button{
+        transition:background-color .2s;
+        
+        &.button{
+            padding:1rem 2.5rem;
+        }
+
+        & .button__text{
+            font-size: $text-med-small;
+            transform:scale(1, 1.4);
+            letter-spacing: -1px;
+        }
+
+        &:hover{
+            background-color:$color-orange;
+        }
+
     }
 } 
 
-.section-blog{
-    padding: 2rem 0 10rem 0;
+.section-form{
+    background-color: $color-light;
+    padding:12rem 0 0 0;
 }

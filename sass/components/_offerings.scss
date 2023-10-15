@@ -4,19 +4,45 @@
     margin:0 auto;
     list-style-type: none;
 
+    &__link{
+        text-decoration: none;
+        color:inherit;
+    }
+
     &__item{
-        padding:0rem 2rem;
-        &:not(:last-child){
-            border-right: 1px solid red;
-        }
+        display: inline-block;
+        padding:0rem 1rem;
+
         &-description{
             display:inline-block;
-            text-transform: uppercase;
-            font-size:2rem;
+            @include text-standard($text-small-med);
+            color:$color-light;
         }
+
         &-icon{
             display: inline-block;
-            font-size:2rem;
+            padding-right: .8rem;
         }
+
+        &:not(:last-child){
+            border-right: 1px solid $color-light;
+        }
+
+        &>*{
+            vertical-align: middle;
+        }
+        
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover:not(:last-child){
+            border-right: 1px solid $color-purple;
+        }
+        &:hover &-description{
+            color:$color-purple;
+        }
+    }
+
+    &__icon{
     }
 }

@@ -1,15 +1,27 @@
 .notch-title{
+    position:absolute;
     display:inline-block;
     transform: translateY(-50%);
-    padding: 1rem 2rem;
-    border-radius:5px;
+    padding: 1rem 3rem;
+    border-radius:8px;
 
     &--green{
-        background-color: greenyellow;
+        background-color: $color-green;
     }
+
     &__text{
+        display:inline-block;
         text-transform: uppercase;
-        font-size:2rem;
-        color:white;
+        font-size:$text-med-small;
+        color:$color-light;
+        transform: scale(1, 1.4);
+        font-weight: 600;
+        letter-spacing: -1px;
+    }
+
+    &--top-left{
+        top:0;
+        left:10%;
+        transform:translateY(-60%);
     }
 }
