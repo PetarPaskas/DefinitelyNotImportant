@@ -13,8 +13,14 @@
 body{
     box-sizing: border-box;
     font-family: 'Morganite',sans-serif;
+    &>*{
+        position:relative;
+    }
 }
 
+[class^="section"]{
+    position:relative;
+}
 .wrapper{
     max-width: 114rem;
     margin: 0 auto; 

@@ -19,12 +19,9 @@
         &:visited{
             display:inline-block;
             text-decoration:none;
-            text-transform: uppercase;
-            font-weight: 600;
-            font-size:2rem;
             color: $color-black;
-            letter-spacing: -0.1rem;
-            transform:scale(1, 1.4);
+            @include text-standard($text-small);
+            font-weight: 800;
         }
 
         &:hover{

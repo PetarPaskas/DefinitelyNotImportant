@@ -7,7 +7,15 @@ $color-purple-transparent: rgba(47, 44, 150, 0.534);
 $color-black-transparent: rgba(0, 0, 0, 0.466);
 
 $text-small-min: 1.6rem;
-$text-small:1.8rem;
-$text-small-med: 2rem;
+
 $text-med-small:2.4rem;
 $text-med: 3rem;
+
+$text-small:1.2rem;
+$text-small-med: 1.6rem;
+$text-h1: 5rem;
+
+$z-default-layer:0;
+$z-background-layer:10;
+$z-content-layer:20;
+$z-pop-content-layer:30;

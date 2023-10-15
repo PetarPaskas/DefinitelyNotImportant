@@ -18,23 +18,23 @@
         display:inline-block;
         position:absolute;
 
+        top:10%;
         border-radius:10rem;
-        width: 18rem;
-        height: 48rem;
+        width: 19rem;
+        height: 50rem;
         background-position:center;
         background-repeat:no-repeat;
         background-size: 35rem;
         transition: transform .3s, filter .2s;
 
         &:hover{
-            z-index:3;
+            z-index:$z-pop-content-layer;
             transform: translateY(-5rem) scale(1.1);
             filter:blur(0px) !important;
 
         }
 
         &--1{
-            top:0;
             left:0rem;
             background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
             linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
@@ -44,7 +44,6 @@
             }
         }
         &--2{
-            top:0;
             left:17rem;
             background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
             linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
@@ -54,7 +53,6 @@
             }
         }
         &--3{
-            top:0;
             left:34rem;
             background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
             linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");

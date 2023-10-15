@@ -2,8 +2,6 @@
     background-color: $color-light;
     padding-top:20rem;
     padding-bottom:15rem;
-    position:relative;
-    z-index: -1;
 
     &__wave{
         position:absolute;
@@ -72,19 +70,17 @@
 
     & .notch-title{
     }
-} 
+}  
 
 .section-blog{
     background-color: $color-purple;
     padding: 2rem 0 10rem 0;
     position:relative;
-    z-index:10;
 
     &__wave{
         position:absolute;
         top:0;
         right:0;
-        z-index:-1;
     }
 
     & .h-3{
