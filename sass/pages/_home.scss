@@ -3,10 +3,17 @@
     padding-top:20rem;
     padding-bottom:15rem;
 
+    &__overflow-container{
+        overflow:hidden;
+        &--wave{
+            position:absolute;
+            top:0;
+            right:0;
+            z-index:5;
+        }            
+    }
     &__wave{
-        position:absolute;
-        top:0;
-        right:0;
+        transform: translateY(-20%);
     }
 
     & .gallery{
@@ -74,13 +81,20 @@
 
 .section-blog{
     background-color: $color-purple;
-    padding: 2rem 0 10rem 0;
+    padding: 2rem 0 5rem 0;
     position:relative;
 
     &__wave{
         position:absolute;
         top:0;
         right:0;
+    }
+    &__bottom-wave{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width: 100%;
+        transform: translateY(100%);
     }
 
     & .h-3{
@@ -115,4 +129,5 @@
 
 .section-form{
     background-color: $color-light;
+    padding:12rem 0 0 0;
 }
