@@ -1,0 +1,26 @@
+.study-content{
+    display:flex;   
+    flex-direction: row;  
+
+    &__side{
+        min-width: 15%;
+        flex-direction: column;
+    }
+    &__side &__item{
+        &:not(:last-child){
+            padding-bottom:6rem;
+        }
+    }
+
+    &__main{
+        flex-grow:1;
+        flex-direction: column;
+        margin-left:20rem;
+    }
+    &__main &__item{
+        &:not(:last-child){
+            padding-bottom:7rem;
+        }
+    }
+}
+

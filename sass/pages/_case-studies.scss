@@ -1,0 +1,60 @@
+.case-studies{
+    & .header{
+        padding-top:5rem;
+        padding-bottom:0px;
+    }
+}
+//Main
+.study-content__main .paragraph__content{
+    line-height: 160%;
+}
+
+.section-brief{
+    padding:10rem 15rem;
+    background-color: $color-light;
+}
+
+.section-testimonial{
+    background-color: $color-light;
+    padding:10rem 25rem;
+}
+.section-separator{
+    padding:10rem 15rem;
+    background-color: $color-light;
+}
+
+.section-case-study-gallery{
+    background-color: $color-light;
+    padding: 0 10rem;
+
+}
+
+.view-more-projects-section{
+    position:relative;
+    background-color: $color-green;
+    //padding:20rem 0;
+
+    &__button{
+        transition:background-color .2s;
+        &.button{
+            padding:0.7rem 2.6rem;
+        }
+
+        & .button__text{
+            font-size: $text-small;
+            letter-spacing: 4px;
+        }
+        &:hover{
+            background-color:$color-purple;
+        }
+    }
+    &__wave{
+        width:100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index: $z-background-layer;
+        transform:translateY(99%);
+    }
+}
+

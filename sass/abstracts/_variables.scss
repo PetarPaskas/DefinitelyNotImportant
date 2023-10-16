@@ -7,6 +7,8 @@ $color-purple-transparent: rgba(47, 44, 150, 0.534);
 $color-black-transparent: rgba(0, 0, 0, 0.466);
 $color-black-transparent-text: rgba(35, 36, 39, 0.40);
 
+$color-white:#FFF;
+
 $text-small-min: 1.6rem;
 
 $text-med-small:2.4rem;
@@ -25,17 +27,21 @@ $text-small-min:1.2rem;
 $text-small-med:1.3rem;
 //used on - content-items__text
 $text-small-med-med:1.6rem;
+$text-small-med-med-med: 1.8rem;
 //used on - navigation; footer__link&__text; gallery__description; section-projects__button; content-items__description
 $text-small:2rem;
 //used on - text--main; offerings_link
 $text-med-small:2.4rem;
+//used on - case study heading; 
+$text-med-med:2.6rem;
 //used on - h-3;
 $text-med:2.8rem;
 
 
 $text-h1: 7rem;
+$text-h2-sm:4rem;
 $text-h1-sm: 6.1rem;
-
+ 
 $z-default-layer:0;
 $z-background-layer:10;
 $z-content-layer:20;

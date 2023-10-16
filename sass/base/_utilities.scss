@@ -1,26 +1,30 @@
 .u-center-text{
-    text-align: center;
+    text-align: center !important;
 }
-
 .u-width-medium{
-    width:30rem;
+    width:30rem !important;
 }
-
 .u-text-block{
-    display:block;
+    display:block !important;
 }
-
 .u-section-title{
-    padding:5rem;
+    padding:5rem !important;
 }
-
 .u-left-padding-zero{
-    padding-left:0;
+    padding-left:0 !important;
 }
-
 .u-padding-top-med{
-    padding-top: 5rem;
+    padding-top: 5rem !important;
 }
 .u-padding-bottom-med{
-    padding-bottom: 15rem;
+    padding-bottom: 15rem !important;
 }
+.u-padding-top-btm-med{
+    padding:5rem 0 !important;
+}
+.u-ff-helvetica{
+    font-family: 'helvetica' !important;
+    letter-spacing: 1px !important;
+    font-weight: 400 !important;
+    font-size:1.8rem !important;
+} 

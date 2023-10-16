@@ -1,0 +1,64 @@
+.quote{
+    position:relative;
+    background-color: $color-green;
+    color:$color-white;
+    padding:0 2rem;
+
+    &__title,
+    &__quotee{
+        display:inline-block;
+        width:100%;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__title{
+        font-size:$text-h1-sm;
+        letter-spacing: 4px;
+    }
+    &__quotee{
+        font-size:$text-h2-sm;
+        letter-spacing: 4px;
+        padding-top:1rem;
+    }
+    &__row{
+        padding-bottom:1.8rem;
+        text-align: center;
+    }
+
+    &__text{
+        display:inline-block;
+        width:90%;
+
+        font-size:2.8rem;
+        font-family: 'Helvetica';
+        line-height: 132%;
+        margin:0 auto;
+
+        &--center{
+            text-align: center;
+        }
+    }
+
+    &__open-quote,
+    &__close-quote{
+        position:absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width:12rem;
+        height: 12rem;
+    }
+
+    &__open-quote{
+        top:-15%;
+        left:7%;
+        background-image:url(../../img/svg/quote-open.svg);
+
+    }
+    &__close-quote{
+        bottom:-15%;
+        right:7%;
+        background-image:url(../../img/svg/quote-close.svg);
+
+    }
+}

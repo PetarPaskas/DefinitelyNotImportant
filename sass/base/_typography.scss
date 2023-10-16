@@ -33,6 +33,14 @@
     letter-spacing: 4px;
 }
 
+.h-4{
+    font-size:$text-small;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    display:inline-block;
+    font-weight: bold;
+}
+
 .text{
     display:inline-flex;
     flex-direction: column;
