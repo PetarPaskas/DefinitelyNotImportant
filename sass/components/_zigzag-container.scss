@@ -1,0 +1,72 @@
+.zigzag-container{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    
+    &__item{
+        display:flex;
+
+        &:not(:last-child){
+            padding-bottom:15rem;
+        }
+        &:nth-child(odd){
+            flex-direction: row;
+            .zigzag-container__item-description{
+                text-align:end;
+                padding-left:30rem;
+            }
+        }
+        &:nth-child(even){
+            flex-direction: row-reverse;
+            .zigzag-container__item-description{
+                text-align:start;
+                padding-right:30rem;
+            }
+        }
+        &-description{
+            text-align: start;
+            padding:0 5rem;
+            &>*{
+                display:inline-block;
+                width:100%;
+            }
+        }
+        &-presentation{
+            min-width:57%;
+        }
+    }
+
+    &__title{
+        font-family: 'helvetica';
+        font-size:$text-small-big;
+    }
+    &__client{
+        font-size:$text-h1-sm;
+        letter-spacing: 4px;
+        padding-bottom:1rem;
+    }
+    &__description{
+        font-family: 'helvetica';
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size:1.8rem;
+        padding-bottom:2rem;
+        line-height: 148%;
+    }
+    &__button{
+        font-size:$text-small-big;
+        letter-spacing: 4px;
+        padding: 0.7rem 2rem 0.7rem 2.4rem;
+        width:auto;
+        transition:background-color .2s;
+        &:hover{
+            background-color: $color-purple;
+        }
+    }
+    &__image{
+        width:100%;
+        max-height: 50rem;
+        object-fit: cover;
+        object-position: top;
+    }
+}

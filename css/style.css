@@ -480,6 +480,11 @@ footer.footer {
   padding-top: 5rem;
   padding-bottom: 5rem; }
 
+.portfolio .section-projects {
+  position: relative;
+  padding: 10rem 15rem;
+  padding-top: 20rem; }
+
 .button {
   border-radius: 50px;
   padding: 0.6rem 1.7rem;
@@ -876,6 +881,7 @@ footer.footer {
   background-color: inherit;
   border-radius: 0 0 30px 30px;
   text-align: center;
+  z-index: 10;
   transform: translate(-50%, 50%); }
   .page-notch__content {
     color: #232427;
@@ -895,6 +901,60 @@ footer.footer {
     font-weight: 600;
     letter-spacing: 2px;
     width: 100%; }
+
+.zigzag-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .zigzag-container__item {
+    display: flex; }
+    .zigzag-container__item:not(:last-child) {
+      padding-bottom: 15rem; }
+    .zigzag-container__item:nth-child(odd) {
+      flex-direction: row; }
+      .zigzag-container__item:nth-child(odd) .zigzag-container__item-description {
+        text-align: end;
+        padding-left: 30rem; }
+    .zigzag-container__item:nth-child(even) {
+      flex-direction: row-reverse; }
+      .zigzag-container__item:nth-child(even) .zigzag-container__item-description {
+        text-align: start;
+        padding-right: 30rem; }
+    .zigzag-container__item-description {
+      text-align: start;
+      padding: 0 5rem; }
+      .zigzag-container__item-description > * {
+        display: inline-block;
+        width: 100%; }
+    .zigzag-container__item-presentation {
+      min-width: 57%; }
+  .zigzag-container__title {
+    font-family: 'helvetica';
+    font-size: 2.2rem; }
+  .zigzag-container__client {
+    font-size: 6.1rem;
+    letter-spacing: 4px;
+    padding-bottom: 1rem; }
+  .zigzag-container__description {
+    font-family: 'helvetica';
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+    line-height: 148%; }
+  .zigzag-container__button {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    padding: 0.7rem 2rem 0.7rem 2.4rem;
+    width: auto;
+    transition: background-color .2s; }
+    .zigzag-container__button:hover {
+      background-color: #2f2c96; }
+  .zigzag-container__image {
+    width: 100%;
+    max-height: 50rem;
+    object-fit: cover;
+    object-position: top; }
 
 .case-study {
   background-image: url(../../img/case-studies/bg-case-study-orange-wave.svg);
