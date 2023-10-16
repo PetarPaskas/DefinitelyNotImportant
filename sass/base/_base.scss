@@ -12,7 +12,7 @@
 
 body{
     box-sizing: border-box;
-    font-family: 'Morganite',sans-serif;
+    font-family: 'Morganite';
     &>*{
         position:relative;
     }
@@ -25,6 +25,6 @@ footer.footer{
     position:relative
 }
 .wrapper{
-    max-width: 114rem;
+    max-width: 140rem;
     margin: 0 auto; 
 }

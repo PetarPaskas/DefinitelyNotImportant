@@ -1,4 +1,12 @@
 .header{
+    &__background{
+        width:100%;
+        position:absolute;
+        bottom:0;
+        left:0;
+        padding-top:20rem;
+        transform: translateY(5%);
+    }
     background-color: $color-light;
     position:relative;
     padding-bottom:15rem;
@@ -46,14 +54,16 @@
         align-items: center; 
     }
     & .heading-primary{
-        letter-spacing: -1.5px;
-        transform:scaleY(2.8)
+        max-width: 20rem;
+        padding-bottom:3rem;
     }
 
     &__content-box{
+        
         & .composition{
             margin:0 auto;
             width:54rem;
+            margin-left:15rem;
         }
     }
     &__main &__text-box{
@@ -61,56 +71,8 @@
     }
 
     &__offerings{
-        transform:translateY(7rem);
-        padding-top:3rem;
+        padding-top:4rem;
         text-align: center;
-    }
-
-    &__notch{
-        position:absolute;
-        bottom:0;
-        left:50%;
-        transform:translate(-50%,80%);
-        background-color: $color-green;
-        width:40%;
-        height:10rem;
-        border-radius: 0 0 20px 20px;
-
-        display:flex;
-        justify-content: center;
-        align-items: center;
-
-        &-text{
-            @include text-standard(1.2rem);
-            color:$color-light;
-            padding-bottom:2rem;
-        }
-
-        &-button{
-
-            &-container{
-                position:relative;
-                transform:translateY(-2rem);
-            }
-
-            &,
-            &--behind{
-                position:absolute;
-                height:9em;
-                width:6rem;
-                margin:0 auto;
-                border-radius: 40px;
-                background-color: $color-light;
-            }
-
-            &--behind{
-                transform:scale(1.8) translateY(-10%);
-                background-color: $color-green;
-                clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
-                
-            }
-
-        }
     }
 
 }

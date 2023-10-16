@@ -12,16 +12,15 @@
     &__text{
         display:inline-block;
         text-transform: uppercase;
-        font-size:$text-med-small;
+        font-size:$text-small;
         color:$color-light;
-        transform: scale(1, 1.4);
-        font-weight: 600;
-        letter-spacing: -1px;
+        font-weight: bold;
+        letter-spacing: 4px;
     }
 
     &--top-left{
         top:0;
-        left:10%;
+        left:7%;
         transform:translateY(-60%);
     }
 }

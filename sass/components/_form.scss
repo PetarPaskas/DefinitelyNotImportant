@@ -10,7 +10,7 @@
         justify-content: center;
         align-items:center;
         width:100%;
-        padding:3rem 0;
+        padding:3rem 0 0 0;
     }
     &__group{
         flex-grow:0;
@@ -21,32 +21,43 @@
         }
     }
     &__input{
+        font-family: inherit;
         width:100%;
         border:none;
         outline:none;
         padding-left:.5rem;
-        border-bottom:2px solid $color-green;
-        font-size: 2rem;
+        border-bottom:4px solid $color-green;
         background-color: transparent;
-
+        font-size: $text-med-small;
+        letter-spacing: 3px;
+        color: $color-black;
+        
         &:focus{
             outline:none;
         }
         &::placeholder{
-            color:$color-black-transparent;
-            font-size: $text-small-med;
+            color:$color-black-transparent-text;
+            font-size: $text-med-small;
             text-transform: uppercase;
+            font-weight: bold;
+            overflow: visible;
+            letter-spacing: 4px;
         }
 
     }
     &__label{
         display:inline-block;
+
         font-size:$text-med-small;
         padding-left:.5rem;
+        color:$color-black;
+        letter-spacing: 2px;
+        font-weight: bold;
+
         text-transform: uppercase;
         transition:all .5s;
         transform:translateY(-3rem);
-        color:$color-black;
+
     }
 
     &__input:placeholder-shown + &__label{
@@ -57,15 +68,21 @@
     &__input:not(:placeholder-shown) + &__label{
         visibility: visible;
         opacity:1;
-        transform:translateY(-6rem);
+        transform:translateY(-10rem);
     }
 
     &__button{
         text-transform: uppercase;
-        font-size: $text-med-small;
-        padding:1rem 2.5rem;
-        &:hover{
+        font-size: $text-small;
+        letter-spacing:5px;
+        padding: 0.7rem 2.7rem 0.7rem 2.8rem;
+
+        &:hover:not(:disabled){
             background-color: $color-purple;
+        }
+        &:disabled{
+            cursor:default;
+            opacity:50%;
         }
     }
 

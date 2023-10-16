@@ -1,7 +1,7 @@
 .section-projects{
     background-color: $color-light;
-    padding-top:20rem;
-    padding-bottom:15rem;
+    padding-top:8rem;
+    padding-bottom:10rem;
 
     &__overflow-container{
         overflow:hidden;
@@ -54,13 +54,12 @@
     &__button{
         transition:background-color .2s;
         &.button{
-            padding:1rem 2.5rem;
+            padding:0.7rem 2.6rem;
         }
 
         & .button__text{
-            font-size: $text-med-small;
-            transform:scale(1, 1.4);
-            letter-spacing: -1px;
+            font-size: $text-small;
+            letter-spacing: 4px;
         }
 
         &:hover{
@@ -81,7 +80,7 @@
 
 .section-blog{
     background-color: $color-purple;
-    padding: 2rem 0 5rem 0;
+    padding: 4rem 13rem 5rem 13rem;
     position:relative;
 
     &__wave{
@@ -99,8 +98,6 @@
 
     & .h-3{
         color: $color-light;
-        transform:scale(1,1.6);
-        letter-spacing: -1px;
     }
 
     & .content-items{
@@ -111,13 +108,12 @@
         transition:background-color .2s;
         
         &.button{
-            padding:1rem 2.5rem;
+            padding:0.7rem 2.6rem;
         }
 
         & .button__text{
-            font-size: $text-med-small;
-            transform:scale(1, 1.4);
-            letter-spacing: -1px;
+            font-size: $text-small;
+            letter-spacing:4px;
         }
 
         &:hover{
@@ -129,5 +125,9 @@
 
 .section-form{
     background-color: $color-light;
-    padding:12rem 0 0 0;
+    padding:16rem 0 0 0;
+
+    & .form{
+        margin-top: -3rem;
+    }
 }

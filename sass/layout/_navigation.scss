@@ -7,7 +7,9 @@
 
     &__item{
         display:inline-block;
-        margin:1rem;
+        &:not(:last-child){
+            margin-right:4rem;
+        }
     }
 
     &__link{
@@ -22,6 +24,7 @@
             color: $color-black;
             @include text-standard($text-small);
             font-weight: 800;
+            letter-spacing: 1.5px;
         }
 
         &:hover{

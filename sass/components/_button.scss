@@ -1,14 +1,14 @@
 .button{
-
     &,
     &__text{
+        font-family:inherit;
         display:inline-block;
         font-size:1.5rem;
         font-weight: 600;
     }
 
     border-radius:50px;
-    padding:1rem 1.7rem;
+    padding:0.6rem 1.7rem;
 
     outline:none;
     border: none;
