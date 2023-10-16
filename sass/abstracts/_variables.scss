@@ -1,19 +1,40 @@
-$color-black: #232427;
+$color-black: rgb(35, 36, 39);
 $color-light: #FFF7E1;
 $color-green: #00A979;
 $color-orange: rgb(250, 73, 45);
 $color-purple: rgb(47, 44, 150);
 $color-purple-transparent: rgba(47, 44, 150, 0.534);
 $color-black-transparent: rgba(0, 0, 0, 0.466);
+$color-black-transparent-text: rgba(35, 36, 39, 0.40);
 
 $text-small-min: 1.6rem;
 
 $text-med-small:2.4rem;
 $text-med: 3rem;
-
-$text-small:1.2rem;
+$text-min:1.8rem;
 $text-small-med: 1.6rem;
-$text-h1: 5rem;
+$text-small-min: 1.6rem;
+$text-med-small:2.4rem;
+$text-med: 3rem;
+
+
+//////////////////////////////////////
+//used on - text--top
+$text-small-min:1.2rem;
+//used on - gallery__text
+$text-small-med:1.3rem;
+//used on - content-items__text
+$text-small-med-med:1.6rem;
+//used on - navigation; footer__link&__text; gallery__description; section-projects__button; content-items__description
+$text-small:2rem;
+//used on - text--main; offerings_link
+$text-med-small:2.4rem;
+//used on - h-3;
+$text-med:2.8rem;
+
+
+$text-h1: 7rem;
+$text-h1-sm: 6.1rem;
 
 $z-default-layer:0;
 $z-background-layer:10;

@@ -20,8 +20,8 @@
 
         top:10%;
         border-radius:10rem;
-        width: 19rem;
-        height: 50rem;
+        width: 18rem;
+        height: 48rem;
         background-position:center;
         background-repeat:no-repeat;
         background-size: 35rem;
@@ -35,7 +35,7 @@
         }
 
         &--1{
-            left:0rem;
+            left:1rem;
             background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
             linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
 
@@ -53,7 +53,7 @@
             }
         }
         &--3{
-            left:34rem;
+            left:33rem;
             background-image: linear-gradient(to top, $color-purple-transparent 100%, transparent),
             linear-gradient(to top, $color-black-transparent 60%, transparent), url("../img/covers/pp.png");
 

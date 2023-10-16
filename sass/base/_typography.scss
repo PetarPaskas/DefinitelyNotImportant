@@ -2,34 +2,47 @@
     &-primary{
         text-transform: uppercase;
         color: $color-black;
-        @include text-standard($text-h1);
-        font-weight: 800;
-        line-height: 75%;
+        font-weight: bold;
+        line-height: 140%;
+        letter-spacing: 6px;
+        font-size: $text-h1;
     }
+}
+
+.h-1{
+    color:$color-black;
+    display:inline-block;
+    font-weight: bold;
+    font-size:$text-h1-sm;
+    text-transform: uppercase;
+    letter-spacing: 10px;
 }
 
 .h-2{
     display:inline-block;
     font-weight: 600;
-    font-size:4rem;
+    font-size:8rem;
     text-transform: uppercase;
 }
 
 .h-3{
     display:inline-block;
-    font-weight: 600;
-    font-size:$text-small-med;
+    font-weight: bold;
+    font-size:$text-med;
     text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
 .text{
-    text-transform: uppercase;
     display:inline-flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     white-space: nowrap;
     text-align: center;
+    text-transform: uppercase;
+
     &--top,
     &--main{
         display: inline-block;
@@ -37,14 +50,15 @@
 
     &--top{
         color: $color-orange;
-        font-size: $text-small;
+        font-size: $text-small-min;
+        letter-spacing: 3.6px;
         padding-bottom:.1rem;
+        font-weight: normal;
     }
     &--main{
         color: $color-light;
         font-size:$text-med-small;
-        font-weight: 600;
-        transform: scale(1, 1.2);
-        letter-spacing: -0.1rem;
+        letter-spacing: 3.6px;
+        font-weight: bold;
     }
 }

@@ -6,10 +6,15 @@
     flex-wrap: nowrap;
 
     &__item{
-        flex-grow:1;
+        //flex-grow:1;
+        flex-basis:calc(1/2*100%);
         list-style-type: none;
-        max-width: 60rem;
-        padding:0 2.5rem;
+        &:nth-child(odd){
+            padding-right:2.5rem;
+        }
+        &:nth-child(even){
+            padding-left:2.5rem;
+        }
     }
 
     &__header{
@@ -19,8 +24,9 @@
 
     }
     &__image{
+        height: 30rem;
         width:100%;
-        height: auto;
+        //height: auto;
     }
 
     &__text{
@@ -31,11 +37,10 @@
         display:flex;
         justify-content: start;
         align-items: center;
-        padding-top:1rem;
+        //padding-top:1rem;
 
         vertical-align: middle;
-        font-size: $text-small;
-        font-weight: 600;
+        font-size: 1.6rem;
         color:$color-green;
 
         &::before{
@@ -47,11 +52,11 @@
     }
 
     &__description{
-        font-weight: 400;
         text-transform: uppercase;
-        font-size: $text-small-min;
+        font-size: $text-small;
+        font-weight: 500;
         color:$color-light;
-        padding-top:1rem;
-        transform: scale(1,1.5);
+        letter-spacing: 3px;
+        padding-left:7rem;
     }
 }

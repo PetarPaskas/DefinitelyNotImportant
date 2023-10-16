@@ -1,8 +1,5 @@
 @mixin text-standard($font-size){
-     text-transform: uppercase;
      font-weight: 600;
-     transform:scaleY( 2.4);
-     transform-origin:left;
+     text-transform: uppercase;
      font-size:$font-size;
-     shape-outside: margin-box;
 }
