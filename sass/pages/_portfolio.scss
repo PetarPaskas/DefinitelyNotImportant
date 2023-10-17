@@ -7,9 +7,69 @@
         padding-bottom:5rem;
     }
 
-    .section-projects{
+    .section-portfolios{
         position:relative;
-        padding:10rem 15rem;
-        padding-top:20rem;
+        padding:20rem 15rem 0 15rem;
+
+        background-color: $color-light;
+        & .zigzag-container{
+            position:relative;
+            z-index: $z-content-layer;
+        }
+
+        &__wave{
+            position:absolute;
+            &--right{
+                right:0;
+            }
+            &--left{
+                top:45%;
+                left:0;
+            }
+            &--upper{
+                top:10%;
+            }
+            &--lower{
+                top:30%;
+            }
+        }
+
+        &__button{
+            transition:background-color .2s;
+            &.button{
+                padding:0.7rem 2.6rem;
+            }
+    
+            & .button__text{
+                font-size: $text-small;
+                letter-spacing: 4px;
+            }
+            &:hover{
+                background-color:$color-purple;
+            }
+        }
+
     }
+
+    .section-clients{
+        background-color: $color-purple;
+        padding:2rem;
+        & .notch-title{
+            background-color: $color-purple;
+        }
+    }
+
+    .section-form{
+        padding-top:0;
+
+        &__background-top-wave{
+            width: 100%;
+            max-height: 20rem;
+            object-fit: cover;
+            object-position: bottom;
+            margin-bottom:6rem;
+        }
+    }
+
+
 }

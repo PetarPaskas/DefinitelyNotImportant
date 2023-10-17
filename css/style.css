@@ -169,6 +169,9 @@ footer.footer {
 .u-padding-top-btm-med {
   padding: 5rem 0 !important; }
 
+.u-padding-top-btm-lg {
+  padding: 15rem 0 !important; }
+
 .u-ff-helvetica {
   font-family: 'helvetica' !important;
   letter-spacing: 1px !important;
@@ -480,10 +483,48 @@ footer.footer {
   padding-top: 5rem;
   padding-bottom: 5rem; }
 
-.portfolio .section-projects {
+.portfolio .section-portfolios {
   position: relative;
-  padding: 10rem 15rem;
-  padding-top: 20rem; }
+  padding: 20rem 15rem 0 15rem;
+  background-color: #FFF7E1; }
+  .portfolio .section-portfolios .zigzag-container {
+    position: relative;
+    z-index: 20; }
+  .portfolio .section-portfolios__wave {
+    position: absolute; }
+    .portfolio .section-portfolios__wave--right {
+      right: 0; }
+    .portfolio .section-portfolios__wave--left {
+      top: 45%;
+      left: 0; }
+    .portfolio .section-portfolios__wave--upper {
+      top: 10%; }
+    .portfolio .section-portfolios__wave--lower {
+      top: 30%; }
+  .portfolio .section-portfolios__button {
+    transition: background-color .2s; }
+    .portfolio .section-portfolios__button.button {
+      padding: 0.7rem 2.6rem; }
+    .portfolio .section-portfolios__button .button__text {
+      font-size: 2rem;
+      letter-spacing: 4px; }
+    .portfolio .section-portfolios__button:hover {
+      background-color: #2f2c96; }
+
+.portfolio .section-clients {
+  background-color: #2f2c96;
+  padding: 2rem; }
+  .portfolio .section-clients .notch-title {
+    background-color: #2f2c96; }
+
+.portfolio .section-form {
+  padding-top: 0; }
+  .portfolio .section-form__background-top-wave {
+    width: 100%;
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: bottom;
+    margin-bottom: 6rem; }
 
 .button {
   border-radius: 50px;
