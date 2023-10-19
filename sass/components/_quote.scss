@@ -4,6 +4,47 @@
     color:$color-white;
     padding:0 2rem;
 
+    &--orange{
+        background-color: $color-orange;
+    }
+
+    &--round{
+        border-radius: 15px;
+    }
+    &--med{
+        padding:2rem 4rem;
+        .quote__title{
+            font-size:$text-med;
+            letter-spacing: 4px;
+            font-weight: 600;
+            text-align: right;
+        }
+        .quote__text{
+            font-size:$text-small-med-med-med;
+            font-family: 'Helvetica';
+        }
+        .quote__quotee{
+            font-size:$text-large;
+            font-weight: 600;
+        }
+       .quote__open-quote,
+       .quote__close-quote{
+        width:9rem;
+        height: 9rem;
+       }
+       .quote__open-quote{
+        top:-10%;
+        right:7%;
+       }
+       .quote__close-quote{
+        bottom:-10%;
+        right:7%;
+       }
+       .quote__row{
+        padding-bottom:3rem;
+       }
+    }
+
     &__title,
     &__quotee{
         display:inline-block;
@@ -36,6 +77,9 @@
 
         &--center{
             text-align: center;
+        }
+        &--start{
+            text-align: start;
         }
     }
 

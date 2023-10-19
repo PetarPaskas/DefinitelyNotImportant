@@ -14,7 +14,8 @@
 
 @import './pages/_home.scss';
 @import './pages/_case-studies.scss';
-@import './pages/portfolio.scss';
+@import './pages/_portfolio.scss';
+@import './pages/_services.scss';
 
 @import './components/_button.scss'; 
 @import './components/_menu.scss';              
@@ -31,5 +32,7 @@
 @import './components/_quote.scss';
 @import './components/_page-notch.scss'; 
 @import './components/_zigzag-container.scss';
+@import './components/_card.scss';
+@import './components/_button-slider.scss';
 
 @import './components/_case-study.scss';
