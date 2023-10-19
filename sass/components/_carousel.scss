@@ -37,11 +37,27 @@
 
     &__slide{
         display: inline-block;
-        animation:10s spin linear infinite;
+        //animation:18s spin linear infinite;
     }
 
     &__image{
         height:15rem;
         margin: 0 4rem;
+    }
+
+    &__item{
+    }
+
+    &--table{
+
+        .logos__slide{
+            display:inline-table;
+            border-collapse:separate;
+            border-spacing: 2.5rem;
+            
+            &>*{
+                display: table-cell;
+            }
+        }
     }
 }

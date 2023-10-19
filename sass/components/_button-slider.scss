@@ -1,0 +1,29 @@
+.button-slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+    }
+    &__button{
+        border-radius: 50%;
+        width:2.8rem;
+        height: 2.8rem;
+        outline:none;
+        border:2px solid $color-orange;
+        background-color: transparent;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &--selected{
+            border:2px solid transparent;
+            background-color: $color-orange;
+        }
+    }
+}

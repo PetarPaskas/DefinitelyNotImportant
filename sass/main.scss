@@ -13,14 +13,26 @@
 @import './layout/_layers.scss'; 
 
 @import './pages/_home.scss';
+@import './pages/_case-studies.scss';
+@import './pages/_portfolio.scss';
+@import './pages/_services.scss';
 
-@import './components/_button.scss';
-@import './components/_menu.scss';       
+@import './components/_button.scss'; 
+@import './components/_menu.scss';              
 @import './components/_composition.scss';
-@import './components/_offerings.scss';   
-@import './components/_gallery.scss';      
+@import './components/_offerings.scss';    
+@import './components/_gallery.scss';              
 @import './components/_notch-title.scss'; 
 @import './components/_content-items.scss'; 
-@import './components/_carousel.scss';                
+@import './components/_carousel.scss';                 
 @import './components/_form.scss';  
-         
+
+@import './components/_study-content.scss';
+@import './components/_paragraph.scss';
+@import './components/_quote.scss';
+@import './components/_page-notch.scss'; 
+@import './components/_zigzag-container.scss';
+@import './components/_card.scss';
+@import './components/_button-slider.scss';
+
+@import './components/_case-study.scss';
