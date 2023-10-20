@@ -10,13 +10,26 @@
         text-transform: uppercase;
         padding-bottom:1rem;
     }
+
+    &__line{
+        display: inline-block;
+        font-size:inherit;
+        width:100%;
+    }
     &__content{
         display:inline-block;
         font-size:$text-small-med-med;
         letter-spacing:2px;
 
+        &--helvetica{
+            font-size: $text-small-med-med;
+            font-weight: 400;
+            font-family: 'Helvetica';
+            letter-spacing: 0.64px;
+        }
+
         &:not(:last-child){
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
         }
     }
 }

@@ -95,3 +95,13 @@
         margin:0 auto;
     }
 }
+
+.text-blog{
+    &__row{
+        display: block;
+        &:not(:last-child)
+        {
+            margin-bottom: 3rem;
+        }
+    }
+}
