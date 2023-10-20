@@ -9,6 +9,10 @@
         background-color: $color-green;
     }
 
+    &--mid{
+        padding:2rem 3rem;
+    }
+
     &__text{
         display:inline-block;
         text-transform: uppercase;
@@ -17,7 +21,14 @@
         font-weight: bold;
         letter-spacing: 4px;
     }
-
+    &__text--mid{
+        font-size:$text-med-med;
+    }
+    &--top-center{
+        top:0;
+        left:50%;
+        transform:translate(-50%,-60%);
+    }
     &--top-left{
         top:0;
         left:7%;

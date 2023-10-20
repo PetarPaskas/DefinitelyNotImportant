@@ -31,9 +31,28 @@
 .u-padding-top-btm-lg{
     padding:15rem 0 !important;
 }
+.u-padding-min{
+    padding:1rem !important;
+}
 .u-ff-helvetica{
     font-family: 'helvetica' !important;
     letter-spacing: 1px !important;
     font-weight: 400 !important;
     font-size:1.8rem !important;
 } 
+.u-center-div{
+    margin:0 auto !important;
+}
+.u-mw-130{
+    max-width: 130rem !important;
+}
+.u-inherit-background{
+    background-color: inherit !important;
+}
+.u-round-edges{
+    border-radius: 20px;
+}
+.u-content-layer{
+    position: relative !important;
+    z-index: $z-content-layer;
+}
