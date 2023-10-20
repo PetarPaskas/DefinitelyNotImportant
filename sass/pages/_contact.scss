@@ -1,0 +1,25 @@
+.contact{
+    .header{
+        background-color: $color-green;
+        padding-top:2rem;
+        padding-bottom:7rem;
+        .menu{
+            align-items: center;
+        }
+        .page-notch{
+            padding:2rem;
+        }
+        z-index: $z-content-layer;
+    }
+
+    .section-form{
+        position:relative;
+        
+        &__wave-purple--top-right{
+            position:absolute;
+            top:-2%;
+            right: 0;
+            z-index: $z-background-layer;
+        }
+    }
+}

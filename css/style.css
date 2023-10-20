@@ -602,6 +602,24 @@ footer.footer {
     max-width: 80rem;
     margin: 0 auto; }
 
+.contact .header {
+  background-color: #00A979;
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  z-index: 20; }
+  .contact .header .menu {
+    align-items: center; }
+  .contact .header .page-notch {
+    padding: 2rem; }
+
+.contact .section-form {
+  position: relative; }
+  .contact .section-form__wave-purple--top-right {
+    position: absolute;
+    top: -2%;
+    right: 0;
+    z-index: 10; }
+
 .button {
   border-radius: 50px;
   padding: 0.6rem 1.7rem;
