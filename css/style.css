@@ -169,6 +169,24 @@ footer.footer {
   .text-blog__row:not(:last-child) {
     margin-bottom: 3rem; }
 
+.text-testimonial .text-title {
+  font-family: 'helvetica';
+  font-size: 2.2rem;
+  font-weight: 400; }
+
+.text-testimonial .text-client {
+  font-size: 6.1rem;
+  letter-spacing: 4px;
+  padding-bottom: 1rem; }
+
+.text-testimonial .text-description {
+  font-family: 'helvetica';
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+  line-height: 148%; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -217,6 +235,9 @@ footer.footer {
 .u-mw-130 {
   max-width: 130rem !important; }
 
+.u-mw-80 {
+  max-width: 80rem !important; }
+
 .u-inherit-background {
   background-color: inherit !important; }
 
@@ -226,6 +247,26 @@ footer.footer {
 .u-content-layer {
   position: relative !important;
   z-index: 20; }
+
+.u-flex-column {
+  display: flex;
+  flex-direction: column; }
+  .u-flex-column--center {
+    justify-content: center;
+    align-items: center; }
+
+.u-image-cover-top-mh50 {
+  display: inline-block;
+  width: 100%;
+  max-height: 50rem;
+  object-fit: cover;
+  object-position: top; }
+
+.u-margin-top {
+  margin-top: 5rem !important; }
+
+.u-margin-top-mid {
+  margin-top: 10rem !important; }
 
 @keyframes spin {
   0% {
@@ -687,8 +728,20 @@ footer.footer {
   padding-bottom: 5rem; }
 
 .testimonials .section-testimonials {
+  position: relative;
   padding: 20rem;
-  background-color: #FFF7E1; }
+  background-color: #FFF7E1;
+  overflow: hidden; }
+  .testimonials .section-testimonials__img {
+    position: absolute;
+    width: 30%; }
+    .testimonials .section-testimonials__img--top-left {
+      top: -2%;
+      left: 0; }
+    .testimonials .section-testimonials__img--bottom-right {
+      top: 50%;
+      right: 0;
+      width: 40%; }
 
 .testimonials .section-clients {
   background-color: #2f2c96;
@@ -697,7 +750,7 @@ footer.footer {
     background-color: #2f2c96; }
 
 .testimonials .section-form {
-  padding-top: 0; }
+  padding-top: 10rem; }
   .testimonials .section-form__background-top-wave {
     width: 100%;
     max-height: 20rem;
@@ -725,6 +778,14 @@ footer.footer {
     color: #FFF7E1; }
   .button:hover {
     cursor: pointer; }
+  .button--testimonial {
+    font-size: 2.2rem;
+    letter-spacing: 4px;
+    padding: 0.7rem 2rem 0.7rem 2.4rem;
+    width: auto;
+    transition: background-color .2s; }
+    .button--testimonial:hover {
+      background-color: #2f2c96; }
 
 .menu {
   margin: 0 auto;

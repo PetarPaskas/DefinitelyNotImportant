@@ -105,3 +105,27 @@
         }
     }
 }
+
+.text-testimonial{
+
+    .text-title{
+        font-family: 'helvetica';
+        font-size:$text-small-big;
+        font-weight: 400;
+    }
+    
+    .text-client{
+        font-size:$text-h1-sm;
+        letter-spacing: 4px;
+        padding-bottom:1rem;
+    }
+
+    .text-description{
+        font-family: 'helvetica';
+        letter-spacing: 1px;
+        font-weight: 400;
+        font-size:1.8rem;
+        padding-bottom:2rem;
+        line-height: 148%;
+    }
+}
