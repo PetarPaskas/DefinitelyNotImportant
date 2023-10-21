@@ -7,8 +7,24 @@
     }
 
     .section-testimonials{
+        position:relative;
         padding:20rem;
         background-color: $color-light;
+        overflow: hidden;
+
+        &__img{
+            position:absolute;
+            width: 30%;
+            &--top-left{
+                top:-2%;
+                left:0;
+            }
+            &--bottom-right{
+                top:50%;
+                right:0;
+                width:40%;
+            }
+        }
     }
 
     .section-clients {
@@ -21,7 +37,7 @@
     }
 
     .section-form {
-        padding-top: 0;
+        padding-top: 10rem;
 
         &__background-top-wave {
             width: 100%;

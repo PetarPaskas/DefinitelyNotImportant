@@ -46,6 +46,9 @@
 .u-mw-130{
     max-width: 130rem !important;
 }
+.u-mw-80{
+    max-width: 80rem !important;
+}
 .u-inherit-background{
     background-color: inherit !important;
 }
@@ -55,4 +58,28 @@
 .u-content-layer{
     position: relative !important;
     z-index: $z-content-layer;
+}
+.u-flex-column{
+    display:flex;
+    flex-direction: column;
+    &--center{
+        justify-content: center;
+        align-items: center;
+    }
+}
+.u-flex-row{
+
+}
+.u-image-cover-top-mh50{
+    display: inline-block;
+    width:100%;
+    max-height: 50rem;
+    object-fit: cover;
+    object-position: top;
+}
+.u-margin-top{
+    margin-top: 5rem !important;
+}
+.u-margin-top-mid{
+    margin-top:10rem !important;
 }

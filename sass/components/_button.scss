@@ -28,4 +28,15 @@
     &:hover{
         cursor: pointer;
     }
+
+    &--testimonial{
+        font-size:$text-small-big;
+        letter-spacing: 4px;
+        padding: 0.7rem 2rem 0.7rem 2.4rem;
+        width:auto;
+        transition:background-color .2s;
+        &:hover{
+            background-color: $color-purple;
+        }
+    }
 }
