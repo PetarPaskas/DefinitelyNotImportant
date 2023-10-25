@@ -11,6 +11,10 @@
         align-items:center;
         width:100%;
         padding:3rem 0 0 0;
+        @include respond('phone'){
+            flex-direction: column;
+            padding:0;
+        }
     }
     &__group{
         flex-grow:0;
@@ -19,6 +23,11 @@
         &--full-width{
             flex-basis: 100%;
         }
+        @include respond('phone'){
+            width: 80%;
+            margin-top:3rem;
+        }
+
     }
     &__input{
         font-family: inherit;
@@ -31,6 +40,10 @@
         font-size: $text-med-small;
         letter-spacing: 3px;
         color: $color-black;
+
+        @include respond('tab-land'){
+            letter-spacing: 2px;
+        }
         
         &:focus{
             outline:none;
@@ -42,6 +55,11 @@
             font-weight: bold;
             overflow: visible;
             letter-spacing: 4px;
+
+            @include respond('tab-land'){
+                font-size:$text-small;
+                letter-spacing: 2px;
+            }
         }
 
     }
@@ -58,6 +76,10 @@
         transition:all .5s;
         transform:translateY(-3rem);
 
+        @include respond('tab-land'){
+            font-size:$text-small;
+        }
+
     }
 
     &__input:placeholder-shown + &__label{
@@ -69,6 +91,9 @@
         visibility: visible;
         opacity:1;
         transform:translateY(-10rem);
+        @include respond('tab-land'){
+            transform:translateY(-9.5rem);
+        }
     }
 
     &__button{

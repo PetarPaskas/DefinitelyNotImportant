@@ -6,6 +6,9 @@
         line-height: 140%;
         letter-spacing: 6px;
         font-size: $text-h1;
+        @include respond('phone'){
+            font-size: $text-h2;
+        }
     }
 }
 
@@ -16,6 +19,11 @@
     font-size:$text-h1-sm;
     text-transform: uppercase;
     letter-spacing: 10px;
+
+    @include respond('tab-land'){
+        font-size:$text-h2;
+        letter-spacing: 6px;
+    }
 }
 
 .h-2{
@@ -81,7 +89,7 @@
         font-weight: 600;
         letter-spacing: 6px;
         padding-bottom: 1rem;
-        font-size:$tex-h2;
+        font-size:$text-h2;
         text-transform: uppercase;
     }
 

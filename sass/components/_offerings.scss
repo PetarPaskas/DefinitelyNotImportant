@@ -4,6 +4,11 @@
     margin:0 auto;
     list-style-type: none;
 
+    @include respond('phone'){
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__link{
         text-decoration: none;
         color:inherit;
@@ -28,6 +33,10 @@
 
         &:not(:last-child){
             border-right: 1px solid $color-light;
+            @include respond('phone'){
+                border-right: 1px solid transparent;
+                margin-bottom: 1rem;
+            }
         }
 
         &>*{

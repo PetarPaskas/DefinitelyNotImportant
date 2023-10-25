@@ -3,3 +3,64 @@
      text-transform: uppercase;
      font-size:$font-size;
 }
+
+//Media query manager
+//Desktop first
+/*
+
+0-600px ---Phone
+
+600-900px ---Tablet portrait
+
+900-1200px ---Tablet landscape
+
+1200-1800px ---Desktop
+
+1800-Infinite ---Big Desktop
+
+    -phone
+    -tab-port
+    -tab-land
+    -big-desktop
+
+Please use em units instead of pixels/rem. 
+They always point to the browser default font size.
+*/
+
+@mixin respond($view){
+     @if $view == 'phone' {
+         @media only screen and (max-width:37.5em){ //600px
+             @content;
+         }
+     }
+     @if $view == 'tab-generic'{
+        @media only screen and (max-width:48em){ //768px
+            @content;
+        }
+     }
+     @if $view == 'tab-port'{
+         @media only screen and (max-width:56.25em){ //900px
+             @content;
+        }        
+     }
+     @if $view == 'laptop'{
+        @media only screen and (max-width:64em){ //1024px
+            @content;
+        }
+     }
+     @if $view == 'tab-land'{
+         @media only screen and (max-width:75em){ //1200px
+             @content;
+         }
+     }
+     @if $view == 'big-laptop'{
+        @media only screen and (max-width:90em){ //1440px
+            @content;
+        }
+     }
+     @if $view == 'big-desktop'{
+         @media only screen and (min-width:112.5em){  //1800px
+             @content;
+         }
+     }
+ }

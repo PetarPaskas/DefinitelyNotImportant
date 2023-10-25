@@ -1,33 +1,80 @@
 .header{
+    overflow-x:hidden;
+    overflow-y: clip;
+    background-color: $color-light;
+    position:relative;
+    padding-bottom:15rem;
+
     &__background{
         width:100%;
         position:absolute;
         bottom:0;
         left:0;
         padding-top:20rem;
-        transform: translateY(5%);
+
+        &--tablet,
+        &--phone{
+            display: none;
+            visibility: hidden;
+            width:100%;
+        }
+
+        @include respond('big-laptop'){
+            padding-top:0rem;
+        }
+
+        @include respond('tab-port'){
+            &--big{
+                display:none;
+                visibility: hidden;
+            }
+
+            &--tablet{
+                display:block;
+                visibility: visible;
+            }
+        }
+        @include respond('phone'){
+            &--tablet{
+                display: none;
+                visibility: hidden;
+            }
+            &--phone{
+                visibility: visible;
+                display: block;
+                height: 70rem;
+                width: auto;
+                position:relative;
+                left:50%;
+                transform: translateX(-50%);
+            }
+        }
     }
-    background-color: $color-light;
-    position:relative;
-    padding-bottom:15rem;
 
     &__logo-wave{
         position:absolute;
         top:0;
         left:0;
+        @include respond('tab-port'){
+            height: 30rem;
+        }
+        @include respond('tab-land'){
+            height: 35rem;
+        }
+        @include respond('phone'){
+            height: 28rem;
+        }
     }
 
     &__overflow-container{
         overflow: hidden;
-    }s
+    }
 
     &__green-wave{
 
         height:auto;
         width:100%;
         transform:translateY(7%);
-
-
         &--container{
             position:absolute;
             width:100%;
@@ -39,6 +86,9 @@
     &__content{
         padding-top:4rem;
         position:relative;
+        @include respond('tab-land'){
+            padding-top:2rem;
+        }
     }
 
     &__main{
@@ -48,31 +98,92 @@
         padding:7rem 0;
         justify-content: space-around;
         max-width: 114rem;
+
+        @include respond('big-laptop'){
+            padding: 1rem 0;
+            justify-content: space-between;
+        }
+        @include respond('tab-port'){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @include respond('tab-land'){
+            margin-top:3rem;
+        }
     }
     &__text-box{
         display:flex;
         align-items: center; 
+        max-width: 38rem;
+
+        @include respond('big-laptop'){
+            margin-left:10rem;
+        }
+        @include respond('laptop'){
+            margin-left: 22rem;
+        }
+        @include respond('tab-land'){
+            margin-left:0;
+            text-align: center;
+            max-width: none;
+            padding-bottom:5rem;
+        }
+        @include respond('phone'){
+            padding-bottom: 2rem;
+        }
     }
+
     & .heading-primary{
         max-width: 20rem;
         padding-bottom:3rem;
+
+        .u-text-break{
+            display:none;
+        }
+
+        @include respond('tab-land'){
+            max-width: none;
+            .u-text-break{
+                display:block;
+            }
+        }
     }
 
     &__content-box{
-        
         & .composition{
             margin:0 auto;
             width:54rem;
             margin-left:15rem;
+
+            @include respond('big-laptop'){
+                width:60rem;
+            }
+            @include respond('tab-land'){
+                margin-left:0;
+            }
         }
     }
-    &__main &__text-box{
-        max-width: 38rem;
-    }
-
     &__offerings{
         padding-top:4rem;
         text-align: center;
+        
+        @include respond('big-laptop'){
+            transform:translateY(2rem);
+        }
+        @include respond('tab-land'){
+            padding-bottom:3rem;
+            transform:translateY(5.5rem);
+        }
+        @include respond('laptop'){
+            transform:translateY(8rem);
+        }
+        @include respond('tab-port'){
+            transform:none;
+        }
+        @include respond('phone'){
+            padding-top:1rem;
+        }
     }
 
 }

@@ -2,9 +2,20 @@
     position:relative;
     height:48rem;
 
+    @include respond('tab-land'){
+        height: 54rem;
+    }
+    @include respond('phone'){
+        height: 48rem;
+    }
+
     &:not(:hover){
         .composition__item--2{
             transform:translateY(-5rem);
+
+            @include respond('tab-land'){
+                transform:translate(-50%,-60%);
+            }
         }
     }
 
@@ -27,11 +38,23 @@
         background-size: 35rem;
         transition: transform .3s, filter .2s;
 
+        @include respond('big-laptop'){
+            width:17rem;
+            height: 44rem;
+        }
+        @include respond('tab-land'){
+            width:20rem;
+            height: 52rem;
+        }
+        @include respond('phone'){
+            width:16rem;
+            height: 44rem;
+        }
+
         &:hover{
             z-index:$z-pop-content-layer;
             transform: translateY(-5rem) scale(1.1);
             filter:blur(0px) !important;
-
         }
 
         &--1{
@@ -41,6 +64,18 @@
 
             &:hover{
                 background-image: url("../img/covers/pp.png");
+                @include respond('tab-land'){
+                    transform:translate(-130%,-50%) scale(1.1);
+                }
+            }
+
+            @include respond('big-laptop'){
+                left:3rem;
+            }
+            @include respond('tab-land'){
+                top:50%;
+                left:50%;
+                transform:translate(-130%,-50%);
             }
         }
         &--2{
@@ -50,6 +85,14 @@
 
             &:hover{
                 background-image: url("../img/covers/pp.png");
+                @include respond('tab-land'){
+                    transform:translate(-50%,-50%) scale(1.1);
+                }
+            }
+            @include respond('tab-land'){
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
             }
         }
         &--3{
@@ -59,6 +102,18 @@
 
             &:hover{
                 background-image: url("../img/covers/pp.png");
+                @include respond('tab-land'){
+                    transform:translate(30%,-50%) scale(1.1);
+                }
+            }
+
+            @include respond('big-laptop'){
+                left:31rem
+            }
+            @include respond('tab-land'){
+                top:50%;
+                left:50%;
+                transform:translate(30%,-50%);
             }
         }
     }

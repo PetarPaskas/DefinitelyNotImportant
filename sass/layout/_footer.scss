@@ -19,10 +19,22 @@
             top:0;
             left:0;
             height: 40rem;
+            @include respond('laptop'){
+                height: 30rem;
+            }
+            @include respond('tab-generic'){
+                height: 25rem;
+            }
         }
         &--bottom{
             bottom:0;
             right:0;
+            @include respond('laptop'){
+                height: 25rem;
+            }
+            @include respond('tab-generic'){
+                height: 20rem;
+            }
         }
     }
 
@@ -32,19 +44,28 @@
         display:flex;
         padding:10rem 0 10rem 0;    
         justify-content: space-between;
+
+        @include respond('tab-generic'){
+            padding:6rem 0 8rem 0;
+        }
     
         &>*{
             flex-basis:calc(1/2*100%);
-           // flex-grow:1;
         }
     }
 
     &__logo-box{
         text-align: right;
         padding-right:4rem; //connected
+        @include respond('tab-generic'){
+            padding-top:2rem;
+        }
     }
     &__logo{
         margin-right:5rem;
+        @include respond('tab-generic'){
+            height: 6rem;
+        }
     }
     &__list{
         display:flex;

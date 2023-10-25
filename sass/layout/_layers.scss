@@ -8,6 +8,10 @@
 
     padding:inherit;
     margin:inherit;
+
+    &--low{
+        z-index:9;
+    }
 }
 
 .content-layer{

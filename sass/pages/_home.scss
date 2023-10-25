@@ -5,21 +5,45 @@
 
     &__overflow-container{
         overflow:hidden;
+
         &--wave{
             position:absolute;
             top:0;
             right:0;
             z-index:5;
+            top:-10%;
+            @include respond('tab-land'){
+                top:-15%;
+            }
         }            
     }
     &__wave{
-        transform: translateY(-20%);
+
+        @include respond('big-laptop'){
+           width:54rem;
+        }
+        @include respond('tab-land'){
+            width:50rem;
+        }
+        @include respond('laptop'){
+            width:40rem;
+        }
     }
 
     & .gallery{
         margin:0 auto; 
         padding-bottom:7rem;
         width:140rem;
+        
+        @include respond('big-laptop'){
+            width:100rem;
+        }
+        @include respond('tab-generic'){
+            max-width: 90rem;
+        }
+        @include respond('phone'){
+            max-width: 60rem;
+        }
     }
     & .gallery__item{
        &--1{
@@ -50,6 +74,37 @@
         grid-column: col 6 / col 8;
         grid-row: 7 / 13; 
        } 
+
+       @include respond('phone'){
+           &--1{
+            grid-column: col 1 / col 5;
+            grid-row: 1 / 4;
+           } 
+           &--2{
+            grid-column: col 5 / col 9;
+            grid-row: 1 / 4;
+           } 
+           &--3{
+            grid-column: start / end;
+            grid-row: 4 / 6;
+           } 
+           &--4{
+            grid-column: start / end;
+            grid-row: 6 / 8;
+           } 
+           &--5{
+            grid-column: start / end;
+            grid-row: 8 / 10;
+           } 
+           &--6{
+            grid-column: col 1 / col 5;
+            grid-row: 10 / 13;
+           } 
+           &--7{
+            grid-column: col 5 / col 9;
+            grid-row: 10 / 13; 
+           } 
+       }
     }
 
     &__button{
@@ -84,6 +139,10 @@
     padding: 4rem 13rem 5rem 13rem;
     position:relative;
 
+    @include respond('laptop'){
+        padding: 4rem 5rem 5rem 5rem;
+    }
+
     &__wave{
         position:absolute;
         top:0;
@@ -95,6 +154,10 @@
         left:0;
         width: 100%;
         transform: translateY(100%);
+        
+        @include respond('phone'){
+            transform: translateY(100%) scale(1.9);
+        }
     }
 
     & .h-3{
@@ -129,6 +192,17 @@
     padding:16rem 0 0 0;
 
     & .form{
-        margin-top: -3rem;
+        max-width: 140rem;
+        margin: -3rem auto 0 auto;
+
+        @include respond('big-laptop'){
+            max-width: 100rem;
+        }
+        @include respond('tab-land'){
+            max-width: 90rem;
+        }
+        @include respond('tab-generic'){
+            max-width: 80rem;
+        }
     }
 }
