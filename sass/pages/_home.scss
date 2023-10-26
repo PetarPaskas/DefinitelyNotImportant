@@ -15,6 +15,9 @@
             @include respond('tab-land'){
                 top:-15%;
             }
+            @include respond('phone'){
+                top:-10%;
+            }
         }            
     }
     &__wave{
@@ -40,9 +43,13 @@
         }
         @include respond('tab-generic'){
             max-width: 90rem;
+            max-width: 90vw;
         }
         @include respond('phone'){
-            max-width: 60rem;
+            max-width: 90vw;
+        }
+        @include respond('phone-med'){
+            padding-bottom:0rem;
         }
     }
     & .gallery__item{
@@ -142,11 +149,18 @@
     @include respond('laptop'){
         padding: 4rem 5rem 5rem 5rem;
     }
+    @include respond('phone'){
+        padding: 4rem 2rem 5rem 2rem;
+        overflow-x: clip;
+    }
 
     &__wave{
         position:absolute;
         top:0;
         right:0;
+        @include respond('phone'){
+            width:25rem
+        }
     }
     &__bottom-wave{
         position:absolute;
@@ -189,7 +203,15 @@
 
 .section-form{
     background-color: $color-light;
-    padding:16rem 0 0 0;
+    padding-top:16rem;
+
+    @include respond('phone'){
+        padding-top:10rem;
+    }
+
+    @include respond('phone-med'){
+        padding-top:6rem;
+    }
 
     & .form{
         max-width: 140rem;

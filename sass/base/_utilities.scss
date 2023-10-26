@@ -24,6 +24,9 @@
 }
 .u-padding-bottom-med{
     padding-bottom: 15rem !important;
+    @include respond('phone-med'){
+        padding-bottom: 7rem !important;
+    }
 }
 .u-padding-top-btm-med{
     padding:5rem 0 !important;

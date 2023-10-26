@@ -30,6 +30,9 @@
             @include respond('phone'){
                 height: 6rem;
             }
+            @include respond('phone-med'){
+                height: 5rem;
+            }
         }
     }
 }

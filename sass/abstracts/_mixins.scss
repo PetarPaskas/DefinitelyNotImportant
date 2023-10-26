@@ -28,6 +28,21 @@ They always point to the browser default font size.
 */
 
 @mixin respond($view){
+    @if $view == 'phone-sm-sm'{
+        @media only screen and (max-width:22.5em){
+            @content;
+        }
+    }
+    @if $view == 'phone-sm'{
+        @media only screen and (max-width:25em){
+            @content;
+        }
+    }
+    @if $view == 'phone-med'{
+        @media only screen and (max-width:29em){
+            @content;
+        }
+    }
      @if $view == 'phone' {
          @media only screen and (max-width:37.5em){ //600px
              @content;

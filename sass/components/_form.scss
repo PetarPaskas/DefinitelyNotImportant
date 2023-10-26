@@ -24,10 +24,9 @@
             flex-basis: 100%;
         }
         @include respond('phone'){
-            width: 80%;
+            width: 90%;
             margin-top:3rem;
         }
-
     }
     &__input{
         font-family: inherit;

@@ -8,6 +8,9 @@
     @include respond('phone'){
         height: 48rem;
     }
+    @include respond('phone-med'){
+        height: 42rem;
+    }
 
     &:not(:hover){
         .composition__item--2{
@@ -49,6 +52,10 @@
         @include respond('phone'){
             width:16rem;
             height: 44rem;
+        }
+        @include respond('phone-med'){
+            width: 15rem;
+            height: 42rem;
         }
 
         &:hover{

@@ -30,6 +30,12 @@
     @include respond('phone'){
         font-size: 56.25%; //1rem = 10px
     }
+    @include respond('phone-med'){
+        font-size: 56.25%;
+    }
+    @include respond('phone-sm'){
+        font-size:53.3%; //1rem = 8px
+    }
 }
 
 body{

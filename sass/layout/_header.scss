@@ -49,6 +49,12 @@
                 transform: translateX(-50%);
             }
         }
+        @include respond('phone-med'){
+            &--phone{
+                height: 50rem;
+                transform: translate(-50%,-10%) scale(1.1);
+            }
+        }
     }
 
     &__logo-wave{
@@ -63,6 +69,10 @@
         }
         @include respond('phone'){
             height: 28rem;
+        }
+        @include respond('phone-med'){
+            height: 22rem;
+            left:-3rem;
         }
     }
 
@@ -120,17 +130,20 @@
         @include respond('big-laptop'){
             margin-left:10rem;
         }
-        @include respond('laptop'){
-            margin-left: 22rem;
-        }
         @include respond('tab-land'){
             margin-left:0;
             text-align: center;
             max-width: none;
             padding-bottom:5rem;
         }
+        @include respond('laptop'){
+            margin-left: 2rem;
+        }
         @include respond('phone'){
-            padding-bottom: 2rem;
+            padding-bottom: 4rem;
+        }
+        @include respond('phone-med'){
+            padding-bottom: 6rem;
         }
     }
 
@@ -183,6 +196,10 @@
         }
         @include respond('phone'){
             padding-top:1rem;
+        }
+        @include respond('phone-med'){
+            padding-bottom: 1rem;
+            //transform:translateY(2.5rem);
         }
     }
 
