@@ -853,6 +853,7 @@ footer.footer {
         max-width: 80rem; } }
 
 .case-studies .header {
+  overflow: visible;
   padding-top: 5rem;
   padding-bottom: 0px; }
 
@@ -896,6 +897,7 @@ footer.footer {
     transform: translateY(99%); }
 
 .portfolio .header {
+  overflow: visible;
   position: relative;
   background-color: #00A979;
   padding-top: 5rem;
@@ -954,6 +956,7 @@ footer.footer {
   z-index: -1; }
 
 .services .header {
+  overflow: visible;
   position: relative;
   padding: 5rem 10rem 15rem 10rem;
   z-index: 20; }
@@ -996,6 +999,7 @@ footer.footer {
     margin: 0 auto; }
 
 .contact .header {
+  overflow: visible;
   background-color: #00A979;
   padding-top: 2rem;
   padding-bottom: 7rem;
@@ -1014,6 +1018,7 @@ footer.footer {
     z-index: 10; }
 
 .blog .header {
+  overflow: visible;
   background-color: #00A979;
   padding-top: 2rem;
   padding-bottom: 7rem; }
@@ -1050,6 +1055,7 @@ footer.footer {
   background-color: #00A979; }
 
 .testimonials .header {
+  overflow: visible;
   position: relative;
   background-color: #00A979;
   padding-top: 5rem;
