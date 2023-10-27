@@ -14,13 +14,33 @@
             .zigzag-container__item-description{
                 text-align:end;
                 padding-left:30rem;
+                @include respond('tab-land'){
+                    padding-left:20rem;
+                }
+                @include respond('phone'){
+                    padding:0;
+                }
+            }
+            @include respond('phone'){
+                flex-direction: column;
             }
         }
+        
         &:nth-child(even){
             flex-direction: row-reverse;
             .zigzag-container__item-description{
                 text-align:start;
                 padding-right:30rem;
+                @include respond('tab-land'){
+                    padding-right:20rem;
+                }
+                @include respond('phone'){
+                    padding:0;
+                }
+            }
+
+            @include respond('phone'){
+                flex-direction: column;
             }
         }
         &-description{
@@ -33,6 +53,9 @@
         }
         &-presentation{
             min-width:57%;
+            @include respond('tab-land'){
+                min-width:70%;
+            }
         }
     }
 

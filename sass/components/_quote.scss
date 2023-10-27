@@ -13,24 +13,46 @@
     }
     &--med{
         padding:2rem 4rem;
+
+        @include respond('phone-med'){
+            padding:1rem 2rem;
+        }
         .quote__title{
             font-size:$text-med;
             letter-spacing: 4px;
             font-weight: 600;
             text-align: right;
+            @include respond('phone'){
+                font-size: $text-small-med-med-med;
+            }
         }
         .quote__text{
             font-size:$text-small-med-med-med;
             font-family: 'Helvetica';
+            @include respond('phone-med'){
+                width:95%;
+                font-size: $text-small-med-med;
+            }
         }
         .quote__quotee{
             font-size:$text-large;
             font-weight: 600;
+            @include respond('phone'){
+                font-size:$text-small;
+            }
+            @include respond('phone-med'){
+                font-size:$text-small-med-med-med;
+                letter-spacing: 3px;
+            }
         }
        .quote__open-quote,
        .quote__close-quote{
         width:9rem;
         height: 9rem;
+        @include respond('phone-med'){
+            width: 7rem;
+            height: 7rem;
+        }
        }
        .quote__open-quote{
         top:-10%;
@@ -42,6 +64,9 @@
        }
        .quote__row{
         padding-bottom:3rem;
+        @include respond('phone-med'){
+            padding-bottom: 2rem;
+        }
        }
     }
 

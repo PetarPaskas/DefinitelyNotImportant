@@ -54,10 +54,25 @@
             display:inline-table;
             border-collapse:separate;
             border-spacing: 2.5rem;
+
+            @include respond('tab-land'){
+                display: block;
+            }
             
             &>*{
                 display: table-cell;
+
+                @include respond('tab-land'){
+                    display:inline-block;
+                    margin-right:2.5rem;
+                    min-height: 35rem;
+                    vertical-align: top;
+                }
+                @include respond('phone'){
+                    min-height: 28rem;
+                }
             }
+
         }
     }
 }

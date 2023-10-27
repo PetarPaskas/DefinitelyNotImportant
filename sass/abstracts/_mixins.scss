@@ -79,3 +79,9 @@ They always point to the browser default font size.
          }
      }
  }
+
+ @mixin touchDevices(){
+    @media (max-width:75em) and (pointer:coarse) and (hover:none){
+        @content;
+    }
+ }

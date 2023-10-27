@@ -9,10 +9,12 @@
     text-align: center;
     z-index: $z-background-layer;
     transform:translate(-50%,50%);
-
-
     max-width: 30%;
 
+    @include respond('tab-port'){
+        max-width:fit-content;
+        min-width: 35%;
+    }
     
     &__content{
         color:$color-black;
@@ -26,6 +28,12 @@
         letter-spacing:8px;
         padding-left:8px;
         width:100%;
+        text-wrap: nowrap;
+
+        @include respond('tab-port'){
+            font-size:$text-h2-sm;
+            letter-spacing: 6px;
+        }
     }
     &__sub-heading{
         display:inline-block;

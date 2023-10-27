@@ -34,6 +34,9 @@
             height: 5rem;
         }
         &-img{
+            &--white{
+                filter: drop-shadow(0 0 0.15rem $color-black);
+            }
             @include respond('tab-land'){
                 height: 7rem;
                 width: auto;

@@ -1,4 +1,11 @@
 .button{
+
+    border-radius:50px;
+    padding:0.6rem 1.7rem 0.6rem 1.7rem;
+    outline:none;
+    border: none;
+
+
     &,
     &__text{
         font-family:inherit;
@@ -6,12 +13,6 @@
         font-size:1.5rem;
         font-weight: 600;
     }
-
-    border-radius:50px;
-    padding:0.6rem 1.7rem;
-
-    outline:none;
-    border: none;
 
     &--green{
         text-transform: uppercase;
@@ -39,4 +40,9 @@
             background-color: $color-purple;
         }
     }
+
+    @include respond('tab-land'){
+        padding:0.9rem 1.7rem 0.6rem 1.7rem;
+    }
+
 }

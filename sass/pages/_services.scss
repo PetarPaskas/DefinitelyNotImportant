@@ -6,13 +6,11 @@
         position:absolute;
         bottom:0;
         left:0;
-        z-index: -1;
     }
     .header{
         overflow: visible;
         position:relative;
         padding:5rem 10rem 15rem 10rem;
-        z-index: $z-content-layer;
 
         .navigation__link{
             color:$color-white;
@@ -22,6 +20,13 @@
         }
         .menu{
             align-items: center;
+            position:relative;
+        }
+        @include respond('tab-generic'){
+            padding:1rem 10rem 8rem 1rem;
+        }
+        @include respond('phone-sm-sm'){
+           // padding:1rem 10rem 8rem 1rem;
         }
     }
 
@@ -33,23 +38,35 @@
         .logos{
             margin-top:12rem;
             text-align: end;
+
+            @include respond('laptop'){
+                margin-top:5rem;
+            }
         }
     
         .zigzag-container{
             padding-right:8rem;
             padding-left:12rem;
             margin-top:9rem;
+
             &__item{
                 &-presentation{
                     min-width:none;
                 }
                 &-description{
                     min-width: 36%;
+                    @include respond('tab-generic'){
+                        min-width: 33%;
+                    }
                 }
             }
 
             .text-normal--description{
                 max-width: none;
+            }
+            @include respond('tab-generic'){
+                padding-right:5rem;
+                padding-left:5rem;
             }
         }
     }
@@ -64,11 +81,24 @@
 
     .section-testimonials{
         background-color: $color-light;
-        padding:8rem 0;
-        padding-top:16rem;
+        padding:16rem 0 8rem 0;
+
+        @include respond('phone-med'){
+            padding:10rem 0 3rem 0;
+        }
+        
         .quote{
             max-width: 80rem;
             margin:0 auto;
+            @include respond('tab-generic'){
+                max-width: 62rem;
+            }
+            @include respond('phone'){
+                max-width: 90vw
+            }
+            @include respond('phone-med'){
+                //max-width: 46rem;
+            }
         }
     }
 }

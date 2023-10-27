@@ -113,8 +113,12 @@
 
     &__button{
         transition:background-color .2s;
+
         &.button{
-            padding:0.7rem 2.6rem;
+            padding: 0.7rem 2.6rem;
+            @include respond('tab-land'){
+                padding: 1rem 2.6rem 0.5rem 2.6rem;
+            }
         }
 
         & .button__text{
@@ -184,6 +188,9 @@
         
         &.button{
             padding:0.7rem 2.6rem;
+            @include respond('tab-land'){
+                padding: 1rem 2.6rem 0.5rem 2.6rem;
+            }
         }
 
         & .button__text{

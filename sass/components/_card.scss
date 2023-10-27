@@ -4,6 +4,15 @@
     color:$color-light;
     padding:3rem;
     max-width: 28rem;
+    
+    @include respond('tab-land'){
+        max-width: none;
+        width: calc(1/4*90%);
+    }
+    @include respond('phone'){
+        width: calc(1/2*85%);
+        padding:2rem;
+    }
 
     &>*{
         white-space:wrap;
@@ -13,12 +22,22 @@
         text-align: center;
         min-height: 30%;
         height: 13rem;
+        @include respond('tab-land'){
+            height: 10rem;
+        }
+        @include respond('phone'){
+            min-height: 8rem;
+        }
     }
     &__title{
         font-weight: bold;
         font-size: $text-med;
         letter-spacing: 3px;
         text-transform: uppercase;
+        @include respond('tab-land'){
+            font-size:$text-small;
+            letter-spacing: 2px;
+        }
     }
     &__body{
         text-align: center;
@@ -26,6 +45,9 @@
     &__text{
         font-family: "Helvetica";
         font-size:$text-small-med-med;
+        @include respond('phone'){
+            font-size: $text-small-med;
+        }
     }
     &--orange{
         background-color: $color-orange;
@@ -56,11 +78,20 @@
                 }
                 &__header{
                     height: 9rem;
+                    @include respond('tab-land'){
+                        height: 6rem;
+                    }
+                }
+                @include respond('tab-land'){
+                    width:auto;
                 }
             }
 
             &:not(:last-child){
                 margin-bottom:4rem;
+                @include respond('phone'){
+                    margin-bottom:2rem;
+                }
             }
         }
     }

@@ -108,6 +108,10 @@
             cursor:default;
             opacity:50%;
         }
+
+        @include respond('tab-land'){
+            padding: 1rem 2.7rem 0.5rem 2.8rem;
+        }
     }
 
 }

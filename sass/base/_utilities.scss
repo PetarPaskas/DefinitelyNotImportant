@@ -99,3 +99,7 @@
 .u-border-top-green{
     border-top:2px solid $color-green;
 }
+.u-layer-relative-content{
+    position: relative;
+    z-index: $z-content-layer;
+}
