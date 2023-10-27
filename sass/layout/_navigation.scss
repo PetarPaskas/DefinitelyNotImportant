@@ -1,8 +1,8 @@
 .navigation{
     &__list{
         display:flex;
-        justify-content: space-evenly;
         flex-direction: row;
+        justify-content: space-evenly;
     }
 
     &__item{
@@ -32,6 +32,13 @@
             cursor:pointer;
         }
 
+    }
 
+    @include respond('tab-port'){
+        max-width: 7rem;
+        max-height: 7rem;
+        &>*{
+            display:none;
+        }
     }
 }
