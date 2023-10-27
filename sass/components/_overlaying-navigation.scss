@@ -1,0 +1,183 @@
+.overlaying-navigation{
+    display:none;
+    @include respond('tab-port'){
+        display:block;
+    }
+    &__checkbox{
+        display:none;
+    }
+    &__checkbox:checked ~ &__list{
+        display:flex;
+    }
+    &__checkbox:checked ~ &__background{
+        transform: scale(90);
+        background-color: $color-light-transparent;
+        backdrop-filter: blur(.2px);
+    }
+    &__checkbox:checked ~ &__nav{
+        visibility: visible;
+        opacity:1;
+        width:100%;
+    }
+    &__checkbox:checked + &__button &__icon{
+        background-color: transparent;
+
+        &::before,
+        &::after{
+            top:50%;
+            left:50%;
+        }
+        &::after{
+            transform:translate(-50%,-50%) rotate(135deg);
+        }
+        &::before{
+            transform:translate(-50%,-50%) rotate(-135deg);
+        }
+    }
+    &__button{
+        position:absolute;
+        right:5%;
+        top:2.5rem;
+        max-width: 7rem;
+        max-height: 7rem;
+        z-index: 50;
+        display: inline-block;
+        background-color: transparent;
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        text-align: center;
+        cursor:pointer;
+    }
+    &__icon{
+        position:relative;
+        width:3.3rem;
+        margin-top:3.5rem;
+
+        &,
+        &::before,
+        &::after{
+        display:inline-block;
+        background-color:$color-black;
+        height:2px;
+        transition:transform .3s, top .1s, left .1s,background-color .1s;
+        }
+
+        &::before,
+        &::after{
+            content:'';
+            position:absolute;
+            left:0;
+            width:100%;
+        }
+        &::before{
+            top:-1rem;
+        }
+        &::after{
+            top:1rem;
+        }
+    }
+    &__background{
+        position:fixed;
+        right:5.5%;
+        top:3rem;
+        width:6rem;
+        height: 6rem; 
+        border-radius: 50%; 
+        background-color: transparent;
+        backface-visibility: hidden;
+        transition:transform .6s cubic-bezier(0.83, 0, 0.17, 1), background-color .4s cubic-bezier(0.83, 0, 0.17, 1);
+        z-index: 40;
+    }
+
+    &__nav{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        position:fixed;
+        top:0;
+        left:0;
+        z-index:40;
+
+        width: 0%;
+        height: 100vh;
+        visibility: hidden;
+        opacity: 0;
+
+        transition-property: opacity, width, visibility;
+        transition-duration: .6s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &-item{
+            display:flex;
+            justify-content:center;
+            align-items: center;
+
+            &--column{
+                flex-direction: column;
+            }
+
+            & .footer__social-media{
+                width:auto;
+            }
+            &:not(:last-child){
+                margin-bottom:1rem;
+            }
+        }
+    }
+
+    &__list{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-item{
+            &:not(:last-child){
+                margin-bottom:3rem;
+                @include respond('phone-med'){
+                    margin-bottom:2rem;
+            }
+            }
+        }
+    }
+
+    &__link{
+        transition:transform .2s;
+        backface-visibility: hidden;
+
+        &,
+        &:link,
+        &:visited{
+            display:inline-block;
+            text-decoration:none;
+            color: $color-black;
+            @include text-standard($text-large);
+            font-weight: 800;
+            letter-spacing: 4px;
+        }
+
+        &:hover{
+            color: $color-orange;
+            cursor:pointer;
+        }
+
+        &--mid{
+            font-size:$text-small-big;
+            letter-spacing: 3px;
+        }
+    }
+
+    &__button,
+    &__background{
+        display: none;        
+        @include respond('tab-port'){
+            display:inline-block;
+        }
+    }
+
+}

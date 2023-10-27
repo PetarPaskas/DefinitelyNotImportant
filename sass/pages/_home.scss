@@ -4,22 +4,50 @@
     padding-bottom:10rem;
 
     &__overflow-container{
-        overflow:hidden;
+        display: inline-block;
+        //overflow:hidden;
+        //transform: translateY(100%);
+        position:absolute;
+        top:0;
+        right:0;
         &--wave{
-            position:absolute;
-            top:0;
-            right:0;
-            z-index:5;
+            display: inline-block;
+            // position:absolute;
+            // bottom:-30%;
+            // right:0;
         }            
     }
     &__wave{
-        transform: translateY(-20%);
+
+        @include respond('big-laptop'){
+           width:54rem;
+        }
+        @include respond('tab-land'){
+            width:50rem;
+        }
+        @include respond('laptop'){
+            width:40rem;
+        }
     }
 
     & .gallery{
         margin:0 auto; 
         padding-bottom:7rem;
         width:140rem;
+        
+        @include respond('big-laptop'){
+            width:100rem;
+        }
+        @include respond('tab-generic'){
+            max-width: 90rem;
+            max-width: 90vw;
+        }
+        @include respond('phone'){
+            max-width: 90vw;
+        }
+        @include respond('phone-med'){
+            padding-bottom:0rem;
+        }
     }
     & .gallery__item{
        &--1{
@@ -50,6 +78,37 @@
         grid-column: col 6 / col 8;
         grid-row: 7 / 13; 
        } 
+
+       @include respond('phone'){
+           &--1{
+            grid-column: col 1 / col 5;
+            grid-row: 1 / 4;
+           } 
+           &--2{
+            grid-column: col 5 / col 9;
+            grid-row: 1 / 4;
+           } 
+           &--3{
+            grid-column: start / end;
+            grid-row: 4 / 6;
+           } 
+           &--4{
+            grid-column: start / end;
+            grid-row: 6 / 8;
+           } 
+           &--5{
+            grid-column: start / end;
+            grid-row: 8 / 10;
+           } 
+           &--6{
+            grid-column: col 1 / col 5;
+            grid-row: 10 / 13;
+           } 
+           &--7{
+            grid-column: col 5 / col 9;
+            grid-row: 10 / 13; 
+           } 
+       }
     }
 
     &__button{
@@ -84,10 +143,21 @@
     padding: 4rem 13rem 5rem 13rem;
     position:relative;
 
+    @include respond('laptop'){
+        padding: 4rem 5rem 5rem 5rem;
+    }
+    @include respond('phone'){
+        padding: 4rem 2rem 5rem 2rem;
+        overflow-x: clip;
+    }
+
     &__wave{
         position:absolute;
         top:0;
         right:0;
+        @include respond('phone'){
+            width:25rem
+        }
     }
     &__bottom-wave{
         position:absolute;
@@ -95,6 +165,10 @@
         left:0;
         width: 100%;
         transform: translateY(100%);
+        
+        @include respond('phone'){
+            transform: translateY(100%) scale(1.9);
+        }
     }
 
     & .h-3{
@@ -126,9 +200,28 @@
 
 .section-form{
     background-color: $color-light;
-    padding:16rem 0 0 0;
+    padding-top:16rem;
+
+    @include respond('phone'){
+        padding-top:10rem;
+    }
+
+    @include respond('phone-med'){
+        padding-top:6rem;
+    }
 
     & .form{
-        margin-top: -3rem;
+        max-width: 140rem;
+        margin: -3rem auto 0 auto;
+
+        @include respond('big-laptop'){
+            max-width: 100rem;
+        }
+        @include respond('tab-land'){
+            max-width: 90rem;
+        }
+        @include respond('tab-generic'){
+            max-width: 80rem;
+        }
     }
 }

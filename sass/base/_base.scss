@@ -7,12 +7,41 @@
 }
 
 :root{
-    font-size:62.5%;
+    font-size:62.5%; //1rem = 10px
+
+    @include respond('big-desktop'){
+        font-size:75%; //1rem = 12px
+    }
+    @include respond('big-laptop'){
+        font-size: 62.5%; //1rem = 10px
+    }
+    @include respond('tab-land'){
+        font-size: 56.25%; //1rem = 9px
+    }
+    @include respond('laptop'){
+        font-size: 56.25%; //1rem = 10px
+    }
+    @include respond('tab-port'){
+        font-size: 50%; //1rem = 8px
+    }
+    @include respond('tab-generic'){
+        font-size:50%; //1rem = 8px
+    }
+    @include respond('phone'){
+        font-size: 56.25%; //1rem = 10px
+    }
+    @include respond('phone-med'){
+        font-size: 56.25%;
+    }
+    @include respond('phone-sm'){
+        font-size:53.3%; //1rem = 8px
+    }
 }
 
 body{
     box-sizing: border-box;
     font-family: 'Morganite';
+
     &>*{
         position:relative;
     }

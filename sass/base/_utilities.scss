@@ -24,6 +24,9 @@
 }
 .u-padding-bottom-med{
     padding-bottom: 15rem !important;
+    @include respond('phone-med'){
+        padding-bottom: 7rem !important;
+    }
 }
 .u-padding-top-btm-med{
     padding:5rem 0 !important;
@@ -82,4 +85,17 @@
 }
 .u-margin-top-mid{
     margin-top:10rem !important;
+}
+.u-margin-top-lg{
+    margin-top:18rem !important;
+}
+.u-margin-bottom-mid{
+    margin-bottom:10rem;
+}
+.u-padding-top-btm-async{
+    padding-top:4rem;
+    padding-bottom:2rem;
+}
+.u-border-top-green{
+    border-top:2px solid $color-green;
 }

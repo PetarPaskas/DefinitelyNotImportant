@@ -6,6 +6,13 @@
         line-height: 140%;
         letter-spacing: 6px;
         font-size: $text-h1;
+        @include respond('phone'){
+            letter-spacing: 4px;
+            font-size: $text-h2;
+        }
+        @include respond('phone-med'){
+            font-size: $text-h2-med;
+        }
     }
 }
 
@@ -16,6 +23,15 @@
     font-size:$text-h1-sm;
     text-transform: uppercase;
     letter-spacing: 10px;
+
+    @include respond('tab-land'){
+        font-size:$text-h2;
+        letter-spacing: 6px;
+    }
+    @include respond('phone-med'){
+        font-size:$text-h2-med;
+        letter-spacing: 3px;
+    }
 }
 
 .h-2{
@@ -61,6 +77,10 @@
         letter-spacing: 3.6px;
         padding-bottom:.1rem;
         font-weight: normal;
+        @include respond('tab-land'){
+            letter-spacing: 2.5px;
+            font-size:$text-small-med-med;
+        }
     }
     &--main{
         color: $color-light;
@@ -81,7 +101,7 @@
         font-weight: 600;
         letter-spacing: 6px;
         padding-bottom: 1rem;
-        font-size:$tex-h2;
+        font-size:$text-h2;
         text-transform: uppercase;
     }
 

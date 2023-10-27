@@ -3,13 +3,47 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: start;
-    max-width:175rem;
+    align-items: center;
+    max-width:145rem;
 
+    @include respond('big-laptop'){
+        max-width: 130rem;
+    }
+    @include respond('tab-land'){
+        max-width: 118rem;
+    }
+    @include respond('laptop'){
+        max-width: 100rem;
+    }
+    @include respond('tab-generic'){
+        max-width: 81rem;
+    }
+    @include respond('phone'){
+        max-width: 56rem;
+    }
     &__logo{
-        &__logo-img{
-            width:100%;
-            height: auto;
+        position:relative;
+        z-index:50;
+        @include respond('tab-land'){
+            height: 7rem;
+        }
+        @include respond('phone'){
+            height: 6rem;
+        }
+        @include respond('phone-med'){
+            height: 5rem;
+        }
+        &-img{
+            @include respond('tab-land'){
+                height: 7rem;
+                width: auto;
+            }
+            @include respond('phone'){
+                height: 6rem;
+            }
+            @include respond('phone-med'){
+                height: 5rem;
+            }
         }
     }
 }
