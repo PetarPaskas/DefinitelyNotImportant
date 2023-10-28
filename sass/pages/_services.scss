@@ -37,10 +37,14 @@
     
         .logos{
             margin-top:12rem;
-            text-align: end;
+            //text-align: end;
 
             @include respond('laptop'){
                 margin-top:5rem;
+            }
+
+            &__slide{
+                animation:8s spin-fix linear infinite;
             }
         }
     

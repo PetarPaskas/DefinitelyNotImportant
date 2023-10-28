@@ -364,6 +364,12 @@ footer.footer {
   100% {
     transform: translateX(-100%); } }
 
+@keyframes spin-fix {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-99%); } }
+
 .header {
   overflow-x: hidden;
   overflow-y: clip;
@@ -1045,11 +1051,12 @@ footer.footer {
   padding-top: 3.7rem;
   padding-bottom: 20rem; }
   .services .section-services .logos {
-    margin-top: 12rem;
-    text-align: end; }
+    margin-top: 12rem; }
     @media only screen and (max-width: 64em) {
       .services .section-services .logos {
         margin-top: 5rem; } }
+    .services .section-services .logos__slide {
+      animation: 8s spin-fix linear infinite; }
   .services .section-services .zigzag-container {
     padding-right: 8rem;
     padding-left: 12rem;
@@ -1730,9 +1737,6 @@ footer.footer {
     .carousel__item > img {
       height: 100%;
       display: block; }
-  .carousel--animated {
-    flex-wrap: nowrap;
-    animation: carousel-spin 10s linear infinite; }
   .carousel-animation-wrapper .carousel {
     display: inline-flex; }
 
@@ -1741,7 +1745,8 @@ footer.footer {
   overflow: hidden;
   white-space: nowrap; }
   .logos__slide {
-    display: inline-block; }
+    display: inline-block;
+    animation: 8s spin linear infinite; }
   .logos__image {
     height: 15rem;
     margin: 0 4rem; }
@@ -1749,16 +1754,14 @@ footer.footer {
     display: inline-table;
     border-collapse: separate;
     border-spacing: 2.5rem; }
-    @media only screen and (max-width: 75em) {
-      .logos--table .logos__slide {
-        display: block; } }
+    .logos--table .logos__slide:last-child {
+      margin-left: -1.25rem; }
     .logos--table .logos__slide > * {
       display: table-cell; }
       @media only screen and (max-width: 75em) {
         .logos--table .logos__slide > * {
-          display: inline-block;
-          margin-right: 2.5rem;
           min-height: 35rem;
+          min-width: 20rem;
           vertical-align: top; } }
       @media only screen and (max-width: 37.5em) {
         .logos--table .logos__slide > * {
@@ -2195,11 +2198,9 @@ footer.footer {
   max-width: 28rem; }
   @media only screen and (max-width: 75em) {
     .card {
-      max-width: none;
-      width: calc(1/4*90%); } }
+      max-width: none; } }
   @media only screen and (max-width: 37.5em) {
     .card {
-      width: calc(1/2*85%);
       padding: 2rem; } }
   .card > * {
     white-space: wrap; }

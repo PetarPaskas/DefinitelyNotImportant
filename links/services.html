@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="logos logos--table">
-                <div id="clients-slide" class="logos__slide">
+                <div id="services-slide" class="logos__slide logos__slide--animated">
                         <div class="card card--orange">
                             <div class="card__header"><h2 class="card__title">Graphic design</h2> </div>
                             <div class="card__body"><p class="card__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae omnis suscipit sed praesentium laudantium cum sit id vero, repellendus ab quisquam nihil atque eum culpa, expedita accusantium officia, iure quidem.</p></div>
@@ -194,7 +194,7 @@
                 </span>
             </div>
             <div class="logos">
-                <div id="clients-slide" class="logos__slide">
+                <div id="clients-slide" class="logos__slide logos__slide--animated">
                     <img class="logos__image" src="../img/icons/fwrd-logo.png">
                     <img class="logos__image" src="../img/icons/pxl.png">
                     <img class="logos__image" src="../img/icons/msf.png">
@@ -294,3 +294,16 @@
         </div>
         </footer>
 </body>
+
+<script>
+    cloneNodes(["services-slide", "clients-slide"]);
+
+    function cloneNodes(nodeIds){
+        nodeIds.forEach(nodeId=>{
+            let clientsSlide = document.getElementById(nodeId);
+            let copy = clientsSlide.cloneNode(true);
+            clientsSlide.parentNode.appendChild(copy);
+        })
+    }
+
+</script>
