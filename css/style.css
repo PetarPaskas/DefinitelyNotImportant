@@ -354,6 +354,10 @@ footer.footer {
   position: relative;
   z-index: 20; }
 
+@media only screen and (max-width: 75em) {
+  .u-mw-90vw-tab-land {
+    max-width: 90vw !important; } }
+
 @keyframes spin {
   0% {
     transform: translateX(0); }
@@ -912,16 +916,63 @@ footer.footer {
   background-color: #00A979;
   padding-top: 5rem;
   padding-bottom: 5rem; }
+  @media only screen and (max-width: 48em) {
+    .portfolio .header {
+      padding-top: 1rem; } }
 
 .portfolio .section-portfolios {
   position: relative;
   padding: 20rem 15rem 0 15rem;
   background-color: #FFF7E1; }
+  @media only screen and (max-width: 90em) {
+    .portfolio .section-portfolios {
+      padding: 20rem 10rem 0 10rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .portfolio .section-portfolios {
+      padding: 16rem 2rem 0 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .portfolio .section-portfolios {
+      padding: 14rem 2rem 0 2rem; } }
   .portfolio .section-portfolios .zigzag-container {
     position: relative;
-    z-index: 20; }
+    z-index: 20;
+    /* maybe in container */
+    /* maybe in container */ }
+    @media only screen and (max-width: 90em) {
+      .portfolio .section-portfolios .zigzag-container__client {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 64em) {
+      .portfolio .section-portfolios .zigzag-container__client {
+        font-size: 4.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .portfolio .section-portfolios .zigzag-container__client {
+        font-size: 4rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .portfolio .section-portfolios .zigzag-container__title {
+        font-size: 1.8rem; } }
+    @media only screen and (max-width: 64em) {
+      .portfolio .section-portfolios .zigzag-container__description {
+        font-size: 1.6rem; } }
+    @media only screen and (max-width: 64em) {
+      .portfolio .section-portfolios .zigzag-container__item:not(:last-child) {
+        padding-bottom: 10rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .portfolio .section-portfolios .zigzag-container__item:not(:last-child) {
+        padding-bottom: 7rem; } }
+    .portfolio .section-portfolios .zigzag-container__item-presentation {
+      max-width: 57%; }
+      @media only screen and (max-width: 75em) {
+        .portfolio .section-portfolios .zigzag-container__item-presentation {
+          min-width: 60%;
+          max-width: 70%; } }
   .portfolio .section-portfolios__wave {
     position: absolute; }
+    @media only screen and (max-width: 64em) {
+      .portfolio .section-portfolios__wave {
+        width: 25rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .portfolio .section-portfolios__wave {
+        width: 20rem; } }
     .portfolio .section-portfolios__wave--right {
       right: 0; }
     .portfolio .section-portfolios__wave--left {
@@ -938,6 +989,10 @@ footer.footer {
     .portfolio .section-portfolios__button .button__text {
       font-size: 2rem;
       letter-spacing: 4px; }
+      @media only screen and (max-width: 56.25em) {
+        .portfolio .section-portfolios__button .button__text {
+          font-size: 1.8rem;
+          letter-spacing: 3px; } }
     .portfolio .section-portfolios__button:hover {
       background-color: #2f2c96; }
 
@@ -955,6 +1010,12 @@ footer.footer {
     object-fit: cover;
     object-position: bottom;
     margin-bottom: 6rem; }
+    @media only screen and (max-width: 37.5em) {
+      .portfolio .section-form__background-top-wave {
+        height: 13rem; } }
+    @media only screen and (max-width: 29em) {
+      .portfolio .section-form__background-top-wave {
+        margin-bottom: 1rem; } }
 
 .services__header-wave {
   width: 100%;
@@ -992,7 +1053,7 @@ footer.footer {
   .services .section-services .zigzag-container {
     padding-right: 8rem;
     padding-left: 12rem;
-    margin-top: 9rem; }
+    margin-top: 10rem; }
     .services .section-services .zigzag-container__item-presentation {
       min-width: none; }
     .services .section-services .zigzag-container__item-description {
@@ -1000,12 +1061,18 @@ footer.footer {
       @media only screen and (max-width: 48em) {
         .services .section-services .zigzag-container__item-description {
           min-width: 33%; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services .zigzag-container__item:not(:last-child) {
+        padding-bottom: 10rem; } }
     .services .section-services .zigzag-container .text-normal--description {
       max-width: none; }
     @media only screen and (max-width: 48em) {
       .services .section-services .zigzag-container {
         padding-right: 5rem;
         padding-left: 5rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services .zigzag-container .card {
+        width: 45vw; } }
 
 .services .section-clients {
   background-color: #2f2c96; }
@@ -1062,21 +1129,39 @@ footer.footer {
   background-color: #FFF7E1;
   padding: 20rem 0;
   overflow: hidden; }
+  @media only screen and (max-width: 75em) {
+    .blog .section-blog-description {
+      padding: 14rem 0; } }
   .blog .section-blog-description .paragraph:not(:last-child) {
     padding-bottom: 2rem; }
   .blog .section-blog-description__wave-top-left {
     position: absolute;
     top: -17%;
     left: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .blog .section-blog-description__wave-top-left {
+        top: -2%;
+        width: 35rem; } }
+    @media only screen and (max-width: 29em) {
+      .blog .section-blog-description__wave-top-left {
+        width: 25rem; } }
   .blog .section-blog-description__wave-bottom-right {
     position: absolute;
     bottom: -15%;
     right: 0; }
+    @media only screen and (max-width: 37.5em) {
+      .blog .section-blog-description__wave-bottom-right {
+        width: 35rem;
+        bottom: -4%; } }
 
 .blog .section-blog {
   position: relative;
   background-color: #00A979;
-  padding-top: 15rem; }
+  padding-top: 15rem;
+  margin-bottom: -1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .blog .section-blog {
+      padding-top: 9rem; } }
   .blog .section-blog .content-items__decorative-text::before {
     border-bottom: 1px solid #2f2c96; }
   .blog .section-blog .content-items__text {
@@ -1559,6 +1644,9 @@ footer.footer {
     letter-spacing: 4px; }
   .notch-title__text--mid {
     font-size: 2.6rem; }
+    @media only screen and (max-width: 25em) {
+      .notch-title__text--mid {
+        font-size: 2rem; } }
   .notch-title--top-center {
     top: 0;
     left: 50%;
@@ -1918,7 +2006,7 @@ footer.footer {
   border-radius: 0 0 30px 30px;
   text-align: center;
   z-index: 10;
-  transform: translate(-50%, 50%);
+  transform: translate(-50%, 70%);
   max-width: 30%; }
   @media only screen and (max-width: 56.25em) {
     .page-notch {
@@ -1936,10 +2024,18 @@ footer.footer {
     padding-left: 8px;
     width: 100%;
     text-wrap: nowrap; }
+    @media only screen and (max-width: 90em) {
+      .page-notch__heading {
+        font-size: 4rem;
+        letter-spacing: 6px; } }
     @media only screen and (max-width: 56.25em) {
       .page-notch__heading {
         font-size: 4rem;
         letter-spacing: 6px; } }
+    @media only screen and (max-width: 29em) {
+      .page-notch__heading {
+        font-size: 3.2rem;
+        letter-spacing: 5px; } }
   .page-notch__sub-heading {
     display: inline-block;
     text-align: center;
@@ -1954,6 +2050,10 @@ footer.footer {
     font-weight: 600;
     letter-spacing: 2px;
     width: 100%; }
+    @media only screen and (max-width: 29em) {
+      .page-notch__sub-text {
+        font-size: 1.8rem;
+        letter-spacing: 2px; } }
   .page-notch__sup-text {
     display: inline-block;
     text-align: center;
@@ -1963,12 +2063,43 @@ footer.footer {
     width: 100%;
     color: #2f2c96;
     text-transform: uppercase; }
+    @media only screen and (max-width: 29em) {
+      .page-notch__sup-text {
+        font-size: 1.3rem; } }
   .page-notch--med {
     transform: translate(-50%, 70%); }
+    @media only screen and (max-width: 56.25em) {
+      .page-notch--med {
+        max-width: 40%; } }
+    @media only screen and (max-width: 37.5em) {
+      .page-notch--med {
+        max-width: fit-content; } }
     .page-notch--med .page-notch__heading {
       font-size: 4rem; }
+      @media only screen and (max-width: 90em) {
+        .page-notch--med .page-notch__heading {
+          font-size: 3.2rem;
+          letter-spacing: 5px; } }
+      @media only screen and (max-width: 75em) {
+        .page-notch--med .page-notch__heading {
+          font-size: 2.8rem;
+          letter-spacing: 4px; } }
+      @media only screen and (max-width: 29em) {
+        .page-notch--med .page-notch__heading {
+          letter-spacing: 3px;
+          padding: 0 1.5rem; } }
     .page-notch--med .page-notch__sub-heading {
       font-size: 2.4rem; }
+      @media only screen and (max-width: 90em) {
+        .page-notch--med .page-notch__sub-heading {
+          font-size: 2rem;
+          letter-spacing: 5px; } }
+      @media only screen and (max-width: 75em) {
+        .page-notch--med .page-notch__sub-heading {
+          letter-spacing: 4px; } }
+      @media only screen and (max-width: 29em) {
+        .page-notch--med .page-notch__sub-heading {
+          letter-spacing: 3px; } }
     .page-notch--med .page-notch__sub-text {
       font-size: 1.8rem; }
   .page-notch--color-white .page-notch__content {
@@ -1986,33 +2117,23 @@ footer.footer {
       flex-direction: row; }
       .zigzag-container__item:nth-child(odd) .zigzag-container__item-description {
         text-align: end;
-        padding-left: 30rem; }
-        @media only screen and (max-width: 75em) {
-          .zigzag-container__item:nth-child(odd) .zigzag-container__item-description {
-            padding-left: 20rem; } }
-        @media only screen and (max-width: 37.5em) {
-          .zigzag-container__item:nth-child(odd) .zigzag-container__item-description {
-            padding: 0; } }
+        align-items: end; }
       @media only screen and (max-width: 37.5em) {
         .zigzag-container__item:nth-child(odd) {
           flex-direction: column; } }
     .zigzag-container__item:nth-child(even) {
       flex-direction: row-reverse; }
       .zigzag-container__item:nth-child(even) .zigzag-container__item-description {
-        text-align: start;
-        padding-right: 30rem; }
-        @media only screen and (max-width: 75em) {
-          .zigzag-container__item:nth-child(even) .zigzag-container__item-description {
-            padding-right: 20rem; } }
-        @media only screen and (max-width: 37.5em) {
-          .zigzag-container__item:nth-child(even) .zigzag-container__item-description {
-            padding: 0; } }
-      @media only screen and (max-width: 37.5em) {
-        .zigzag-container__item:nth-child(even) {
-          flex-direction: column; } }
+        align-items: start;
+        text-align: start; }
     .zigzag-container__item-description {
-      text-align: start;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
       padding: 0 5rem; }
+      @media only screen and (max-width: 75em) {
+        .zigzag-container__item-description {
+          padding: 0 2rem; } }
       .zigzag-container__item-description > * {
         display: inline-block;
         width: 100%; }
@@ -2021,6 +2142,19 @@ footer.footer {
       @media only screen and (max-width: 75em) {
         .zigzag-container__item-presentation {
           min-width: 70%; } }
+    @media only screen and (max-width: 37.5em) {
+      .zigzag-container__item:nth-child(1n) {
+        flex-direction: column-reverse; }
+        .zigzag-container__item:nth-child(1n) .zigzag-container__item-description {
+          align-items: center;
+          text-align: center;
+          padding-top: 2rem; }
+          .zigzag-container__item:nth-child(1n) .zigzag-container__item-description > * {
+            width: auto; }
+        .zigzag-container__item:nth-child(1n) .zigzag-container__item-presentation {
+          min-width: 0%;
+          max-width: none;
+          width: 100%; } }
   .zigzag-container__title {
     font-family: 'helvetica';
     font-size: 2.2rem; }
@@ -2043,6 +2177,10 @@ footer.footer {
     transition: background-color .2s; }
     .zigzag-container__button:hover {
       background-color: #2f2c96; }
+    @media only screen and (max-width: 56.25em) {
+      .zigzag-container__button {
+        font-size: 1.8rem;
+        letter-spacing: 3px; } }
   .zigzag-container__image {
     width: 100%;
     max-height: 50rem;

@@ -103,3 +103,9 @@
     position: relative;
     z-index: $z-content-layer;
 }
+
+.u-mw-90vw-tab-land{
+    @include respond('tab-land'){
+        max-width: 90vw !important;
+    }
+}

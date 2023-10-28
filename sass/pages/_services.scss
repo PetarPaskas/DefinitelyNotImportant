@@ -47,7 +47,7 @@
         .zigzag-container{
             padding-right:8rem;
             padding-left:12rem;
-            margin-top:9rem;
+            margin-top:10rem;
 
             &__item{
                 &-presentation{
@@ -59,6 +59,12 @@
                         min-width: 33%;
                     }
                 }
+
+                @include respond('phone'){
+                    &:not(:last-child){
+                        padding-bottom: 10rem;
+                    }
+                }
             }
 
             .text-normal--description{
@@ -67,6 +73,12 @@
             @include respond('tab-generic'){
                 padding-right:5rem;
                 padding-left:5rem;
+            }
+
+            @include respond('phone'){
+                & .card{
+                    width: 45vw;
+                }
             }
         }
     }
