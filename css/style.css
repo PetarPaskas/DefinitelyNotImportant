@@ -895,21 +895,58 @@ footer.footer {
   overflow: visible;
   padding-top: 5rem;
   padding-bottom: 0px; }
+  @media only screen and (max-width: 56.25em) {
+    .case-studies .header {
+      padding-top: 2rem; } }
+  @media only screen and (max-width: 48em) {
+    .case-studies .header {
+      padding-top: 1.5rem; } }
 
 .study-content__main .paragraph__content {
   line-height: 160%; }
 
+@media only screen and (max-width: 29em) {
+  .study-content .paragraph__title {
+    letter-spacing: 2px;
+    font-size: 1.8rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .study-content .paragraph__content {
+    font-size: 1.6rem !important; } }
+
 .section-brief {
   padding: 10rem 15rem;
   background-color: #FFF7E1; }
+  @media only screen and (max-width: 56.25em) {
+    .section-brief {
+      padding: 10rem 4rem; } }
+  @media only screen and (max-width: 29em) {
+    .section-brief {
+      padding: 5rem 2rem; } }
 
 .section-testimonial {
   background-color: #FFF7E1;
   padding: 10rem 25rem; }
+  @media only screen and (max-width: 90em) {
+    .section-testimonial {
+      padding: 10rem 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-testimonial {
+      padding: 2rem 2rem 10rem 2rem; } }
+  .section-testimonial .quote {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
 
 .section-separator {
   padding: 10rem 15rem;
   background-color: #FFF7E1; }
+  @media only screen and (max-width: 90em) {
+    .section-separator {
+      padding: 10rem 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-separator {
+      padding: 10rem 2rem;
+      padding-top: 5rem; } }
 
 .section-case-study-gallery {
   background-color: #FFF7E1;
@@ -1897,15 +1934,31 @@ footer.footer {
 .study-content {
   display: flex;
   flex-direction: row; }
+  @media only screen and (max-width: 37.5em) {
+    .study-content {
+      flex-direction: column; } }
   .study-content__side {
-    min-width: 15%;
-    flex-direction: column; }
+    min-width: 15%; }
+    @media only screen and (max-width: 37.5em) {
+      .study-content__side {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; } }
   .study-content__side .study-content__item:not(:last-child) {
     padding-bottom: 6rem; }
+  @media only screen and (max-width: 37.5em) {
+    .study-content__side .study-content__item {
+      flex-basis: calc(1/3*97%); } }
   .study-content__main {
     flex-grow: 1;
     flex-direction: column;
     margin-left: 20rem; }
+    @media only screen and (max-width: 56.25em) {
+      .study-content__main {
+        margin-left: 10rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .study-content__main {
+        margin-left: 0; } }
   .study-content__main .study-content__item:not(:last-child) {
     padding-bottom: 7rem; }
 
@@ -2002,10 +2055,31 @@ footer.footer {
   .quote__title {
     font-size: 6.1rem;
     letter-spacing: 4px; }
+    @media only screen and (max-width: 75em) {
+      .quote__title {
+        font-size: 3.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .quote__title {
+        font-size: 2.6rem;
+        letter-spacing: 2px; } }
+    @media only screen and (max-width: 29em) {
+      .quote__title {
+        font-size: 2.4rem; } }
   .quote__quotee {
     font-size: 4rem;
     letter-spacing: 4px;
     padding-top: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .quote__quotee {
+        font-size: 2.8rem;
+        letter-spacing: 3px; } }
+    @media only screen and (max-width: 37.5em) {
+      .quote__quotee {
+        letter-spacing: 2px;
+        font-size: 2.4rem; } }
+    @media only screen and (max-width: 29em) {
+      .quote__quotee {
+        font-size: 2.2rem; } }
   .quote__row {
     padding-bottom: 1.8rem;
     text-align: center; }
@@ -2016,6 +2090,12 @@ footer.footer {
     font-family: 'Helvetica';
     line-height: 132%;
     margin: 0 auto; }
+    @media only screen and (max-width: 75em) {
+      .quote__text {
+        font-size: 2.2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .quote__text {
+        font-size: 1.8rem; } }
     .quote__text--center {
       text-align: center; }
     .quote__text--start {
@@ -2027,14 +2107,32 @@ footer.footer {
     background-size: contain;
     width: 12rem;
     height: 12rem; }
+    @media only screen and (max-width: 75em) {
+      .quote__open-quote, .quote__close-quote {
+        width: 8rem;
+        height: 8rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .quote__open-quote, .quote__close-quote {
+        height: 6rem;
+        height: 6rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .quote__open-quote, .quote__close-quote {
+        height: 5.5rem;
+        height: 5.5rem; } }
   .quote__open-quote {
     top: -15%;
     left: 7%;
     background-image: url(../../img/svg/quote-open.svg); }
+    @media only screen and (max-width: 37.5em) {
+      .quote__open-quote {
+        top: -10%; } }
   .quote__close-quote {
     bottom: -15%;
     right: 7%;
     background-image: url(../../img/svg/quote-close.svg); }
+    @media only screen and (max-width: 37.5em) {
+      .quote__close-quote {
+        bottom: -10%; } }
 
 .page-notch {
   position: absolute;
@@ -2334,10 +2432,34 @@ footer.footer {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 13rem; }
+  @media only screen and (max-width: 56.25em) {
+    .case-study {
+      padding-bottom: 8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .case-study {
+      padding-bottom: 6rem; } }
   .case-study__cover {
     height: 65vh;
     position: relative;
-    background-color: green; }
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-position .5s;
+    background-position: center; }
+    @media only screen and (max-width: 56.25em) {
+      .case-study__cover {
+        height: 39vh; } }
+    @media only screen and (max-width: 37.5em) {
+      .case-study__cover {
+        height: 30vh; } }
+    .case-study__cover[data-position="center"] {
+      background-position: center; }
+    .case-study__cover[data-position="left"] {
+      background-position: left; }
+    .case-study__cover[data-position="right"] {
+      background-position: right; }
+  @media only screen and (max-width: 37.5em) {
+    .case-study__arrow {
+      height: 3rem; } }
   .case-study__arrow-container {
     display: flex;
     justify-content: center;
@@ -2358,6 +2480,19 @@ footer.footer {
     transform: translateY(-70%);
     text-align: center;
     margin-bottom: -4%; }
+    @media only screen and (max-width: 56.25em) {
+      .case-study__triangle {
+        margin-bottom: -10%; } }
+    @media only screen and (max-width: 37.5em) {
+      .case-study__triangle {
+        transform: translateY(-60%);
+        margin-bottom: -7%; } }
+    @media only screen and (max-width: 29em) {
+      .case-study__triangle {
+        margin-bottom: -9%; } }
+  @media only screen and (max-width: 37.5em) {
+    .case-study__triangle-image {
+      height: 7rem; } }
   .case-study__description {
     text-align: center; }
   .case-study__study-heading {
@@ -2366,3 +2501,7 @@ footer.footer {
     color: #FFF7E1;
     display: inline-block;
     letter-spacing: 3px; }
+    @media only screen and (max-width: 37.5em) {
+      .case-study__study-heading {
+        font-size: 2rem;
+        letter-spacing: 2px; } }

@@ -11,6 +11,7 @@
     &--round{
         border-radius: 15px;
     }
+
     &--med{
         padding:2rem 4rem;
 
@@ -70,6 +71,7 @@
        }
     }
 
+    //for larger quote elements - example: case study page
     &__title,
     &__quotee{
         display:inline-block;
@@ -80,11 +82,32 @@
     &__title{
         font-size:$text-h1-sm;
         letter-spacing: 4px;
+        @include respond('tab-land'){
+            font-size: $text-large;
+        }
+        @include respond('phone'){
+            font-size:$text-med-med;
+            letter-spacing: 2px;
+        }
+        @include respond('phone-med'){
+            font-size: $text-med-small;
+        }
     }
     &__quotee{
         font-size:$text-h2-sm;
         letter-spacing: 4px;
         padding-top:1rem;
+        @include respond('tab-land'){
+            font-size: $text-med;
+            letter-spacing: 3px;
+        }
+        @include respond('phone'){
+            letter-spacing: 2px;
+            font-size: $text-med-small;
+        }
+        @include respond('phone-med'){
+            font-size: $text-small-big;
+        }
     }
     &__row{
         padding-bottom:1.8rem;
@@ -95,10 +118,19 @@
         display:inline-block;
         width:90%;
 
-        font-size:2.8rem;
+        font-size: $text-med;
         font-family: 'Helvetica';
         line-height: 132%;
         margin:0 auto;
+        @include respond('tab-land'){
+            font-size: $text-small-big;
+        }
+        @include respond('phone'){
+            font-size: $text-small-med-med-med;
+        }
+        @include respond('phone-med'){
+
+        }
 
         &--center{
             text-align: center;
@@ -116,18 +148,36 @@
         background-size: contain;
         width:12rem;
         height: 12rem;
+        @include respond('tab-land'){
+            width: 8rem;
+            height: 8rem;
+        }
+        @include respond('phone'){
+            height: 6rem;
+            height: 6rem;
+        }
+        @include respond('phone'){
+            height: 5.5rem;
+            height: 5.5rem;
+        }
     }
 
     &__open-quote{
         top:-15%;
         left:7%;
         background-image:url(../../img/svg/quote-open.svg);
+        @include respond('phone'){
+            top:-10%;
+        }
 
     }
     &__close-quote{
         bottom:-15%;
         right:7%;
         background-image:url(../../img/svg/quote-close.svg);
+        @include respond('phone'){
+            bottom:-10%;
+        }
 
     }
 }

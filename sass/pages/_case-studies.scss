@@ -3,25 +3,72 @@
         overflow: visible;
         padding-top:5rem;
         padding-bottom:0px;
+        @include respond('tab-port'){
+            padding-top: 2rem;
+        }
+        @include respond('tab-generic'){
+            padding-top:1.5rem;
+        }
     }
 }
 //Main
-.study-content__main .paragraph__content{
-    line-height: 160%;
+.study-content{
+    &__main{
+        .paragraph__content{
+            line-height: 160%;
+        }
+    }
+
+    .paragraph{
+        &__title{
+            @include respond('phone-med'){
+                letter-spacing: 2px;
+                font-size:$text-small-med-med-med;
+            }
+        }
+        &__content{
+            @include respond('phone'){
+                font-size:$text-small-med-med !important;
+            }
+        }
+    }
 }
 
 .section-brief{
     padding:10rem 15rem;
     background-color: $color-light;
+    @include respond('tab-port'){
+        padding:10rem 4rem;
+    }
+    @include respond('phone-med'){
+        padding:5rem 2rem;
+    }
 }
 
 .section-testimonial{
     background-color: $color-light;
     padding:10rem 25rem;
+    @include respond('big-laptop'){
+        padding:10rem 4rem;
+    }
+    @include respond('phone'){
+        padding: 2rem 2rem 10rem 2rem;
+    }
+    .quote{
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
 }
 .section-separator{
     padding:10rem 15rem;
     background-color: $color-light;
+    @include respond('big-laptop'){
+        padding:10rem 4rem;
+    }
+    @include respond('phone'){
+        padding:10rem 2rem;
+        padding-top:5rem;
+    }
 }
 
 .section-case-study-gallery{

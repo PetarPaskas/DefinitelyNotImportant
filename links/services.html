@@ -296,6 +296,7 @@
 </body>
 
 <script>
+    disableScrollOnNavigationHamburger();
     cloneNodes(["services-slide", "clients-slide"]);
 
     function cloneNodes(nodeIds){
@@ -303,6 +304,16 @@
             let clientsSlide = document.getElementById(nodeId);
             let copy = clientsSlide.cloneNode(true);
             clientsSlide.parentNode.appendChild(copy);
+        })
+    }
+    
+    function disableScrollOnNavigationHamburger(){
+        const navigation = document.getElementById('navi-toggle');
+        navigation.addEventListener('click',()=>{
+        if(document.body.style.overflow == 'hidden')
+            document.body.style.overflow = 'visible'
+        else
+            document.body.style.overflow = "hidden"
         })
     }
 

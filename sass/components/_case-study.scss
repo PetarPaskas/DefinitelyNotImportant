@@ -4,14 +4,57 @@
     background-repeat: no-repeat;
     background-size:cover;
     padding-bottom:13rem;
+    @include respond('tab-port'){
+        padding-bottom:8rem;
+    }
+    @include respond('phone'){
+        padding-bottom:6rem;
+    }
 
     &__cover{
         height: 65vh;
         position:relative;
-        background-color: green;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background-position .5s;
+        background-position: center;
+
+        @include respond('tab-port'){
+            height: 39vh;
+        }
+        @include respond('phone'){
+            height: 30vh;
+        }
+
+        &[data-position="center"]{
+            background-position: center;
+        }
+        &[data-position="left"]{
+            background-position: left;
+        }
+        &[data-position="right"]{
+            background-position: right;
+        }
+
+        // &-image{
+        //     display:inline-block;
+        //     height: 100%;
+        //     &[data-position="center"]{
+        //         background-position: center;
+        //     }
+        //     &[data-position="left"]{
+        //         background-position: left;
+        //     }
+        //     &[data-position="right"]{
+        //         background-position: right;
+        //     }
+        // }
     }
 
     &__arrow{
+        @include respond('phone'){
+            height: 3rem;
+        }
         &-container{
             display:flex;
             justify-content: center;
@@ -33,6 +76,7 @@
                 cursor:pointer;
             }
         }
+
         &--left{
         }
         &--right{
@@ -43,8 +87,21 @@
         transform:translateY(-70%);
         text-align: center;
         margin-bottom:-4%;
+        @include respond('tab-port'){
+            margin-bottom:-10%;
+        }
+        @include respond('phone'){
+            transform:translateY(-60%);
+            margin-bottom:-7%;
+        }
+        @include respond('phone-med'){
+            margin-bottom: -9%;
+        }
     }
     &__triangle-image{
+        @include respond('phone'){
+            height: 7rem;
+        }
     }
     &__description{
         text-align: center;
@@ -55,5 +112,9 @@
         color:$color-light;
         display:inline-block;
         letter-spacing: 3px;
+        @include respond('phone'){
+            font-size: $text-small;
+            letter-spacing: 2px;
+        }
     }
 }

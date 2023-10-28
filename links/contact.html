@@ -189,3 +189,15 @@
     </div>
 </footer>
 </body>
+<script>
+    disableScrollOnNavigationHamburger();
+    function disableScrollOnNavigationHamburger(){
+        const navigation = document.getElementById('navi-toggle');
+        navigation.addEventListener('click',()=>{
+        if(document.body.style.overflow == 'hidden')
+            document.body.style.overflow = 'visible'
+        else
+            document.body.style.overflow = "hidden"
+        })
+    }
+</script>
