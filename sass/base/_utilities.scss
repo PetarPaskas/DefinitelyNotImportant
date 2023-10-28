@@ -11,7 +11,7 @@
     display:block !important;
 }
 .u-section-title{
-    padding:5rem !important;
+    padding:4rem !important;
 }
 .u-left-padding-zero{
     padding-left:0 !important;
@@ -85,6 +85,11 @@
 }
 .u-margin-top-mid{
     margin-top:10rem !important;
+}
+.u-margin-top-mid-phone{
+    @include respond('phone'){
+        margin-top:3rem !important;
+    }
 }
 .u-margin-top-lg{
     margin-top:18rem !important;

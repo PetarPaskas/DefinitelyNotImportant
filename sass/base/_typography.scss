@@ -132,12 +132,24 @@
         font-family: 'helvetica';
         font-size:$text-small-big;
         font-weight: 400;
+        @include respond('tab-port'){
+            font-size:$text-small-med-med-med;
+        }
     }
     
     .text-client{
         font-size:$text-h1-sm;
         letter-spacing: 4px;
         padding-bottom:1rem;
+        @include respond('big-laptop'){
+            font-size: $text-h2;
+        }
+        @include respond('laptop'){
+            font-size:$text-h2-med;
+        }
+        @include respond('tab-port'){
+            font-size:$text-h2-sm;
+        }
     }
 
     .text-description{
@@ -147,5 +159,8 @@
         font-size:1.8rem;
         padding-bottom:2rem;
         line-height: 148%;
+        @include respond('laptop'){
+            font-size:$text-small-med-med;
+        }
     }
 }
