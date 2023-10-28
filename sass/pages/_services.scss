@@ -26,7 +26,6 @@
             padding:1rem 10rem 8rem 1rem;
         }
         @include respond('phone-sm-sm'){
-           // padding:1rem 10rem 8rem 1rem;
         }
     }
 
@@ -37,7 +36,6 @@
     
         .logos{
             margin-top:12rem;
-            //text-align: end;
 
             @include respond('laptop'){
                 margin-top:5rem;

@@ -62,8 +62,6 @@
             &>*{
                 display: table-cell;
                 @include respond('tab-land'){
-                    //display:inline-block;
-                    //margin-right:2.5rem;
                     min-height: 35rem;
                     min-width: 20rem;
                     vertical-align: top;
