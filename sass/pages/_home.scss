@@ -36,13 +36,10 @@
         width:140rem;
         
         @include respond('big-laptop'){
-            width:100rem;
-        }
-        @include respond('tab-generic'){
-            max-width: 90rem;
+            //width:100rem;
             max-width: 90vw;
         }
-        @include respond('phone'){
+        @include respond('tab-generic'){
             max-width: 90vw;
         }
         @include respond('phone-med'){

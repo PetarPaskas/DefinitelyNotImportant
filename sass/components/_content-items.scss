@@ -33,17 +33,35 @@
         }
     }
 
+    &__link{
+
+    }
+
+    &__link:hover &__image{
+        transform: scale(1.1);
+    }
+
     &__header{
-        text-align: center;
+        text-align: start;
     }
     &__body{
 
     }
     &__image{
+        transform: scale(1.05);
+        transform-origin: bottom;
+        transition: all .2s;
         height: 30rem;
-        width:100%;
+        width:auto;
+
+        @include respond('tab-land'){
+            height: 29rem;
+        }
+        @include respond('laptop'){
+            height: 25rem;
+        }
         @include respond('tab-generic'){
-            height: 22rem;
+            height: 19rem;
         }
     }
 
