@@ -697,12 +697,17 @@ footer.footer {
     text-decoration: none; }
     .footer__link:hover {
       color: #fa492d; }
-  @media only screen and (max-width: 29em) {
-    .footer__social-media {
-      width: 3.4rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .footer__social-media {
-      width: 2.7rem; } }
+  .footer__social-media {
+    transition: transform .2s, filter .1s; }
+    .footer__social-media:hover {
+      transform: translateY(-6px);
+      filter: contrast(250%); }
+    @media only screen and (max-width: 29em) {
+      .footer__social-media {
+        width: 3.4rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .footer__social-media {
+        width: 2.7rem; } }
   .footer__button.footer__link {
     font-size: 2rem;
     letter-spacing: 3px;
@@ -1429,7 +1434,10 @@ footer.footer {
   border-radius: 50px;
   padding: 0.6rem 1.7rem 0.6rem 1.7rem;
   outline: none;
-  border: none; }
+  border: none;
+  transition: all .2s; }
+  .button__text {
+    text-decoration: none; }
   .button, .button__text {
     font-family: inherit;
     display: inline-block;
@@ -1437,14 +1445,19 @@ footer.footer {
     font-weight: 600; }
   .button--green {
     text-transform: uppercase;
-    background-color: #00A979;
-    color: #FFF7E1; }
+    background-color: #00A979; }
+    .button--green,
+    .button--green .button__text {
+      color: #FFF7E1; }
   .button--orange {
     text-transform: uppercase;
-    background-color: #fa492d;
-    color: #FFF7E1; }
-  .button:hover {
-    cursor: pointer; }
+    background-color: #fa492d; }
+    .button--orange,
+    .button--orange .button__text {
+      color: #FFF7E1; }
+  .button:hover:not([data-status="disabled"]) {
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px #232427); }
   .button--testimonial {
     font-size: 2.2rem;
     letter-spacing: 4px;
@@ -2165,6 +2178,11 @@ footer.footer {
     padding-left: 8px;
     width: 100%;
     text-wrap: nowrap; }
+    .page-notch__heading--long {
+      text-wrap: wrap; }
+      @media only screen and (max-width: 37.5em) {
+        .page-notch__heading--long {
+          font-size: 2rem; } }
     @media only screen and (max-width: 90em) {
       .page-notch__heading {
         font-size: 4rem;
@@ -2232,6 +2250,13 @@ footer.footer {
         .page-notch--med .page-notch__heading {
           letter-spacing: 3px;
           padding: 0 1.5rem; } }
+      .page-notch--med .page-notch__heading--long {
+        font-size: 3.2rem;
+        letter-spacing: 5px;
+        text-wrap: wrap; }
+        @media only screen and (max-width: 37.5em) {
+          .page-notch--med .page-notch__heading--long {
+            font-size: 2rem; } }
     .page-notch--med .page-notch__sub-heading {
       font-size: 2.4rem; }
       @media only screen and (max-width: 90em) {

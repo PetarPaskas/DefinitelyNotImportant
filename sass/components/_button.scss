@@ -4,7 +4,11 @@
     padding:0.6rem 1.7rem 0.6rem 1.7rem;
     outline:none;
     border: none;
+    transition: all .2s;
 
+    &__text{
+        text-decoration: none;
+    }
 
     &,
     &__text{
@@ -12,22 +16,32 @@
         display:inline-block;
         font-size:1.5rem;
         font-weight: 600;
+
+
     }
 
     &--green{
         text-transform: uppercase;
         background-color:$color-green;
-        color:$color-light;
+
+        &,
+        .button__text{
+            color:$color-light;
+        }
     }
 
     &--orange{
         text-transform: uppercase;
         background-color:$color-orange;
-        color:$color-light;
+        &,
+        .button__text{
+            color:$color-light;
+        }
     }
 
-    &:hover{
+    &:hover:not([data-status="disabled"]){
         cursor: pointer;
+        filter:drop-shadow(2px 2px 4px $color-black);
     }
 
     &--testimonial{

@@ -16,11 +16,11 @@
         <div class="overlaying-navigation__nav">
             <div class="overlaying-navigation__nav-item u-margin-top-mid">
                 <ul class="overlaying-navigation__list">
-                    <li class="overlaying-navigation__list-item"><a href="" class="overlaying-navigation__link">Home</a></li>
-                    <li class="overlaying-navigation__list-item"><a href="" class="overlaying-navigation__link">Portfolio</a></li>
-                    <li class="overlaying-navigation__list-item"><a href="" class="overlaying-navigation__link">Services</a></li>
-                    <li class="overlaying-navigation__list-item"><a href="" class="overlaying-navigation__link">Testimonials</a></li>
-                    <li class="overlaying-navigation__list-item"><a href="" class="overlaying-navigation__link">Contact</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../index.html" class="overlaying-navigation__link">Home</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/portfolio.html" class="overlaying-navigation__link">Portfolio</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/services.html" class="overlaying-navigation__link">Services</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/testimonials.html" class="overlaying-navigation__link">Testimonials</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/contact.html" class="overlaying-navigation__link">Contact</a></li>
                 </ul>
             </div>
             <div class="overlaying-navigation__nav-item overlaying-navigation__nav-item--column">
@@ -65,11 +65,11 @@
             </div>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Testimonials</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="../index.html" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="../links/portfolio.html" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="../links/services.html" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="../links/testimonials.html" class="navigation__link">Testimonials</a></li>
+                    <li class="navigation__item"><a href="../links/contact.html" class="navigation__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -285,7 +285,6 @@
 </body>
 
 <script>
-    disableScrollOnNavigationHamburger();
     const leftArrow = document.getElementById('left-arrow');
     const rightArrow = document.getElementById('right-arrow');
     const heroImage = document.getElementById('hero-image');
@@ -314,14 +313,33 @@
         heroImage.dataset.position = heroImagePositions[newPositionIndex];
     }
 
-    function disableScrollOnNavigationHamburger(){
+    window.addEventListener('load', function(event) {
+        enableScroll();
+    });
+
+    const navigation = document.getElementById('navi-toggle');
+    navigation.addEventListener('change',(e)=>{
+        if(e.target.checked){
+            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
+            document.querySelector(".menu__logo-img").style.position = "fixed";
+        }
+        else{
+            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
+            document.querySelector(".menu__logo-img").style.position = "static";
+        }
+    })
+
+    function enableScroll(){
         const navigation = document.getElementById('navi-toggle');
-        navigation.addEventListener('click',()=>{
-        if(document.body.style.overflow == 'hidden')
-            document.body.style.overflow = 'visible'
-        else
-            document.body.style.overflow = "hidden"
-        })
+
+        if(navigation.checked){
+            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
+            document.querySelector(".menu__logo-img").style.position = "fixed";
+        }
+        else{
+            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
+            document.querySelector(".menu__logo-img").style.position = "static";
+        }
     }
 
 </script>

@@ -33,6 +33,13 @@
         width:100%;
         text-wrap: nowrap;
 
+        &--long{
+            text-wrap: wrap;
+            @include respond('phone'){
+                font-size: $text-small;
+            }
+        }
+
         @include respond('big-laptop'){
             font-size:$text-h2-sm;
             letter-spacing: 6px;
@@ -50,6 +57,7 @@
         @include respond('phone'){
             letter-spacing: 4px;
         }
+
     }
     &__sub-heading{
         display:inline-block;
@@ -95,6 +103,7 @@
         }
         .page-notch__heading{
             font-size: $text-h2-sm;
+
             @include respond('big-laptop'){
                 font-size: $text-large;
                 letter-spacing: 5px;
@@ -106,6 +115,15 @@
             @include respond('phone-med'){
                 letter-spacing: 3px;
                 padding:0 1.5rem;
+            }
+
+            &--long{
+                font-size:$text-large;
+                letter-spacing: 5px;
+                text-wrap: wrap;
+                @include respond('phone'){
+                    font-size: $text-small;
+                }
             }
         }
         .page-notch__sub-heading{
