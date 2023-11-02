@@ -1544,8 +1544,8 @@ footer.footer {
     height: 48rem;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 35rem;
-    transition: transform .3s, filter .2s; }
+    transition: transform .3s, filter .2s;
+    background-size: 125%; }
     @media only screen and (max-width: 90em) {
       .composition__item {
         width: 17rem;
@@ -1554,6 +1554,9 @@ footer.footer {
       .composition__item {
         width: 20rem;
         height: 52rem; } }
+    @media only screen and (max-width: 48em) {
+      .composition__item {
+        background-size: 130%; } }
     @media only screen and (max-width: 37.5em) {
       .composition__item {
         width: 16rem;
@@ -1561,16 +1564,17 @@ footer.footer {
     @media only screen and (max-width: 29em) {
       .composition__item {
         width: 15rem;
-        height: 42rem; } }
+        height: 42rem;
+        background-size: 135%; } }
     .composition__item:hover {
       z-index: 30;
       transform: translateY(-5rem) scale(1.1);
       filter: blur(0px) !important; }
     .composition__item--1 {
       left: 1rem;
-      background-image: linear-gradient(to top, rgba(47, 44, 150, 0.534) 100%, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.466) 60%, transparent), url("../img/covers/pp.png"); }
+      background-image: linear-gradient(to top, rgba(47, 44, 150, 0.356) 100%, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.466) 60%, transparent), url("../img/hero/kreek.png"); }
       .composition__item--1:hover {
-        background-image: url("../img/covers/pp.png"); }
+        background-image: url("../img/hero/kreek.png"); }
         @media only screen and (max-width: 75em) {
           .composition__item--1:hover {
             transform: translate(-130%, -50%) scale(1.1); } }
@@ -1584,9 +1588,9 @@ footer.footer {
           transform: translate(-130%, -50%); } }
     .composition__item--2 {
       left: 17rem;
-      background-image: linear-gradient(to top, rgba(47, 44, 150, 0.534) 100%, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.466) 60%, transparent), url("../img/covers/pp.png"); }
+      background-image: linear-gradient(to top, rgba(47, 44, 150, 0.356) 100%, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.466) 60%, transparent), url("../img/hero/pp-2.png"); }
       .composition__item--2:hover {
-        background-image: url("../img/covers/pp.png"); }
+        background-image: url("../img/hero/pp-2.png"); }
         @media only screen and (max-width: 75em) {
           .composition__item--2:hover {
             transform: translate(-50%, -50%) scale(1.1); } }
@@ -1597,9 +1601,9 @@ footer.footer {
           transform: translate(-50%, -50%); } }
     .composition__item--3 {
       left: 33rem;
-      background-image: linear-gradient(to top, rgba(47, 44, 150, 0.534) 100%, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.466) 60%, transparent), url("../img/covers/pp.png"); }
+      background-image: linear-gradient(to top, rgba(47, 44, 150, 0.356) 100%, transparent), linear-gradient(to top, rgba(0, 0, 0, 0.466) 60%, transparent), url("../img/hero/ian.png"); }
       .composition__item--3:hover {
-        background-image: url("../img/covers/pp.png"); }
+        background-image: url("../img/hero/ian.png"); }
         @media only screen and (max-width: 75em) {
           .composition__item--3:hover {
             transform: translate(30%, -50%) scale(1.1); } }
@@ -1659,8 +1663,12 @@ footer.footer {
       cursor: pointer; }
     .offerings__item:hover:not(:last-child) {
       border-right: 1px solid #2f2c96; }
-    .offerings__item:hover .offerings__item-description {
-      color: #2f2c96; }
+    .offerings__item:hover .offerings__item-description,
+    .offerings__item:hover .offerings__icon {
+      color: #2f2c96;
+      fill: #2f2c96; }
+  .offerings__icon {
+    fill: #FFF7E1; }
 
 .gallery {
   display: grid;
