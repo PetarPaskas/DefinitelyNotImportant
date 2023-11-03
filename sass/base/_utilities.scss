@@ -70,7 +70,15 @@
         align-items: center;
     }
 }
+.u-flex-row-reverse{
+    display:flex;
+    flex-direction: row-reverse;
+}
 .u-flex-row{
+    display:flex;
+    flex-direction: row;
+}
+.u-row{
 
 }
 .u-image-cover-top-mh50{
@@ -112,5 +120,38 @@
 .u-mw-90vw-tab-land{
     @include respond('tab-land'){
         max-width: 90vw !important;
+    }
+}
+
+.u-table{
+        display:table;
+        border-collapse:separate;
+        border-spacing: 2.5rem; 
+        margin-left:-2.5rem;
+
+        &>div:first-child{
+            border:none;
+        }
+
+        &>*{
+            display: table-cell !important;
+
+            @include respond('tab-land'){
+                min-height: 35rem;
+                min-width: 20rem;
+                vertical-align: top;
+            }
+            @include respond('phone'){
+                min-height: 28rem;
+            }
+        }
+}
+
+.u-color{
+    &-purple{
+        color:$color-purple !important;
+    }
+    &-orange{
+        color:$color-orange !important;
     }
 }
