@@ -84,31 +84,63 @@
     <section class="section-testimonials">
         <img src="../img/svg/bg-top-purple-wave-testimonial.svg" alt="" class="section-testimonials__img section-testimonials__img--top-left">
         <img src="../img/svg/bg-bottom-purple-wave-testimonial.svg" alt="" class="section-testimonials__img section-testimonials__img--bottom-right">
-        <div class="u-flex-column u-flex-column--center u-mw-80 u-center-div u-content-layer">
+        <div class="section-testimonials__main u-flex-column u-flex-column--center u-mw-80 u-center-div u-content-layer">
             <div class="u-row">
-                <div class="quote quote--med quote--round quote--orange">
-                    <div class="quote__row">
-                        <span class="quote__title">Testimonial</span>
+                <div id="quotes" class="u-flex-row">
+                    <div id="quote" class="quote visible quote--med quote--round quote--orange">
+                        <div class="quote__row">
+                            <span class="quote__title">Testimonial 1</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__text quote__text--center">&lsquo;FWRD is a team run by veterans in the space and their work reflects that! Their communication was top tier and they went the extra mile on the branding for my company.</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__quotee">Siebert Lanhove, Founder, Re:Activ</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__text quote__text--start">services provided • services provided • services provided</span>
+                        </div>
+                        <div class="quote__open-quote"></div>
+                        <div class="quote__close-quote"></div>
                     </div>
-                    <div class="quote__row">
-                        <span class="quote__text quote__text--center">&lsquo;FWRD is a team run by veterans in the space and their work reflects that! Their communication was top tier and they went the extra mile on the branding for my company.</span>
+                    <div id="quote" class="quote quote--med quote--round quote--orange">
+                        <div class="quote__row">
+                            <span class="quote__title">Testimonial 2</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__text quote__text--center">&lsquo;FWRD is a team run by veterans in the space and their work reflects that! Their communication was top tier and they went the extra mile on the branding for my company.</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__quotee">Siebert Lanhove, Founder, Re:Activ</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__text quote__text--start">services provided • services provided • services provided</span>
+                        </div>
+                        <div class="quote__open-quote"></div>
+                        <div class="quote__close-quote"></div>
                     </div>
-                    <div class="quote__row">
-                        <span class="quote__quotee">Siebert Lanhove, Founder, Re:Activ</span>
+                    <div id="quote" class="quote quote--med quote--round quote--orange">
+                        <div class="quote__row">
+                            <span class="quote__title">Testimonial 3</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__text quote__text--center">&lsquo;FWRD is a team run by veterans in the space and their work reflects that! Their communication was top tier and they went the extra mile on the branding for my company.</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__quotee">Siebert Lanhove, Founder, Re:Activ</span>
+                        </div>
+                        <div class="quote__row">
+                            <span class="quote__text quote__text--start">services provided • services provided • services provided</span>
+                        </div>
+                        <div class="quote__open-quote"></div>
+                        <div class="quote__close-quote"></div>
                     </div>
-                    <div class="quote__row">
-                        <span class="quote__text quote__text--start">services provided • services provided • services provided</span>
-                    </div>
-                    <div class="quote__open-quote"></div>
-                    <div class="quote__close-quote"></div>
                 </div>
                 <div class="u-padding-top-btm-med">
                     <ul class="button-slider">
-                        <li class="button-slider__item"><button class="button-slider__button button-slider__button--selected"></button></li>
-                        <li class="button-slider__item"><button class="button-slider__button "></button></li>
-                        <li class="button-slider__item"><button class="button-slider__button"></button></li>
-                        <li class="button-slider__item"><button class="button-slider__button"></button></li>
-                        <li class="button-slider__item"><button class="button-slider__button"></button></li>
+                        <li class="button-slider__item"><button class="button-slider__button " data-item="0"></button></li>
+                        <li class="button-slider__item"><button class="button-slider__button " data-item="1"></button></li>
+                        <li class="button-slider__item"><button class="button-slider__button" data-item="2"></button></li>
                     </ul>
                 </div>
             </div>
@@ -284,4 +316,96 @@
             document.querySelector(".menu__logo-img").style.position = "static";
         }
     }
+</script>
+
+
+
+
+<script>
+const quotes = document.querySelectorAll('.quote');
+const buttonSelectedClass = "button-slider__button--selected";
+
+let nextCardSlot = 0;
+let currentCardIndex = 0;
+let isAnimating = false;
+
+function showCard(index) {
+  quotes.forEach((card, i) => {
+    card.classList.remove('sliding');
+    if (i === index) {
+      card.classList.add('visible');
+    } else {
+      card.classList.remove('visible');
+    }
+  });
+}
+
+function nextCard() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const nextIndex = (currentCardIndex + 1) % quotes.length;
+
+  const currentCard = quotes[currentCardIndex];
+  currentCard.classList.add('sliding');
+  currentCard.style.transform = 'translateX(-110%)';
+
+  setTimeout(() => {
+    currentCard.style.transform = 'translateX(0)';
+    currentCardIndex = nextCardSlot;
+    showCard(currentCardIndex);
+    isAnimating = false;
+  }, 600);
+}
+
+function prevCard() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const currentCard = quotes[currentCardIndex];
+  currentCard.classList.add('sliding');
+  currentCard.style.transform = 'translateX(110%)';
+
+  setTimeout(() => {
+    currentCard.style.transform = 'translateX(0)';
+    currentCardIndex = nextCardSlot;
+    showCard(currentCardIndex);
+    isAnimating = false;
+  }, 600);
+}
+
+
+showCard(currentCardIndex); // Show the initial card
+deselectSelectButton(currentCardIndex);
+
+document.querySelector('.button-slider').addEventListener('click',(e)=>{
+    const button = e.target;
+    const index = button.dataset.item;
+    const prevCardIndex = currentCardIndex;
+
+    if(!index || parseInt(index) === currentCardIndex)
+    return;
+
+    nextCardSlot = parseInt(index);
+    console.log(`Next:${nextCardSlot} --- Current:${currentCardIndex}`);
+    
+    if(currentCardIndex > nextCardSlot)
+    nextCard();
+    else
+    prevCard();  
+
+    deselectSelectButton(nextCardSlot)
+})
+
+
+
+function deselectSelectButton(index){
+    document.querySelectorAll('.button-slider__button').forEach((e,i)=>{
+        e.classList.remove(buttonSelectedClass);
+
+        if(index === i)
+        e.classList.add(buttonSelectedClass)
+    });
+}
+
 </script>

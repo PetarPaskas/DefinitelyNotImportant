@@ -3,6 +3,9 @@
     background-color: $color-green;
     color:$color-white;
     padding:0 2rem;
+    visibility: hidden;
+    display: none;
+    transition: transform 0.5s, visibility .5s;
 
     &--orange{
         background-color: $color-orange;
@@ -180,4 +183,10 @@
         }
 
     }
+}
+
+.quote.visible{
+    display:block;
+    transform:translateX(0);
+    visibility: visible;
 }

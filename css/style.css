@@ -1302,6 +1302,9 @@ footer.footer {
       top: 50%;
       right: 0;
       width: 40%; }
+  .testimonials .section-testimonials__main {
+    overflow: hidden;
+    padding-top: 4rem; }
 
 .testimonials .section-clients {
   background-color: #2f2c96;
@@ -2052,7 +2055,10 @@ footer.footer {
   position: relative;
   background-color: #00A979;
   color: #FFF;
-  padding: 0 2rem; }
+  padding: 0 2rem;
+  visibility: hidden;
+  display: none;
+  transition: transform 0.5s, visibility .5s; }
   .quote--orange {
     background-color: #fa492d; }
   .quote--round {
@@ -2193,6 +2199,11 @@ footer.footer {
     @media only screen and (max-width: 37.5em) {
       .quote__close-quote {
         bottom: -10%; } }
+
+.quote.visible {
+  display: block;
+  transform: translateX(0);
+  visibility: visible; }
 
 .page-notch {
   position: absolute;
