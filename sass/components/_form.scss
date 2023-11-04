@@ -67,8 +67,8 @@
 
         font-size:$text-med-small;
         padding-left:.5rem;
-        color:$color-black;
         letter-spacing: 2px;
+        color:$color-black;
         font-weight: bold;
 
         text-transform: uppercase;
@@ -114,4 +114,13 @@
         }
     }
 
+    &__error{
+        color:$color-orange;
+        font-size: $text-small-med;
+        display: block;
+        transform: translateY(-3rem);
+        visibility: hidden;
+        padding-left:.5rem;
+        letter-spacing: 2px;
+    }
 }
