@@ -9,23 +9,50 @@
         &:not(:last-child){
             padding-bottom:15rem;
         }
+
         &:nth-child(odd){
             flex-direction: row;
             .zigzag-container__item-description{
                 text-align:end;
-                padding-left:30rem;
+                align-items: end;
+                //padding-left:30rem;
+                @include respond('tab-land'){
+                    //padding-left:20rem;
+                }
+                @include respond('phone'){
+                    //padding:0;
+                }
+            }
+            @include respond('phone'){
+                flex-direction: column;
             }
         }
+        
         &:nth-child(even){
             flex-direction: row-reverse;
             .zigzag-container__item-description{
+                align-items:start;
                 text-align:start;
-                padding-right:30rem;
+                //padding-right:30rem;
+                @include respond('tab-land'){
+                    //padding-right:20rem;
+                }
+                @include respond('phone'){
+                    //padding:0;
+                }
+                @include respond('phone')
             }
         }
+
         &-description{
-            text-align: start;
+            display: flex;
+            flex-direction: column;
+            flex-grow:1;
             padding:0 5rem;
+
+            @include respond('tab-land'){
+                padding:0 2rem;
+            }
             &>*{
                 display:inline-block;
                 width:100%;
@@ -33,7 +60,32 @@
         }
         &-presentation{
             min-width:57%;
+            @include respond('tab-land'){
+                min-width:70%;
+            }
         }
+
+        @include respond('phone'){
+            &:nth-child(1n){
+                flex-direction: column-reverse;
+
+                & .zigzag-container__item-description{
+                    align-items: center;
+                    text-align: center;
+                    padding-top: 2rem;
+                    &>*{
+                        width:auto;
+                    }
+                }
+
+                & .zigzag-container__item-presentation{
+                    min-width: 0%;
+                    max-width: none;
+                    width:100%;
+                }
+            }
+        }
+
     }
 
     &__title{
@@ -59,8 +111,13 @@
         padding: 0.7rem 2rem 0.7rem 2.4rem;
         width:auto;
         transition:background-color .2s;
+        
         &:hover{
             background-color: $color-purple;
+        }
+        @include respond('tab-port'){
+            font-size: $text-small-med-med-med;
+            letter-spacing: 3px;
         }
     }
     &__image{
