@@ -1961,8 +1961,8 @@ footer.footer {
     display: inline-block;
     font-size: 2.4rem;
     padding-left: .5rem;
-    color: #232427;
     letter-spacing: 2px;
+    color: #232427;
     font-weight: bold;
     text-transform: uppercase;
     transition: all .5s;
@@ -1993,6 +1993,14 @@ footer.footer {
     @media only screen and (max-width: 75em) {
       .form__button {
         padding: 1rem 2.7rem 0.5rem 2.8rem; } }
+  .form__error {
+    color: #fa492d;
+    font-size: 1.3rem;
+    display: block;
+    transform: translateY(-3rem);
+    visibility: hidden;
+    padding-left: .5rem;
+    letter-spacing: 2px; }
 
 .study-content {
   display: flex;
