@@ -334,31 +334,31 @@
                         <div class="form__group">
                             <input id="name" name="name" type="text" placeholder="Name" class="form__input" autocomplete="off" required>
                             <label for="name" class="form__label">Name</label>
-                            <small id="error-name" class="form__error">xxxx</small>
+                            <small id="error-name" class="form__error">No issues.</small>
                         </div>
                         <div class="form__group">
                             <input type="email" id="email" name="email" placeholder="Email" class="form__input" autocomplete="off" required>
                             <label for="email" class="form__label">Email</label>
-                            <small id="error-email" class="form__error">xxxx</small>
+                            <small id="error-email" class="form__error">No issues.</small>
                         </div>
                     </div>
                     <div class="form__row">
                         <div class="form__group">
                             <input type="text" id="phone" name="phone" placeholder="Phone number" class="form__input" autocomplete="off" required>
                             <label for="phone" class="form__label">Phone number</label>
-                            <small id="error-phone" class="form__error">xxx</small>
+                            <small id="error-phone" class="form__error">No issues.</small>
                         </div>
                         <div class="form__group">
                             <input type="text" id="service" name="service" class="form__input" placeholder="Which service are you interested in?" autocomplete="off" required>
                             <label for="service" class="form__label">Which service are you interested in?</label>
-                            <small id="error-service" class="form__error">xxxx</small>
+                            <small id="error-service" class="form__error">No issues.</small>
                         </div>
                     </div>
                     <div class="form__row">
                         <div class="form__group form__group--full-width">
                             <input type="text" class="form__input" id="info" name="info" placeholder="Tell us more">
                             <label for="info" class="form__label">Tell us more</label>
-                            <small id="error-info" class="form__error">xxx</small>
+                            <small id="error-info" class="form__error">No issues.</small>
                         </div>
                     </div>
                     <div class="form__row">
@@ -494,7 +494,7 @@
         const errors = doValidation(data);
 
         if(Object.keys(errors) > 0){
-            alert("Check console")
+            alert("Check console");
             console.log("Errors!!! in form", errors);
             displayErrors(errors);
             return;
@@ -502,6 +502,25 @@
         else{
             hideErrors(data);
         }
+
+        sendRequest();
+    }
+
+    function sendRequest(data){
+        const uri = "";
+        data.clientTime = new Date().toISOString();
+
+        fetch(uri,{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json',
+            },
+            body: JSON.stringify(data)
+        }).then(response=>{
+            console.log(response.status, response);
+        }).catch(err=>{
+            alert("Server error");
+        })
     }
 
     function hideErrors(data){
