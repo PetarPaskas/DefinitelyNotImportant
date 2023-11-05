@@ -1195,12 +1195,20 @@ footer.footer {
   overflow: visible;
   background-color: #00A979;
   padding-top: 2rem;
-  padding-bottom: 7rem;
-  z-index: 20; }
+  padding-bottom: 7rem; }
   .contact .header .menu {
     align-items: center; }
   .contact .header .page-notch {
     padding: 2rem; }
+  .contact .header .background-layer {
+    z-index: 11;
+    background-color: #00A979;
+    height: 100%;
+    width: 100%; }
+  .contact .header .content-layer {
+    z-index: 49; }
+  .contact .header .page-notch {
+    z-index: 11; }
 
 .contact .section-form {
   position: relative; }

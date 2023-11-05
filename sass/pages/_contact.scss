@@ -10,7 +10,20 @@
         .page-notch{
             padding:2rem;
         }
-        z-index: $z-content-layer;
+        //z-index: $z-content-layer;
+
+        .background-layer{
+            z-index:11;
+            background-color:$color-green;
+            height: 100%;
+            width: 100%;
+        }
+        .content-layer{
+            z-index: 49;
+        }
+        .page-notch{
+            z-index: 11;
+        }
     }
 
     .section-form{

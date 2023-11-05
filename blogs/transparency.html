@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../scripts/index.js"></script>
 </head>
 <body class="blog">
     <div class="overlaying-navigation">
@@ -249,27 +250,5 @@
     });
 
     const navigation = document.getElementById('navi-toggle');
-    navigation.addEventListener('change',(e)=>{
-        if(e.target.checked){
-            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
-            document.querySelector(".menu__logo-img").style.position = "fixed";
-        }
-        else{
-            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
-            document.querySelector(".menu__logo-img").style.position = "static";
-        }
-    })
-
-    function enableScroll(){
-        const navigation = document.getElementById('navi-toggle');
-
-        if(navigation.checked){
-            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
-            document.querySelector(".menu__logo-img").style.position = "fixed";
-        }
-        else{
-            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
-            document.querySelector(".menu__logo-img").style.position = "static";
-        }
-    }
+    navigation.addEventListener('change',enableScroll)
 </script>

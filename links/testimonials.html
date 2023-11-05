@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../scripts/index.js"></script>
 </head>
 <body class="testimonials">
     <div class="overlaying-navigation">
@@ -284,128 +285,25 @@
 </footer>
 </body>
 <script>  
-    let clientsSlide = document.getElementById('clients-slide');
-    let copy = clientsSlide.cloneNode(true);
-    clientsSlide.parentNode.appendChild(copy);
+    cloneNodes(['clients-slide']);
 
     window.addEventListener('load', function(event) {
         enableScroll();
     });
 
     const navigation = document.getElementById('navi-toggle');
-    navigation.addEventListener('change',(e)=>{
-        if(e.target.checked){
-            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
-            document.querySelector(".menu__logo-img").style.position = "fixed";
-        }
-        else{
-            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
-            document.querySelector(".menu__logo-img").style.position = "static";
-        }
-    })
+    navigation.addEventListener('change',enableScroll)
 
-    function enableScroll(){
-        const navigation = document.getElementById('navi-toggle');
-
-        if(navigation.checked){
-            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
-            document.querySelector(".menu__logo-img").style.position = "fixed";
-        }
-        else{
-            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
-            document.querySelector(".menu__logo-img").style.position = "static";
-        }
-    }
-</script>
-
-
-
-
-<script>
-const quotes = document.querySelectorAll('.quote');
-const buttonSelectedClass = "button-slider__button--selected";
-
-let nextCardSlot = 0;
-let currentCardIndex = 0;
-let isAnimating = false;
-
-function showCard(index) {
-  quotes.forEach((card, i) => {
-    card.classList.remove('sliding');
-    if (i === index) {
-      card.classList.add('visible');
-    } else {
-      card.classList.remove('visible');
-    }
-  });
+    const testimonialsState = {
+    nextCardSlot:0,
+    currentCardIndex:0,
+    isAnimating: false,
+    quotes: document.querySelectorAll('.quote'),
+    buttonSelectedClass: "button-slider__button--selected"
 }
+showCard(testimonialsState,testimonialsState.currentCardIndex); // Show the initial card
+deselectSelectButton(testimonialsState,testimonialsState.currentCardIndex);
 
-function nextCard() {
-  if (isAnimating) return;
-  isAnimating = true;
-
-  const nextIndex = (currentCardIndex + 1) % quotes.length;
-
-  const currentCard = quotes[currentCardIndex];
-  currentCard.classList.add('sliding');
-  currentCard.style.transform = 'translateX(-110%)';
-
-  setTimeout(() => {
-    currentCard.style.transform = 'translateX(0)';
-    currentCardIndex = nextCardSlot;
-    showCard(currentCardIndex);
-    isAnimating = false;
-  }, 600);
-}
-
-function prevCard() {
-  if (isAnimating) return;
-  isAnimating = true;
-
-  const currentCard = quotes[currentCardIndex];
-  currentCard.classList.add('sliding');
-  currentCard.style.transform = 'translateX(110%)';
-
-  setTimeout(() => {
-    currentCard.style.transform = 'translateX(0)';
-    currentCardIndex = nextCardSlot;
-    showCard(currentCardIndex);
-    isAnimating = false;
-  }, 600);
-}
-
-
-showCard(currentCardIndex); // Show the initial card
-deselectSelectButton(currentCardIndex);
-
-document.querySelector('.button-slider').addEventListener('click',(e)=>{
-    const button = e.target;
-    const index = button.dataset.item;
-    const prevCardIndex = currentCardIndex;
-
-    if(!index || parseInt(index) === currentCardIndex)
-    return;
-
-    nextCardSlot = parseInt(index);
-    console.log(`Next:${nextCardSlot} --- Current:${currentCardIndex}`);
-    
-    if(currentCardIndex > nextCardSlot)
-    nextCard();
-    else
-    prevCard();  
-
-    deselectSelectButton(nextCardSlot)
-})
-
-
-
-function deselectSelectButton(index){
-    document.querySelectorAll('.button-slider__button').forEach((e,i)=>{
-        e.classList.remove(buttonSelectedClass);
-
-        if(index === i)
-        e.classList.add(buttonSelectedClass)
-    });
-}
+document.querySelector('.button-slider').addEventListener('click',(e)=>enableTestimonials(e,testimonialsState))
 
 </script>
