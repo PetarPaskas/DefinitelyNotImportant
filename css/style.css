@@ -926,7 +926,7 @@ footer.footer {
 
 .case-studies .header {
   overflow: visible;
-  padding-top: 5rem;
+  padding-top: 2rem;
   padding-bottom: 0px; }
   @media only screen and (max-width: 56.25em) {
     .case-studies .header {
@@ -949,6 +949,7 @@ footer.footer {
 
 .section-brief {
   padding: 10rem 15rem;
+  padding-top: 14rem;
   background-color: #FFF7E1; }
   @media only screen and (max-width: 56.25em) {
     .section-brief {
@@ -956,6 +957,13 @@ footer.footer {
   @media only screen and (max-width: 29em) {
     .section-brief {
       padding: 5rem 2rem; } }
+  .section-brief__orange-wave {
+    position: absolute;
+    top: -1rem;
+    left: 0; }
+    .section-brief__orange-wave--img {
+      width: 110%;
+      height: auto; }
 
 .section-testimonial {
   background-color: #FFF7E1;
@@ -2526,25 +2534,19 @@ footer.footer {
       background-color: #fa492d; }
 
 .case-study {
-  background-image: url(../../img/case-studies/bg-case-study-orange-wave.svg);
+  background-color: #fa492d;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 13rem;
-  height: 70rem; }
-  @media only screen and (max-width: 90em) {
-    .case-study {
-      height: 75rem; } }
-  @media only screen and (max-width: 75em) {
-    .case-study {
-      height: 82rem; } }
+  padding-bottom: 5rem;
+  min-height: 65vh; }
   @media only screen and (max-width: 56.25em) {
     .case-study {
-      height: 57rem;
-      padding-bottom: 8rem; } }
+      min-height: 39vh;
+      padding-bottom: 5rem; } }
   @media only screen and (max-width: 37.5em) {
     .case-study {
-      height: 41rem;
+      min-height: 30vh;
       padding-bottom: 6rem; } }
   .case-study__cover {
     height: 65vh;

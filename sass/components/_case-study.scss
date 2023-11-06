@@ -1,23 +1,24 @@
 .case-study{
-    background-image: url(../../img/case-studies/bg-case-study-orange-wave.svg);
+    //background-image: url(../../img/case-studies/bg-case-study-orange-wave.svg);
+    background-color: $color-orange;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size:cover;
-    padding-bottom:13rem;
-    height: 70rem;
+    padding-bottom:5rem;
+    min-height: 65vh;
 
     @include respond('big-laptop'){
-        height: 75rem;
+        //height: 75rem;
     }
     @include respond('tab-land'){
-        height: 82rem;
+        //height: 82rem;
     }
     @include respond('tab-port'){
-        height: 57rem;
-        padding-bottom:8rem;
+        min-height: 39vh;
+        padding-bottom:5rem;
     }
     @include respond('phone'){
-        height: 41rem;
+        min-height: 30vh;
         padding-bottom:6rem;
     }
 
