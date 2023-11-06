@@ -1,7 +1,7 @@
 .case-studies{
     & .header{
         overflow: visible;
-        padding-top:5rem;
+        padding-top:2rem;
         padding-bottom:0px;
         @include respond('tab-port'){
             padding-top: 2rem;
@@ -36,12 +36,24 @@
 
 .section-brief{
     padding:10rem 15rem;
+    padding-top:14rem;
+
     background-color: $color-light;
     @include respond('tab-port'){
         padding:10rem 4rem;
     }
     @include respond('phone-med'){
         padding:5rem 2rem;
+    }
+    &__orange-wave{
+        position: absolute;
+        top:-1rem;
+        left:0;
+
+        &--img{
+            width: 110%;
+            height: auto;
+        }
     }
 }
 
