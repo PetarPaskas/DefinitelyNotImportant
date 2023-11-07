@@ -433,6 +433,8 @@ footer.footer {
     bottom: 0;
     left: 0;
     padding-top: 20rem; }
+    .header__background--stacked {
+      z-index: 10; }
     .header__background--tablet, .header__background--phone {
       display: none;
       visibility: hidden;
@@ -497,6 +499,10 @@ footer.footer {
     @media only screen and (max-width: 75em) {
       .header__content {
         padding-top: 2rem; } }
+    .header__content--stacked {
+      z-index: 20; }
+      .header__content--stacked > * {
+        position: relative; }
   .header__main {
     position: relative;
     display: flex;
@@ -764,6 +770,14 @@ footer.footer {
   position: relative;
   z-index: 20; }
 
+@media only screen and (max-width: 48em) {
+  .overlaying-navigation__button {
+    padding-top: 2rem; } }
+
+@media only screen and (max-width: 29em) {
+  .overlaying-navigation__button {
+    padding-top: 0; } }
+
 .section-projects {
   background-color: #FFF7E1;
   padding-top: 8rem;
@@ -771,10 +785,13 @@ footer.footer {
   .section-projects__overflow-container {
     display: inline-block;
     position: absolute;
-    top: 0;
+    top: -15rem;
     right: 0; }
     .section-projects__overflow-container--wave {
       display: inline-block; }
+    @media only screen and (max-width: 48em) {
+      .section-projects__overflow-container {
+        padding-top: -20rem; } }
   @media only screen and (max-width: 90em) {
     .section-projects__wave {
       width: 54rem; } }
@@ -881,10 +898,10 @@ footer.footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    transform: translateY(100%); }
+    transform: translateY(98%); }
     @media only screen and (max-width: 37.5em) {
       .section-blog__bottom-wave {
-        transform: translateY(100%) scale(1.9); } }
+        transform: translateY(98%) scale(1.9); } }
   .section-blog .h-3 {
     color: #FFF7E1; }
   .section-blog .content-items {
@@ -1527,6 +1544,8 @@ footer.footer {
   justify-content: space-between;
   align-items: center;
   max-width: 145rem; }
+  .menu--move-up {
+    transform: translateY(-6rem); }
   @media only screen and (max-width: 90em) {
     .menu {
       max-width: 130rem; } }
@@ -1566,6 +1585,14 @@ footer.footer {
     @media only screen and (max-width: 29em) {
       .menu__logo-img {
         height: 5rem; } }
+    .menu__logo--independent {
+      display: inline-block; }
+      .menu__logo--independent .menu__logo-img {
+        display: inline-block;
+        transform: translate(5rem, 3rem); }
+        @media only screen and (max-width: 29em) {
+          .menu__logo--independent .menu__logo-img {
+            transform: translate(1rem, 1.6rem); } }
 
 .composition {
   position: relative;

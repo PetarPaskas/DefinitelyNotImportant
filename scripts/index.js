@@ -20,7 +20,6 @@ function getFormElements(){
     }
 }
 
-
 function submitForm(e){
     e.preventDefault();
 

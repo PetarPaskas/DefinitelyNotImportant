@@ -6,6 +6,10 @@
     align-items: center;
     max-width:145rem;
 
+    &--move-up{
+        transform:translateY(-6rem);
+    }
+
     @include respond('big-laptop'){
         max-width: 130rem;
     }
@@ -46,6 +50,17 @@
             }
             @include respond('phone-med'){
                 height: 5rem;
+            }
+        }
+        &--independent{
+            display:inline-block;
+            .menu__logo-img {
+                display: inline-block;
+                transform:translate(5rem, 3rem);
+                
+                @include respond('phone-med'){
+                    transform:translate(1rem, 1.6rem);
+                }
             }
         }
     }

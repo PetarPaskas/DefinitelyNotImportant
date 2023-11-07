@@ -12,6 +12,10 @@
         left:0;
         padding-top:20rem;
 
+        &--stacked{
+            z-index: $z-background-layer;
+        }
+
         &--tablet,
         &--phone{
             display: none;
@@ -98,6 +102,12 @@
         position:relative;
         @include respond('tab-land'){
             padding-top:2rem;
+        }
+        &--stacked{
+            z-index: $z-content-layer;
+            &>*{
+                position:relative;
+            }
         }
     }
 

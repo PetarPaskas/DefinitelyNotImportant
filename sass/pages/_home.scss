@@ -1,3 +1,14 @@
+.overlaying-navigation{
+    &__button{
+        @include respond('tab-generic'){
+            padding-top:2rem;
+        }
+        @include respond('phone-med'){
+            padding-top:0;
+        }
+    }
+}
+
 .section-projects{
     background-color: $color-light;
     padding-top:8rem;
@@ -8,14 +19,14 @@
         //overflow:hidden;
         //transform: translateY(100%);
         position:absolute;
-        top:0;
+        top:-15rem;
         right:0;
         &--wave{
             display: inline-block;
-            // position:absolute;
-            // bottom:-30%;
-            // right:0;
-        }            
+        }  
+        @include respond('tab-generic'){
+            padding-top:-20rem;
+        }          
     }
     &__wave{
 
@@ -165,10 +176,10 @@
         bottom:0;
         left:0;
         width: 100%;
-        transform: translateY(100%);
+        transform: translateY(98%);
         
         @include respond('phone'){
-            transform: translateY(100%) scale(1.9);
+            transform: translateY(98%) scale(1.9);
         }
     }
 
