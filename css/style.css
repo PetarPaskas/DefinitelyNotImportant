@@ -1175,10 +1175,13 @@ footer.footer {
     padding-right: 8rem;
     padding-left: 12rem;
     margin-top: 10rem; }
+    .services .section-services .zigzag-container__item:not(:last-child) {
+      padding-bottom: 12rem; }
     .services .section-services .zigzag-container__item-presentation {
       min-width: none; }
     .services .section-services .zigzag-container__item-description {
-      min-width: 36%; }
+      min-width: 36%;
+      justify-content: center; }
       @media only screen and (max-width: 48em) {
         .services .section-services .zigzag-container__item-description {
           min-width: 33%; } }
@@ -1186,7 +1189,11 @@ footer.footer {
       .services .section-services .zigzag-container__item:not(:last-child) {
         padding-bottom: 10rem; } }
     .services .section-services .zigzag-container .text-normal--description {
-      max-width: none; }
+      max-width: 52rem;
+      margin-top: 1rem; }
+    .services .section-services .zigzag-container .text-normal--title {
+      letter-spacing: 10px;
+      font-size: 5rem; }
     @media only screen and (max-width: 48em) {
       .services .section-services .zigzag-container {
         padding-right: 5rem;
@@ -1194,6 +1201,28 @@ footer.footer {
     @media only screen and (max-width: 37.5em) {
       .services .section-services .zigzag-container .card {
         width: 45vw; } }
+  .services .section-services__row--creative .card {
+    flex-basis: 25%; }
+  .services .section-services__row--creative .zigzag-container__image {
+    width: 45rem;
+    transform: translate(8rem, 6rem); }
+  .services .section-services__row--web {
+    margin-left: 10rem; }
+  .services .section-services__row--personalised {
+    transform: translateX(-30rem); }
+  .services .section-services__row--merchandise {
+    margin-left: 15rem; }
+    .services .section-services__row--merchandise .zigzag-container__image {
+      width: 50rem; }
+  .services .section-services__title {
+    margin-top: 7rem; }
+    .services .section-services__title .text-normal {
+      display: block; }
+      .services .section-services__title .text-normal--description {
+        max-width: 60vw;
+        font-size: 2rem; }
+      .services .section-services__title .text-normal:not(:first-child) {
+        padding-top: 2rem; }
 
 .services .section-clients {
   background-color: #2f2c96; }
@@ -2466,32 +2495,26 @@ footer.footer {
     object-position: top; }
 
 .card {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
   border-radius: 10px;
   color: #FFF7E1;
-  padding: 3rem;
-  max-width: 28rem; }
+  padding: 3rem 1rem; }
   @media only screen and (max-width: 75em) {
     .card {
       max-width: none; } }
   @media only screen and (max-width: 37.5em) {
     .card {
       padding: 2rem; } }
-  .card > * {
-    white-space: wrap; }
   .card__header {
     text-align: center;
-    min-height: 30%;
-    height: 13rem; }
-    @media only screen and (max-width: 75em) {
-      .card__header {
-        height: 10rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .card__header {
-        min-height: 8rem; } }
+    height: auto;
+    padding-bottom: 2rem; }
   .card__title {
     font-weight: bold;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     letter-spacing: 3px;
     text-transform: uppercase; }
     @media only screen and (max-width: 75em) {
@@ -2520,22 +2543,17 @@ footer.footer {
     .card-container__row {
       display: flex;
       flex-direction: row;
-      align-items: start;
-      justify-content: space-between; }
+      align-items: stretch;
+      justify-content: start; }
       .card-container__row .card {
-        max-width: none; }
+        max-width: 40%; }
         .card-container__row .card:not(:last-child) {
-          margin-right: 2rem; }
-        .card-container__row .card__header {
-          height: 9rem; }
-          @media only screen and (max-width: 75em) {
-            .card-container__row .card__header {
-              height: 6rem; } }
+          margin-right: 1.5rem; }
         @media only screen and (max-width: 75em) {
           .card-container__row .card {
             width: auto; } }
       .card-container__row:not(:last-child) {
-        margin-bottom: 4rem; }
+        margin-bottom: 1.5rem; }
         @media only screen and (max-width: 37.5em) {
           .card-container__row:not(:last-child) {
             margin-bottom: 2rem; } }

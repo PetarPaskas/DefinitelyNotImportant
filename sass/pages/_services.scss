@@ -52,16 +52,19 @@
             margin-top:10rem;
 
             &__item{
+                &:not(:last-child){
+                    padding-bottom: 12rem;
+                }
                 &-presentation{
                     min-width:none;
                 }
                 &-description{
                     min-width: 36%;
+                    justify-content: center;
                     @include respond('tab-generic'){
                         min-width: 33%;
                     }
                 }
-
                 @include respond('phone'){
                     &:not(:last-child){
                         padding-bottom: 10rem;
@@ -69,9 +72,18 @@
                 }
             }
 
-            .text-normal--description{
-                max-width: none;
+            .text-normal{
+                &--description{
+                    //max-width: none;
+                    max-width: 52rem;
+                    margin-top:1rem;
+                }
+                &--title{
+                    letter-spacing: 10px;
+                    font-size: $text-h2;
+                }
             }
+
             @include respond('tab-generic'){
                 padding-right:5rem;
                 padding-left:5rem;
@@ -80,6 +92,52 @@
             @include respond('phone'){
                 & .card{
                     width: 45vw;
+                }
+            }
+        }
+
+        &__row{
+            &--creative{
+                .card{
+                    flex-basis: 25%;
+                }
+                .zigzag-container__image{
+                    width: 45rem;
+                    transform:translate(8rem,6rem)
+                }
+            }
+            &--collaboration{
+
+            }
+            &--web{
+                margin-left:10rem;
+            }
+            &--personalised{
+                transform:translateX(-30rem);
+            }
+            &--merchandise{
+                margin-left:15rem;
+                .zigzag-container{
+                    &__item-description{
+                        //width:40%;
+                    }
+                    &__image{
+                       width:50rem;
+                    }
+                }
+            }
+        }
+        
+        &__title{
+            margin-top:7rem;
+            .text-normal{
+                display:block;
+                &--description{
+                    max-width: 60vw;
+                    font-size: $text-small;
+                }
+                &:not(:first-child){
+                    padding-top:2rem;
                 }
             }
         }
