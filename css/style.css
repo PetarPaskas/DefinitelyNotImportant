@@ -1171,6 +1171,19 @@ footer.footer {
         margin-top: 5rem; } }
     .services .section-services .logos__slide {
       animation: 8s spin-fix linear infinite; }
+  .services .section-services__btm-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35rem; }
+  .services .section-services__personalised-wave {
+    position: absolute;
+    top: 60%;
+    right: 0; }
+  .services .section-services__creative-wave {
+    top: 20%;
+    left: 0;
+    position: absolute; }
   .services .section-services .zigzag-container {
     padding-right: 8rem;
     padding-left: 12rem;
