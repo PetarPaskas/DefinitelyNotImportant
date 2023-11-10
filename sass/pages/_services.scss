@@ -124,13 +124,49 @@
                 }
             }
             &--collaboration{
-
+                .zigzag-container{
+                    &__item-description{
+                        .zigzag-container__image{
+                            display:inline-block;
+                            @include respond('phone'){
+                                display:none;
+                            }
+                        }
+                    }
+                    &__item-presentation{
+                        .zigzag-container__image{
+                            display: none;
+                            width:20rem;
+                            @include respond('phone'){
+                                display:inline-block;
+                            }
+                        }
+                    }
+                }
             }
             &--web{
                 margin-left:10rem;
             }
             &--personalised{
                 transform:translateX(-30rem);
+                .zigzag-container{
+                    &__item-description{
+                        .zigzag-container__image{
+                            display:inline-block;
+                            @include respond('phone'){
+                                display:none;
+                            }
+                        }
+                    }
+                    &__item-presentation{
+                        .zigzag-container__image{
+                            display: none;
+                            @include respond('phone'){
+                                display:inline-block;
+                            }
+                        }
+                    }
+                }
             }
             &--merchandise{
                 margin-left:15rem;
