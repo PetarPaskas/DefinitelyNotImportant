@@ -68,6 +68,20 @@
             padding-left:12rem;
             margin-top:10rem;
 
+            .card{
+                &-container{
+                    &__row{
+                        @include respond('phone'){
+                            justify-content: center;
+                            flex-wrap:wrap;
+                            align-content:center;
+                            row-gap:2rem;
+                        }
+
+                    }
+                }
+            }
+
             &__item{
                 &:not(:last-child){
                     padding-bottom: 12rem;
@@ -83,6 +97,7 @@
                     }
                 }
                 @include respond('phone'){
+                    flex-direction: column;
                     &:not(:last-child){
                         padding-bottom: 10rem;
                     }
@@ -98,6 +113,10 @@
                 &--title{
                     letter-spacing: 10px;
                     font-size: $text-h2;
+                    @include respond('phone'){
+                        letter-spacing: 4px;
+                        font-size:$text-large;
+                    }
                 }
             }
 
@@ -111,6 +130,12 @@
                     width: 45vw;
                 }
             }
+
+            @include respond('phone'){
+                &__image{
+                    
+                }
+            }
         }
 
         &__row{
@@ -118,15 +143,25 @@
                 .card{
                     flex-basis: 25%;
                 }
-                .zigzag-container__image{
+                img.zigzag-container__image{
                     width: 45rem;
-                    transform:translate(8rem,6rem)
+                    transform:translate(8rem,6rem);
+                    @include respond('phone'){
+                        transform:translate(0,0);
+                        width:90%;
+                    }
                 }
             }
             &--collaboration{
+                @include respond('phone'){
+                    .text-line{
+                        width: 60%;
+                    }
+                }
+
                 .zigzag-container{
                     &__item-description{
-                        .zigzag-container__image{
+                        img.zigzag-container__image{
                             display:inline-block;
                             @include respond('phone'){
                                 display:none;
@@ -134,11 +169,18 @@
                         }
                     }
                     &__item-presentation{
-                        .zigzag-container__image{
+                        img.zigzag-container__image{
                             display: none;
                             width:20rem;
                             @include respond('phone'){
                                 display:inline-block;
+                                width:38%;
+                                transform:translate(1rem,2rem);
+                            }
+                        }
+                        .text-normal--description{
+                            @include respond('phone'){
+                                text-align:center;
                             }
                         }
                     }
@@ -146,12 +188,26 @@
             }
             &--web{
                 margin-left:10rem;
+                @include respond('phone'){
+                    margin-left:0;
+                    img.zigzag-container__image{
+                        width:90%;
+                    }
+                }
             }
             &--personalised{
                 transform:translateX(-30rem);
+
+                @include respond('phone'){
+                    transform:translateX(-0rem);
+                    .text-line{
+                        width: 62%;
+                    }
+                }
+
                 .zigzag-container{
                     &__item-description{
-                        .zigzag-container__image{
+                        img.zigzag-container__image{
                             display:inline-block;
                             @include respond('phone'){
                                 display:none;
@@ -159,10 +215,18 @@
                         }
                     }
                     &__item-presentation{
-                        .zigzag-container__image{
+                        img.zigzag-container__image{
                             display: none;
+                            width:20rem;
                             @include respond('phone'){
                                 display:inline-block;
+                                width:37%;
+                                transform:translate(1rem,2rem);
+                            }
+                        }
+                        .text-normal--description{
+                            @include respond('phone'){
+                                text-align:center;
                             }
                         }
                     }
@@ -170,12 +234,14 @@
             }
             &--merchandise{
                 margin-left:15rem;
-                .zigzag-container{
-                    &__item-description{
-                        //width:40%;
-                    }
-                    &__image{
-                       width:50rem;
+                @include respond('phone'){
+                    margin-left:0;
+                }
+                img.zigzag-container__image{
+                    width:50rem;
+                    @include respond('phone'){
+                    transform:translate(0,0);
+                    width:90%;
                     }
                 }
             }

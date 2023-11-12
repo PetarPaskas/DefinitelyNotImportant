@@ -4,6 +4,11 @@
 .u-left-text{
     text-align: start !important;
 }
+.u-center-text-phone{
+    @include respond('phone'){
+        text-align: center !important;
+    }
+}
 .u-width-medium{
     width:30rem !important;
 }
