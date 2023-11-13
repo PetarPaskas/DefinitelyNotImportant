@@ -7,6 +7,7 @@ Disallow: /.gitignore
 Disallow: /fonts/
 Disallow: /sass/
 Disallow: /css/
+Disallow: /links/testimonials.html
 Allow: /css/style.css
 Allow: /scripts/index.js
 Allow: /index.html
