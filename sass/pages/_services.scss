@@ -385,7 +385,11 @@
                 max-width: 90vw
             }
             @include respond('phone-med'){
-                //max-width: 46rem;
+            }
+            &__close-quote{
+                @include respond('phone'){
+                    bottom:-14%;
+                }
             }
         }
     }
