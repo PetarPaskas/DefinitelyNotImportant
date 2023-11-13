@@ -29,6 +29,10 @@
             "redirect":"/"
         },
         {
+            "route":"/index.html",
+            "redirect":"/"
+        },
+        {
             "route":"/services",
             "rewrite":"/links/services.html"
         },
