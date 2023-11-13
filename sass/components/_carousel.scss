@@ -19,8 +19,8 @@
     }
 
     &--animated{
-        flex-wrap:nowrap;
-        animation: carousel-spin 10s linear infinite;
+        //flex-wrap:nowrap;
+        //animation: carousel-spin 10s linear infinite;
     }
 
     &-animation-wrapper{
@@ -37,7 +37,7 @@
 
     &__slide{
         display: inline-block;
-        //animation:18s spin linear infinite;
+        animation:8s spin linear infinite;
     }
 
     &__image{
@@ -53,11 +53,24 @@
         .logos__slide{
             display:inline-table;
             border-collapse:separate;
-            border-spacing: 2.5rem;
-            
+            border-spacing: 2.5rem; 
+
+            &:last-child{
+                margin-left:-1.25rem;
+            }
+
             &>*{
                 display: table-cell;
+                @include respond('tab-land'){
+                    min-height: 35rem;
+                    min-width: 20rem;
+                    vertical-align: top;
+                }
+                @include respond('phone'){
+                    min-height: 28rem;
+                }
             }
+
         }
     }
 }

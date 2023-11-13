@@ -6,3 +6,12 @@
         transform: translateX(-100%);
     }
 }
+
+@keyframes spin-fix{
+    0%{
+        transform:translateX(0);
+    }
+    100%{
+        transform: translateX(-99%);
+    }
+}

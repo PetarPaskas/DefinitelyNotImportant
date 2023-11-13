@@ -1,17 +1,57 @@
 .case-study{
-    background-image: url(../../img/case-studies/bg-case-study-orange-wave.svg);
+    background-color: $color-orange;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size:cover;
-    padding-bottom:13rem;
+    padding-bottom:5rem;
+    min-height: 65vh;
+
+    @include respond('big-laptop'){
+        //height: 75rem;
+    }
+    @include respond('tab-land'){
+        //height: 82rem;
+    }
+    @include respond('tab-port'){
+        min-height: 39vh;
+        padding-bottom:5rem;
+    }
+    @include respond('phone'){
+        min-height: 30vh;
+        padding-bottom:6rem;
+    }
 
     &__cover{
         height: 65vh;
         position:relative;
-        background-color: green;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: background-position .5s;
+        background-position: center;
+        backface-visibility: hidden;
+
+        @include respond('tab-port'){
+            height: 39vh;
+        }
+        @include respond('phone'){
+            height: 30vh;
+        }
+
+        &[data-position="center"]{
+            background-position: center;
+        }
+        &[data-position="left"]{
+            background-position: left;
+        }
+        &[data-position="right"]{
+            background-position: right;
+        }
     }
 
     &__arrow{
+        @include respond('phone'){
+            height: 3rem;
+        }
         &-container{
             display:flex;
             justify-content: center;
@@ -33,6 +73,7 @@
                 cursor:pointer;
             }
         }
+
         &--left{
         }
         &--right{
@@ -40,11 +81,30 @@
     }
 
     &__triangle{
+        &:hover{
+            cursor:pointer;
+        }
+        transition: transform .1s;
         transform:translateY(-70%);
         text-align: center;
         margin-bottom:-4%;
+        backface-visibility: hidden;
+        @include respond('tab-port'){
+            margin-bottom:-10%;
+        }
+        @include respond('phone'){
+            transform:translateY(-60%);
+            margin-bottom:-7%;
+        }
+        @include respond('phone-med'){
+            margin-bottom: -9%;
+        }
     }
     &__triangle-image{
+        transition: transform .2s;
+        @include respond('phone'){
+            height: 7rem;
+        }
     }
     &__description{
         text-align: center;
@@ -55,5 +115,109 @@
         color:$color-light;
         display:inline-block;
         letter-spacing: 3px;
+        @include respond('phone'){
+            font-size: $text-small;
+            letter-spacing: 2px;
+        }
+    }
+    &__study-description{
+        max-width: 60%;
+        margin:0 auto;
+        text-align: center;
+        padding-top:4rem;
+        font-size:$text-small;
+        letter-spacing: 2px;
+        color:$color-light;
+        @include respond('phone'){
+            font-size:$text-small-med-med;
+            max-width: 80%;
+            letter-spacing: 1.5px;
+        }
+    }
+
+    &__cover,
+    &__description{
+        transition: height .4s;
+    }
+    &__cover{
+        transition: background-position .5s, height .4s;
+    }
+
+    &#case-study{
+        &[data-show-description="hidden"]{
+            .case-study{
+                &__triangle{
+                    &-image{
+                        transform:rotate(0deg);
+                    }
+                    //transform: rotate(0deg) translateY(-70%);
+                    @include respond('phone'){
+                        //transform: rotate(0deg) translateY(-60%);
+                    }
+                }
+                &__description{
+                    height: auto;
+                }
+                &__arrow-container{
+                    display:flex;
+                }
+                &__study-heading{
+                    margin-top:0rem;
+                }
+                &__study-description{
+                    visibility: hidden;
+                    display:none;
+                }
+            }
+        }
+
+        &[data-show-description="visible"]{
+            //on button click
+            .case-study{
+                &__triangle{
+                    &-image{
+                        transform:rotate(180deg);
+                    }
+                    transform: translateY(0);
+                    margin-bottom:0%;
+                    @include respond('tab-port'){
+                        margin-bottom:0%;
+                    }
+                    @include respond('phone'){
+                        transform: translateY(0);
+                        margin-bottom:0%;
+                    }
+                    @include respond('phone-med'){
+                        margin-bottom: 0%;
+                    }
+                }
+
+                &__cover{
+                    height: 0;
+                }
+
+                &__description{
+                    // height: 65vh;
+                    // @include respond('tab-port'){
+                    //     height: 39vh;
+                    // }
+                    // @include respond('phone'){
+                    //     height: 30vh;
+                    // }
+                }
+                &__arrow-container{
+                    display:none;
+                }
+
+                &__study-heading{
+                    margin-top:5rem;
+                }
+                &__study-description{
+                    display:block;
+                    visibility: visible;
+                }
+            }
+        }
+
     }
 }

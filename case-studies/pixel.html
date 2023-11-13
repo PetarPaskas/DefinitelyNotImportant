@@ -7,6 +7,57 @@
     <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body class="case-studies">
+    <div class="overlaying-navigation">
+        <input type="checkbox" class="overlaying-navigation__checkbox" id='navi-toggle'>
+        <label for="navi-toggle" class="overlaying-navigation__button">
+            <span class="overlaying-navigation__icon">&nbsp;</span>
+        </label>
+        <div class="overlaying-navigation__background">&nbsp;</div>
+        <div class="overlaying-navigation__nav">
+            <div class="overlaying-navigation__nav-item u-margin-top-mid">
+                <ul class="overlaying-navigation__list">
+                    <li class="overlaying-navigation__list-item"><a href="../index.html" class="overlaying-navigation__link">Home</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/portfolio.html" class="overlaying-navigation__link">Portfolio</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/services.html" class="overlaying-navigation__link">Services</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/testimonials.html" class="overlaying-navigation__link">Testimonials</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="../links/contact.html" class="overlaying-navigation__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="overlaying-navigation__nav-item overlaying-navigation__nav-item--column">
+                <span class="overlaying-navigation__link overlaying-navigation__link--mid u-padding-top-btm-async u-border-top-green">Let's create some magic</span>
+                <a href="" class="button button--green footer__button footer__link">Inquire</a>
+            </div>
+            <div class="overlaying-navigation__nav-item u-margin-bottom-mid">
+                <ul class="footer__list footer__list--standalone">
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">
+                            <img src="../img/svg/instagram.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">
+                            <img src="../img/svg/behance.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">
+                            <img src="../img/svg/dribble.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">
+                            <img src="../img/svg/linkedin.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">
+                            <img src="../img/svg/facebook.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="menu"> 
             <div class="menu__logo">
@@ -14,37 +65,39 @@
             </div>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Testimonials</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="../index.html" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="../links/portfolio.html" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="../links/services.html" class="navigation__link">Services</a></li>
+                    <li class="navigation__item"><a href="../links/testimonials.html" class="navigation__link">Testimonials</a></li>
+                    <li class="navigation__item"><a href="../links/contact.html" class="navigation__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="case-study">
-            <div class="case-study__cover">
-                <img src="" alt="" class="case-study__cover-image">
-                <div class="case-study__arrow-container case-study__arrow-container--left">
+        <div class="case-study" id="case-study" >
+            <div id="hero-image" style="background-image: url(../img/covers/hero-mayhem.png)" class="case-study__cover">
+                <div id="left-arrow" class="case-study__arrow-container case-study__arrow-container--left">
                     <img src="../img/svg/arrow-left.svg" alt="" class="case-study__arrow case-study__arrow--left">
                 </div>
-                <div class="case-study__arrow-container case-study__arrow-container--right">
+                <div id="right-arrow" class="case-study__arrow-container case-study__arrow-container--right">
                     <img src="../img/svg/arrow-right.svg" alt="" class="case-study__arrow case-study__arrow--right">
                 </div>
             </div>
-            <div class="case-study__triangle">
+            <div id="button-more" class="case-study__triangle">
                 <img src="../img/svg/case-study__triangle.svg" class="case-study__triangle-image">
             </div>
             <div class="case-study__description">
                 <h1 class="case-study__study-heading">Case study: Website design pixel playground</h1>
-            </div>
-            <div class="case-study__wave">
-                <img class="case-study__wave-image">
+                <p class="case-study__study-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo commodi repellendus deleniti, consectetur est iure ipsa nam fugiat voluptatum amet porro accusantium, aspernatur exercitationem laboriosam incidunt distinctio officiis sit expedita?
+                </div>
             </div>
         </div>
     </header>
     <main>
         <section class="section-brief">
+            <div class="section-brief__orange-wave">
+                <img class="section-brief__orange-wave--img" src="../img/svg/case-studies-header-orange-wave.svg" alt="case study orange wave">
+            </div>
             <div class="study-content">
                 <div class="study-content__side">
                     <div class="study-content__item">
@@ -233,3 +286,90 @@
         </div>
     </footer>
 </body>
+
+<script>
+    const leftArrow = document.getElementById('left-arrow');
+    const rightArrow = document.getElementById('right-arrow');
+    const heroImage = document.getElementById('hero-image');
+    const caseStudy = document.getElementById('case-study');
+
+    let heroImagePositions = ["left", "center", "right"];
+
+    window.addEventListener('load',()=>{
+        heroImage.setAttribute('data-position','center');
+        caseStudy.setAttribute('data-show-description','hidden');
+    })
+    
+
+    leftArrow.addEventListener('click',ev=>{
+        moveImage('left');
+    });
+
+    rightArrow.addEventListener('click',ev=>{
+        moveImage('right');
+    })
+
+    function moveImage(direction){
+        const currPosition = heroImage.dataset.position;
+
+        const newPositionIndex = direction == 'left' ? 
+        heroImagePositions.indexOf(currPosition) - 1 
+        : heroImagePositions.indexOf(currPosition) + 1;
+
+        if(newPositionIndex < 0 || 
+            newPositionIndex > (heroImagePositions.length-1))
+            return;
+
+        heroImage.dataset.position = heroImagePositions[newPositionIndex];
+    }
+
+    window.addEventListener('load', function(event) {
+        enableScroll();
+    });
+
+    const navigation = document.getElementById('navi-toggle');
+    navigation.addEventListener('change',(e)=>{
+        if(e.target.checked){
+            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
+            document.querySelector(".menu__logo-img").style.position = "fixed";
+        }
+        else{
+            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
+            document.querySelector(".menu__logo-img").style.position = "static";
+        }
+    })
+
+    function enableScroll(){
+        const navigation = document.getElementById('navi-toggle');
+
+        if(navigation.checked){
+            document.querySelector(".overlaying-navigation__button").style.position = "fixed";
+            document.querySelector(".menu__logo-img").style.position = "fixed";
+        }
+        else{
+            document.querySelector(".overlaying-navigation__button").style.position = "absolute";
+            document.querySelector(".menu__logo-img").style.position = "static";
+        }
+    }
+
+    const moreButton = document.getElementById('button-more');
+    moreButton.addEventListener('click',(e)=>{
+        toggleHeroDescription();
+    })
+
+    function toggleHeroDescription(){
+        const caseStudy = document.getElementById('case-study');
+        if(caseStudy.dataset.showDescription == 'hidden')
+        caseStudy.dataset.showDescription = 'visible'
+        else
+        caseStudy.dataset.showDescription = 'hidden';
+    }
+
+    function toggleVisibility(element){
+        if(element.style.visibility == 'hidden')
+        element.style.visibility = 'visible'
+        else
+        element.style.visibility = 'hidden'
+    }
+
+</script>

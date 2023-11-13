@@ -6,13 +6,11 @@
         position:absolute;
         bottom:0;
         left:0;
-        z-index: -1;
     }
     .header{
         overflow: visible;
         position:relative;
         padding:5rem 10rem 15rem 10rem;
-        z-index: $z-content-layer;
 
         .navigation__link{
             color:$color-white;
@@ -22,6 +20,12 @@
         }
         .menu{
             align-items: center;
+            position:relative;
+        }
+        @include respond('tab-generic'){
+            padding:1rem 10rem 8rem 1rem;
+        }
+        @include respond('phone-sm-sm'){
         }
     }
 
@@ -29,27 +33,328 @@
         background-color: $color-light;
         padding-top:3.7rem;
         padding-bottom:20rem;
+        overflow:hidden;
     
         .logos{
             margin-top:12rem;
-            text-align: end;
+
+            @include respond('laptop'){
+                margin-top:5rem;
+            }
+
+            &__slide{
+                animation:8s spin-fix linear infinite;
+            }
+        }
+
+        &__btm-wave{
+            position:absolute;
+            bottom:0;
+            left:0;
+            width: 35rem;
+            @include respond('phone'){
+                width: 20rem;
+            }
+
+        }
+        &__personalised-wave{
+            position:absolute;
+            top:62%;
+            right:0;
+            width:35rem;
+            @include respond('phone'){
+                top:66%;
+                width:18rem;
+            }
+            @include respond('phone-med'){
+                width:14rem;
+            }
+        }
+        &__creative-wave{
+            top:20%;
+            left:0;
+            position:absolute;
+            @include respond('big-laptop'){
+                width:30rem;
+            }
+            @include respond('tab-generic'){
+                top:25%;
+            }
+            @include respond('phone'){
+                top:16%;
+            }
+            @include respond('phone-med'){
+                top:15%;
+            }
         }
     
         .zigzag-container{
             padding-right:8rem;
             padding-left:12rem;
-            margin-top:9rem;
-            &__item{
-                &-presentation{
-                    min-width:none;
+            margin-top:10rem;
+
+            @include respond('phone-med'){
+                margin-top:5rem;
+            }
+
+            .card{
+                &-container{
+                    &__row{
+                        @include respond('tab-generic'){
+                            justify-content: center;
+                            flex-wrap:wrap;
+                            align-content:center;
+                            row-gap:2rem;
+                        }
+
+                    }
                 }
-                &-description{
-                    min-width: 36%;
+                @include respond('laptop'){
+                    padding-top:1.2rem;
                 }
             }
 
-            .text-normal--description{
-                max-width: none;
+            &__item{
+                &:not(:last-child){
+                    padding-bottom: 12rem;
+                }
+                &-presentation{
+                    min-width:initial;
+                }
+                &-description{
+                    min-width: 36%;
+                    justify-content: center;
+                    @include respond('tab-generic'){
+                        min-width: 33%;
+                    }
+                }
+                @include respond('phone'){
+                    flex-direction: column;
+
+                }
+                &:not(:last-child){
+                    @include respond('phone'){
+                        padding-bottom: 10rem;
+                    }
+                    @include respond('phone-med'){
+                        padding-bottom: 7rem;
+                    }
+                }
+            }
+
+            .text-normal{
+                &--description{
+                    //max-width: none;
+                    max-width: 52rem;
+                    margin-top:1rem;
+                    @include respond('phone'){
+                        margin-top:3rem;
+                    }
+                }
+                &--title{
+
+                }
+            }
+
+            @include respond('tab-generic'){
+                padding-right:1rem;
+                padding-left:1rem;
+            }
+
+            @include respond('phone'){
+                & .card{
+                    width: 45vw;
+                }
+            }
+
+            @include respond('phone'){
+                &__image{
+                    max-height: initial;
+                }
+            }
+        }
+
+        &__row{
+            &--creative{
+                @include respond('phone'){
+                    padding-bottom: 0rem !important;
+                }
+                .zigzag-container{
+                    @include respond('big-laptop'){
+                        &__item-description{
+                            min-width: 30%;
+                        }
+                    }
+                    @include respond('phone'){
+                        &__item-presentation{
+                            margin-top:4rem;
+                        }
+                    }
+                }
+                .card{
+                    flex-basis: 25%;
+                    @include respond('phone'){
+                        width:auto;
+                        flex-basis: 28%;
+                    }
+                    @include respond('phone-med'){
+                        flex-basis: 30%;
+                    }
+                    @include respond('phone-sm'){
+                        flex-basis: 38%;
+                    }
+                }
+                img.zigzag-container__image{
+                    width: 45rem;
+                    transform:translate(8rem,6rem);
+                    @include respond('big-laptop'){
+                        width: 35rem;
+                        transform:translate(3rem,6rem);
+                    }
+                    @include respond('tab-generic'){
+                        transform:translate(10rem,6rem);
+                    }
+                    @include respond('phone'){
+                        transform:translate(0,0);
+                        width:80%;
+                    }
+                }
+            }
+            &--collaboration{
+                @include respond('phone'){
+                    .text-line{
+                        width: auto;
+                    }
+                }
+
+                .zigzag-container{
+                    &__item-description{
+                        img.zigzag-container__image{
+                            display:inline-block;
+                            @include respond('phone'){
+                                display:none;
+                            }
+                        }
+                    }
+                    &__item-presentation{
+                        img.zigzag-container__image{
+                            display: none;
+                            width:20rem;
+                            @include respond('phone'){
+                                display:inline-block;
+                                width:38%;
+                                transform:translate(3rem,9rem);
+                            }
+                        }
+                        .text-normal--description{
+                            @include respond('phone'){
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+            }
+            &--web{
+                margin-left:10rem;
+                @include respond('phone'){
+                    padding-bottom: 0rem !important;
+                    margin-left:0;
+                    img.zigzag-container__image{
+                        width:70%;
+                    }
+                }
+                .zigzag-container{
+                    &__item-presentation{
+                        @include respond('phone'){
+                            margin-top:4rem;
+                        }
+                    }
+                }
+            }
+            &--personalised{
+                transform:translateX(-26rem);
+                @include respond('big-laptop'){
+                    transform:translateX(-20rem);
+                }
+                @include respond('laptop'){
+                    transform:translateX(-12rem);
+                }
+                @include respond('phone'){
+                    transform:translateX(-0rem);
+                    .text-line{
+                        width: auto;
+                    }
+                }
+
+                .zigzag-container{
+                    &__item-description{
+                        img.zigzag-container__image{
+                            display:inline-block;
+                            @include respond('phone'){
+                                display:none;
+                            }
+                        }
+                    }
+                    &__item-presentation{
+                        img.zigzag-container__image{
+                            display: none;
+                            width:20rem;
+                            @include respond('phone'){
+                                display:inline-block;
+                                width:37%;
+                                transform:translate(3rem,11rem);
+                            }
+                        }
+                        .text-normal--description{
+                            @include respond('phone'){
+                                text-align:center;
+                            }
+                        }
+                    }
+                }
+            }
+            &--merchandise{
+                margin-left:15rem;
+                @include respond('tab-land'){
+                    margin-left:12rem;
+                }
+                @include respond('phone'){
+                    margin-left:0;
+                }
+                img.zigzag-container__image{
+                    width:50rem;
+                    @include respond('tab-port'){
+                        width:35rem;
+                    }
+                    @include respond('phone'){
+                    transform:translate(0,0);
+                    width:80%;
+                    }
+                }
+                .zigzag-container{
+                    &__item-presentation{
+                        @include respond('phone'){
+                            margin-top:4rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &__title{
+            margin-top:7rem;
+            .text-normal{
+                display:block;
+                &--description{
+                    max-width: 60vw;
+                    font-size: $text-small;
+                    @include respond('phone'){
+                        max-width: 85vw;
+                    }
+                }
+                &:not(:first-child){
+                    padding-top:2rem;
+                }
             }
         }
     }
@@ -64,11 +369,28 @@
 
     .section-testimonials{
         background-color: $color-light;
-        padding:8rem 0;
-        padding-top:16rem;
+        padding:16rem 0 8rem 0;
+
+        @include respond('phone-med'){
+            padding:10rem 0 3rem 0;
+        }
+        
         .quote{
             max-width: 80rem;
             margin:0 auto;
+            @include respond('tab-generic'){
+                max-width: 62rem;
+            }
+            @include respond('phone'){
+                max-width: 90vw
+            }
+            @include respond('phone-med'){
+            }
+            &__close-quote{
+                @include respond('phone'){
+                    bottom:-14%;
+                }
+            }
         }
     }
 }

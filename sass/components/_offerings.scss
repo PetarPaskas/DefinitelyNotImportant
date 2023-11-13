@@ -49,11 +49,15 @@
         &:hover:not(:last-child){
             border-right: 1px solid $color-purple;
         }
-        &:hover &-description{
+        &:hover &-description,
+        &:hover .offerings__icon {
             color:$color-purple;
+            fill:$color-purple;
         }
+        
     }
 
     &__icon{
+        fill:$color-light;
     }
 }

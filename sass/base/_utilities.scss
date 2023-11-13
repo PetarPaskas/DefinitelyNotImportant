@@ -4,6 +4,19 @@
 .u-left-text{
     text-align: start !important;
 }
+.u-end-text{
+    text-align: end !important;
+}
+.u-center-text-phone{
+    @include respond('phone'){
+        text-align: center !important;
+    }
+}
+.u-center-text-tab-generic{
+    @include respond('tab-generic'){
+        text-align: center !important;
+    }
+}
 .u-width-medium{
     width:30rem !important;
 }
@@ -11,7 +24,7 @@
     display:block !important;
 }
 .u-section-title{
-    padding:5rem !important;
+    padding:4rem !important;
 }
 .u-left-padding-zero{
     padding-left:0 !important;
@@ -70,7 +83,22 @@
         align-items: center;
     }
 }
+.u-flex-inline-column-align-end-phone{
+    @include respond('phone'){
+        display:inline-flex;
+        flex-direction: column;
+        align-items: end;
+    }
+}
+.u-flex-row-reverse{
+    display:flex;
+    flex-direction: row-reverse;
+}
 .u-flex-row{
+    display:flex;
+    flex-direction: row;
+}
+.u-row{
 
 }
 .u-image-cover-top-mh50{
@@ -86,6 +114,11 @@
 .u-margin-top-mid{
     margin-top:10rem !important;
 }
+.u-margin-top-mid-phone{
+    @include respond('phone'){
+        margin-top:3rem !important;
+    }
+}
 .u-margin-top-lg{
     margin-top:18rem !important;
 }
@@ -98,4 +131,47 @@
 }
 .u-border-top-green{
     border-top:2px solid $color-green;
+}
+.u-layer-relative-content{
+    position: relative;
+    z-index: $z-content-layer;
+}
+
+.u-mw-90vw-tab-land{
+    @include respond('tab-land'){
+        max-width: 90vw !important;
+    }
+}
+
+.u-table{
+        display:table;
+        border-collapse:separate;
+        border-spacing: 2.5rem; 
+        margin-left:-2.5rem;
+
+        &>div:first-child{
+            border:none;
+        }
+
+        &>*{
+            display: table-cell !important;
+
+            @include respond('tab-land'){
+                min-height: 35rem;
+                min-width: 20rem;
+                vertical-align: top;
+            }
+            @include respond('phone'){
+                min-height: 28rem;
+            }
+        }
+}
+
+.u-color{
+    &-purple{
+        color:$color-purple !important;
+    }
+    &-orange{
+        color:$color-orange !important;
+    }
 }

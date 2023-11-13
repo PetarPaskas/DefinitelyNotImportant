@@ -5,6 +5,9 @@
         background-color: $color-green;
         padding-top: 5rem;
         padding-bottom: 5rem;
+        @include respond('tab-generic'){
+            padding-top:1rem;
+        }
     }
 
     .section-testimonials{
@@ -12,6 +15,17 @@
         padding:20rem;
         background-color: $color-light;
         overflow: hidden;
+
+        @include respond('tab-port'){
+            padding:20rem 10rem 20rem 10rem;
+        }
+        @include respond('tab-port'){
+            padding:15rem 5rem 15rem 5rem;
+        }
+
+        @include respond('phone-med'){
+            padding:11rem 1rem 11rem 1rem;
+        }
 
         &__img{
             position:absolute;
@@ -26,6 +40,11 @@
                 width:40%;
             }
         }
+
+        &__main{
+            overflow:hidden; 
+            padding-top:4rem;
+        }
     }
 
     .section-clients {
@@ -39,6 +58,10 @@
 
     .section-form {
         padding-top: 10rem;
+
+        @include respond('phone'){
+            padding-top: 5rem;
+        }
 
         &__background-top-wave {
             width: 100%;

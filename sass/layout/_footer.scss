@@ -11,6 +11,7 @@
             height: 90%;
             clip-path:polygon(100% 100%, 0% 100%, 0% 10%, 50% 0%, 100% 10%);
             background-color: $color-purple;
+            
         }
     }
     &__wave{
@@ -149,6 +150,11 @@
         }
     }
     &__social-media{
+        transition: transform .2s, filter .1s;
+        &:hover{
+            transform:translateY(-6px);
+            filter:contrast(250%);
+        }
         @include respond('phone-med'){
             width:3.4rem;
         }

@@ -1,23 +1,84 @@
 .portfolio{
     .header{
         overflow: visible;
-        position:relative;
+        position: relative;
         background-color: $color-green;
         padding-top:5rem;
         padding-bottom:5rem;
+        @include respond('tab-generic'){
+            padding-top:1rem;
+        }
     }
     .section-portfolios{
         position:relative;
         padding:20rem 15rem 0 15rem;
-
         background-color: $color-light;
+
+        @include respond('big-laptop'){
+            padding:20rem 10rem 0 10rem;
+        }
+        @include respond('tab-port'){
+            padding:16rem 2rem 0 2rem;
+        }
+        @include respond('phone'){
+            padding:14rem 2rem 0 2rem;
+        }
+
+
         & .zigzag-container{
             position:relative;
             z-index: $z-content-layer;
+            /* maybe in container */
+            &__client{
+                @include respond('big-laptop'){
+                    font-size: $text-h2;
+                }
+                @include respond('laptop'){
+                    font-size:$text-h2-med;
+                }
+                @include respond('tab-port'){
+                    font-size:$text-h2-sm;
+                }
+            }   
+            &__title{
+                @include respond('tab-port'){
+                    font-size:$text-small-med-med-med;
+                }
+            }
+            &__description{
+                @include respond('laptop'){
+                    font-size:$text-small-med-med;
+                }
+            }
+            /* maybe in container */
+            &__item{
+                &:not(:last-child){
+                    @include respond('laptop'){
+                        padding-bottom: 10rem;
+                    }
+                    @include respond('tab-port'){
+                        padding-bottom: 7rem;
+                    }
+                }
+                &-presentation{
+                    max-width:57%;
+                    @include respond('tab-land'){
+                        min-width: 60%;
+                        max-width:70%;
+                    }
+                }
+            }
+
         }
 
         &__wave{
             position:absolute;
+            @include respond('laptop'){
+                width:25rem;
+            }
+            @include respond('tab-port'){
+                width:20rem;
+            }
             &--right{
                 right:0;
             }
@@ -42,6 +103,10 @@
             & .button__text{
                 font-size: $text-small;
                 letter-spacing: 4px;
+                @include respond('tab-port'){
+                    font-size: $text-small-med-med-med;
+                    letter-spacing: 3px;
+                }
             }
             &:hover{
                 background-color:$color-purple;
@@ -67,6 +132,12 @@
             object-fit: cover;
             object-position: bottom;
             margin-bottom:6rem;
+            @include respond('phone'){
+                height: 13rem;
+            }
+            @include respond('phone-med'){
+                margin-bottom: 1rem;
+            }
         }
     }
 

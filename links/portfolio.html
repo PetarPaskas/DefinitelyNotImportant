@@ -4,11 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Design Portfolio, graphic design portfolio, portfolio websites, artist portfolio, adobe portfolio">
+
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <script src="../scripts/index.js"></script>
 </head>
 
 <body class="portfolio">
+    <div class="overlaying-navigation">
+        <input type="checkbox" class="overlaying-navigation__checkbox" id='navi-toggle'>
+        <label for="navi-toggle" class="overlaying-navigation__button">
+            <span class="overlaying-navigation__icon">&nbsp;</span>
+        </label>
+        <div class="overlaying-navigation__background">&nbsp;</div>
+        <div class="overlaying-navigation__nav">
+            <div class="overlaying-navigation__nav-item u-margin-top-mid">
+                <ul class="overlaying-navigation__list">
+                    <li class="overlaying-navigation__list-item"><a href="../index.html" class="overlaying-navigation__link">Home</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="./portfolio.html" class="overlaying-navigation__link">Portfolio</a></li>
+                    <li class="overlaying-navigation__list-item"><a href="./services.html" class="overlaying-navigation__link">Services</a></li>
+                    <!-- <li class="overlaying-navigation__list-item"><a href="./testimonials.html" class="overlaying-navigation__link">Testimonials</a></li> -->
+                    <li class="overlaying-navigation__list-item"><a href="./contact.html" class="overlaying-navigation__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="overlaying-navigation__nav-item overlaying-navigation__nav-item--column">
+                <span class="overlaying-navigation__link overlaying-navigation__link--mid u-padding-top-btm-async u-border-top-green">Let's create some magic</span>
+                <a href="./contact.html" class="button button--green footer__button footer__link">Inquire</a>
+            </div>
+            <div class="overlaying-navigation__nav-item u-margin-bottom-mid">
+                <ul class="footer__list footer__list--standalone">
+                    <li class="footer__list-item">
+                        <a href="https://www.instagram.com/fwrd_co/" class="footer__link">
+                            <img src="../img/svg/Shared/instagram.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="https://www.behance.net/FWRD" class="footer__link">
+                            <img src="../img/svg/Shared/behance.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="#" class="footer__link">
+                            <img src="../img/svg/Shared/dribble.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="https://www.linkedin.com/company/fwrd-digital-product" class="footer__link">
+                            <img src="../img/svg/Shared/linkedin.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="https://www.facebook.com/FWRDdigitalproduct" class="footer__link">
+                            <img src="../img/svg/Shared/facebook.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="menu">
             <div class="menu__logo">
@@ -16,11 +70,11 @@
             </div>
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Portfolio</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Services</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Testimonials</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="../index.html" class="navigation__link">Home</a></li>
+                    <li class="navigation__item"><a href="./portfolio.html" class="navigation__link">Portfolio</a></li>
+                    <li class="navigation__item"><a href="./services.html" class="navigation__link">Services</a></li>
+                    <!-- <li class="navigation__item"><a href="./testimonials.html" class="navigation__link">Testimonials</a></li> -->
+                    <li class="navigation__item"><a href="./contact.html" class="navigation__link">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,9 +87,9 @@
     </header>
     <main>
     <section class="section-portfolios">
-        <img src="../img/svg/portfolio-bg-right-wave.svg" class="section-portfolios__wave section-portfolios__wave--right section-portfolios__wave--upper">
-        <img src="../img/svg/portfolio-bg-right-wave.svg" class="section-portfolios__wave section-portfolios__wave--right section-portfolios__wave--lower">
-        <img src="../img/svg/portfolio-bg-left-wave.svg" class="section-portfolios__wave section-portfolios__wave--left">
+        <img src="../img/svg/Portfolio/portfolio-bg-right-wave.svg" class="section-portfolios__wave section-portfolios__wave--right section-portfolios__wave--upper">
+        <img src="../img/svg/Portfolio/portfolio-bg-right-wave.svg" class="section-portfolios__wave section-portfolios__wave--right section-portfolios__wave--lower">
+        <img src="../img/svg/Portfolio/portfolio-bg-left-wave.svg" class="section-portfolios__wave section-portfolios__wave--left">
         <div class="zigzag-container">
             <div class="zigzag-container__item">
                 <div class="zigzag-container__item-description">
@@ -46,7 +100,7 @@
                     <a class="button button--orange zigzag-container__button">View project</a>
                 </div>
                 <div class="zigzag-container__item-presentation">
-                    <img src="../img/zigzag.png" class="zigzag-container__image">
+                    <img src="../img/covers/Portfolio/reactiv.png" class="zigzag-container__image">
                 </div>
             </div>
 
@@ -59,7 +113,7 @@
                     <a class="button button--orange zigzag-container__button">View project</a>
                 </div>
                 <div class="zigzag-container__item-presentation">
-                    <img src="../img/zigzag.png" class="zigzag-container__image">
+                    <img src="../img/covers/Portfolio/ian.png" class="zigzag-container__image">
                 </div>
             </div>
 
@@ -72,7 +126,7 @@
                     <a class="button button--orange zigzag-container__button">View project</a>
                 </div>
                 <div class="zigzag-container__item-presentation">
-                    <img src="../img/zigzag.png" class="zigzag-container__image">
+                    <img src="../img/covers/Portfolio/kreek.png" class="zigzag-container__image">
                 </div>
             </div>
 
@@ -86,7 +140,7 @@
                     <a class="button button--orange zigzag-container__button">View project</a>
                 </div>
                 <div class="zigzag-container__item-presentation">
-                    <img src="../img/zigzag.png" class="zigzag-container__image">
+                    <img src="../img/covers/Portfolio/pp.png" class="zigzag-container__image">
                 </div>
             </div>
 
@@ -99,7 +153,7 @@
                     <a class="button button--orange zigzag-container__button">View project</a>
                 </div>
                 <div class="zigzag-container__item-presentation">
-                    <img src="../img/zigzag.png" class="zigzag-container__image">
+                    <img src="../img/covers/Portfolio/nyp.png" class="zigzag-container__image">
                 </div>
             </div>
         </div>
@@ -119,17 +173,18 @@
         </div>
         <div class="logos">
             <div id="clients-slide" class="logos__slide">
-                <img class="logos__image" src="../img/icons/fwrd-logo.png">
-                <img class="logos__image" src="../img/icons/pxl.png">
-                <img class="logos__image" src="../img/icons/msf.png">
-                <img class="logos__image" src="../img/icons/wonitrol.png">
-                <img class="logos__image" src="../img/icons/kreek.png">
-                <img class="logos__image" src="../img/icons/nyp.png">
+                <img class="logos__image" src="../img/icons/Clients/reactive.png">
+                <img class="logos__image" src="../img/icons/Clients/msf.png">
+                <img class="logos__image" src="../img/icons/Clients/mayhem.png">
+                <img class="logos__image" src="../img/icons/Clients/nyp.png">
+                <img class="logos__image" src="../img/icons/Clients/wonitrol.png">
+                <img class="logos__image" src="../img/icons/Clients/kreek.png">
+                <img class="logos__image" src="../img/icons/Clients/pxl.png">
             </div>
         </div>
     </section>
     <section class="section-form">
-        <img src="../img/svg/bg-wave-orange-top-down.svg" alt="" class="section-form__background-top-wave">
+        <img src="../img/svg/Portfolio/bg-wave-orange-top-down.svg" alt="" class="section-form__background-top-wave">
         <div class="u-center-text u-section-title  u-padding-bottom-med">
             <h2 class="h-1">
                 <span class="u-text-block">Tell us about</span>
@@ -165,7 +220,7 @@
             </div>
             <div class="form__row">
                 <div class="form__group u-center-text">
-                    <button class="button button--orange form__button" type="submit" disabled>
+                    <button class="button button--orange form__button" type="submit">
                         Submit
                     </button>
                 </div>
@@ -176,8 +231,8 @@
 <footer class="footer">
 <div class="background-layer">
     <div class="background-layer__clip"></div>
-    <img src="../img/svg/footer-wave-top.svg" alt="" class="footer__wave footer__wave--top">
-    <img src="../img/svg/footer-wave-bottom.svg" alt="" class="footer__wave footer__wave--bottom">
+    <img src="../img/svg/Shared/footer-wave-top.svg" alt="" class="footer__wave footer__wave--top">
+    <img src="../img/svg/Shared/footer-wave-bottom.svg" alt="" class="footer__wave footer__wave--bottom">
 </div>
 <div class="footer-content">
     <div class="footer__logo-box">
@@ -185,39 +240,39 @@
     </div>
     <ul class="footer__list">
         <div class="footer__list-section">
-            <li class="footer__list-item"><a href="#" class="footer__link">About</a></li>
-            <li class="footer__list-item"><a href="#" class="footer__link">Portfolio</a></li>
-            <li class="footer__list-item"><a href="#" class="footer__link">Blog</a></li>
-            <li class="footer__list-item"><a href="#" class="footer__link">Testimonials</a></li>
-            <li class="footer__list-item"><a href="#" class="footer__link">Contact us</a></li>
+            <li class="footer__list-item"><a href="./services.html" class="footer__link">About</a></li>
+            <li class="footer__list-item"><a href="./portfolio.html" class="footer__link">Portfolio</a></li>
+            <li class="footer__list-item"><a href="../index.html#section-blog" class="footer__link">Blog</a></li>
+            <!-- <li class="footer__list-item"><a href="./testimonials.html" class="footer__link">Testimonials</a></li> -->
+            <li class="footer__list-item"><a href="./contact.html" class="footer__link">Contact us</a></li>
         </div>
         <div class="footer__list-section">
             <li class="footer__list-item">
                 <a href="" class="footer__link">Follow us</a>
                 <ul class="footer__list footer__list--standalone">
                     <li class="footer__list-item">
-                        <a href="#" class="footer__link">
-                            <img src="../img/svg/instagram.svg" alt="" class="footer__social-media">
+                        <a href="https://www.instagram.com/fwrd_co/" class="footer__link">
+                            <img src="../img/svg/Shared/instagram.svg" alt="" class="footer__social-media">
+                        </a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="https://www.behance.net/FWRD" class="footer__link">
+                            <img src="../img/svg/Shared/behance.svg" alt="" class="footer__social-media">
                         </a>
                     </li>
                     <li class="footer__list-item">
                         <a href="#" class="footer__link">
-                            <img src="../img/svg/behance.svg" alt="" class="footer__social-media">
+                            <img src="../img/svg/Shared/dribble.svg" alt="" class="footer__social-media">
                         </a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="#" class="footer__link">
-                            <img src="../img/svg/dribble.svg" alt="" class="footer__social-media">
+                        <a href="https://www.linkedin.com/company/fwrd-digital-product" class="footer__link">
+                            <img src="../img/svg/Shared/linkedin.svg" alt="" class="footer__social-media">
                         </a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="#" class="footer__link">
-                            <img src="../img/svg/linkedin.svg" alt="" class="footer__social-media">
-                        </a>
-                    </li>
-                    <li class="footer__list-item">
-                        <a href="#" class="footer__link">
-                            <img src="../img/svg/facebook.svg" alt="" class="footer__social-media">
+                        <a href="https://www.facebook.com/FWRDdigitalproduct" class="footer__link">
+                            <img src="../img/svg/Shared/facebook.svg" alt="" class="footer__social-media">
                         </a>
                     </li>
                 </ul>
@@ -228,7 +283,7 @@
                 </span>
             </li>
             <li class="footer__list-item u-left-padding-zero">
-                <a href="" class="button button--green footer__button footer__link">Inquire</a>
+                <a href="./contact.html" class="button button--green footer__button footer__link">Inquire</a>
             </li>
         </div>
     </ul>
@@ -236,8 +291,13 @@
 </footer>
 </body>
 <script>
-    let clientsSlide = document.getElementById('clients-slide');
-    let copy = clientsSlide.cloneNode(true);
-    clientsSlide.parentNode.appendChild(copy);
+    cloneNodes(["clients-slide"]);
+
+    window.addEventListener('load', function(event) {
+        enableScroll();
+    });
+
+    const navigation = document.getElementById('navi-toggle');
+    navigation.addEventListener('change',enableScroll)
 
 </script>

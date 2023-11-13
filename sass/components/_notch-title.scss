@@ -23,6 +23,9 @@
     }
     &__text--mid{
         font-size:$text-med-med;
+        @include respond('phone-sm'){
+            font-size: $text-small;
+        }
     }
     &--top-center{
         top:0;
