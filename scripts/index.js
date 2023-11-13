@@ -102,14 +102,24 @@ return re.test(email);
 
 function enableScroll(){
     const navigation = document.getElementById('navi-toggle');
+    const button = document.querySelector(".overlaying-navigation__button");
+    console.log(button.classList);
+    const isWhiteButton = button.classList.contains("overlaying-navigation__button--white");
+    const logoImg = document.querySelector(".menu__logo-img");
 
     if(navigation.checked){
-        document.querySelector(".overlaying-navigation__button").style.position = "fixed";
-        document.querySelector(".menu__logo-img").style.position = "fixed";
+        button.style.position = "fixed";
+        logoImg.style.position = "fixed";
+
+        if(isWhiteButton)
+        logoImg.style.filter = 'drop-shadow(1px 1px 8px)';
     }
     else{
-        document.querySelector(".overlaying-navigation__button").style.position = "absolute";
-        document.querySelector(".menu__logo-img").style.position = "static";
+        button.style.position = "absolute";
+        logoImg.style.position = "static";
+
+        if(isWhiteButton)
+        logoImg.style.filter = '';
     }
 }
 
