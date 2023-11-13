@@ -32,6 +32,40 @@
             "route":"/index.html",
             "redirect":"/"
         },
+
+        {
+            "route":"/transparency.html",
+            "redirect":"/blogs/transparency"
+        },
+        {
+            "route":"/typingwithtoddlers.html",
+            "redirect":"/blogs/typingwithtoddlers"
+        },
+        {
+            "route":"/portfolio.html",
+            "redirect":"/portfolio"
+        },
+        {
+            "route":"/contact.html",
+            "redirect":"/contact"
+        },
+        {
+            "route":"/services.html",
+            "redirect":"/services"
+        },
+        {
+            "route":"/testimonials.html",
+            "redirect":"/"
+        },
+        {
+            "route":"/testimonials",
+            "redirect":"/"
+        },
+        {
+            "route":"/index.html",
+            "redirect":"/"
+        },
+
         {
             "route":"/services",
             "rewrite":"/links/services.html"
