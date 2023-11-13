@@ -103,7 +103,6 @@ return re.test(email);
 function enableScroll(){
     const navigation = document.getElementById('navi-toggle');
     const button = document.querySelector(".overlaying-navigation__button");
-    console.log(button.classList);
     const isWhiteButton = button.classList.contains("overlaying-navigation__button--white");
     const logoImg = document.querySelector(".menu__logo-img");
 
