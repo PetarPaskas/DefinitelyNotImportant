@@ -4,8 +4,16 @@
 .u-left-text{
     text-align: start !important;
 }
+.u-end-text{
+    text-align: end !important;
+}
 .u-center-text-phone{
     @include respond('phone'){
+        text-align: center !important;
+    }
+}
+.u-center-text-tab-generic{
+    @include respond('tab-generic'){
         text-align: center !important;
     }
 }
@@ -73,6 +81,13 @@
     &--center{
         justify-content: center;
         align-items: center;
+    }
+}
+.u-flex-inline-column-align-end-phone{
+    @include respond('phone'){
+        display:inline-flex;
+        flex-direction: column;
+        align-items: end;
     }
 }
 .u-flex-row-reverse{

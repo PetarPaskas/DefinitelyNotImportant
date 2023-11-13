@@ -103,6 +103,23 @@
         padding-bottom: 1rem;
         font-size:$text-h2;
         text-transform: uppercase;
+
+        @include respond('laptop'){
+            letter-spacing: 8px;
+        }
+        @include respond('tab-generic'){
+            letter-spacing: 6px;
+            font-size:$text-h2-sm;
+        }
+        @include respond('phone'){
+            letter-spacing: 4px;
+            font-size:$text-large;
+            width:auto;
+        }
+        @include respond('phone-sm'){
+            font-size:$text-med;
+            letter-spacing: 3px;
+        }
     }
 
     &--description{
@@ -113,6 +130,9 @@
         font-size:$text-small-med-med-med;
         max-width: 70rem;
         margin:0 auto;
+        @include respond('phone-sm'){
+            font-size:$text-small-med-med;
+        }
     }
 }
 

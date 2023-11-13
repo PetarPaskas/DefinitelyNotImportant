@@ -221,6 +221,22 @@ footer.footer {
     padding-bottom: 1rem;
     font-size: 5rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 64em) {
+      .text-normal--title {
+        letter-spacing: 8px; } }
+    @media only screen and (max-width: 48em) {
+      .text-normal--title {
+        letter-spacing: 6px;
+        font-size: 4rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .text-normal--title {
+        letter-spacing: 4px;
+        font-size: 3.2rem;
+        width: auto; } }
+    @media only screen and (max-width: 25em) {
+      .text-normal--title {
+        font-size: 2.8rem;
+        letter-spacing: 3px; } }
   .text-normal--description {
     display: inline-block;
     font-family: 'Helvetica';
@@ -229,6 +245,9 @@ footer.footer {
     font-size: 1.8rem;
     max-width: 70rem;
     margin: 0 auto; }
+    @media only screen and (max-width: 25em) {
+      .text-normal--description {
+        font-size: 1.6rem; } }
 
 .text-line {
   display: inline-block;
@@ -278,8 +297,15 @@ footer.footer {
 .u-left-text {
   text-align: start !important; }
 
+.u-end-text {
+  text-align: end !important; }
+
 @media only screen and (max-width: 37.5em) {
   .u-center-text-phone {
+    text-align: center !important; } }
+
+@media only screen and (max-width: 48em) {
+  .u-center-text-tab-generic {
     text-align: center !important; } }
 
 .u-width-medium {
@@ -346,6 +372,12 @@ footer.footer {
   .u-flex-column--center {
     justify-content: center;
     align-items: center; }
+
+@media only screen and (max-width: 37.5em) {
+  .u-flex-inline-column-align-end-phone {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: end; } }
 
 .u-flex-row-reverse {
   display: flex;
@@ -1171,7 +1203,8 @@ footer.footer {
 .services .section-services {
   background-color: #FFF7E1;
   padding-top: 3.7rem;
-  padding-bottom: 20rem; }
+  padding-bottom: 20rem;
+  overflow: hidden; }
   .services .section-services .logos {
     margin-top: 12rem; }
     @media only screen and (max-width: 64em) {
@@ -1184,28 +1217,57 @@ footer.footer {
     bottom: 0;
     left: 0;
     width: 35rem; }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services__btm-wave {
+        width: 20rem; } }
   .services .section-services__personalised-wave {
     position: absolute;
-    top: 60%;
-    right: 0; }
+    top: 62%;
+    right: 0;
+    width: 35rem; }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services__personalised-wave {
+        top: 66%;
+        width: 18rem; } }
+    @media only screen and (max-width: 29em) {
+      .services .section-services__personalised-wave {
+        width: 14rem; } }
   .services .section-services__creative-wave {
     top: 20%;
     left: 0;
     position: absolute; }
+    @media only screen and (max-width: 90em) {
+      .services .section-services__creative-wave {
+        width: 30rem; } }
+    @media only screen and (max-width: 48em) {
+      .services .section-services__creative-wave {
+        top: 25%; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services__creative-wave {
+        top: 16%; } }
+    @media only screen and (max-width: 29em) {
+      .services .section-services__creative-wave {
+        top: 15%; } }
   .services .section-services .zigzag-container {
     padding-right: 8rem;
     padding-left: 12rem;
     margin-top: 10rem; }
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 29em) {
+      .services .section-services .zigzag-container {
+        margin-top: 5rem; } }
+    @media only screen and (max-width: 48em) {
       .services .section-services .zigzag-container .card-container__row {
         justify-content: center;
         flex-wrap: wrap;
         align-content: center;
         row-gap: 2rem; } }
+    @media only screen and (max-width: 64em) {
+      .services .section-services .zigzag-container .card {
+        padding-top: 1.2rem; } }
     .services .section-services .zigzag-container__item:not(:last-child) {
       padding-bottom: 12rem; }
     .services .section-services .zigzag-container__item-presentation {
-      min-width: none; }
+      min-width: initial; }
     .services .section-services .zigzag-container__item-description {
       min-width: 36%;
       justify-content: center; }
@@ -1214,38 +1276,67 @@ footer.footer {
           min-width: 33%; } }
     @media only screen and (max-width: 37.5em) {
       .services .section-services .zigzag-container__item {
-        flex-direction: column; }
-        .services .section-services .zigzag-container__item:not(:last-child) {
-          padding-bottom: 10rem; } }
+        flex-direction: column; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services .zigzag-container__item:not(:last-child) {
+        padding-bottom: 10rem; } }
+    @media only screen and (max-width: 29em) {
+      .services .section-services .zigzag-container__item:not(:last-child) {
+        padding-bottom: 7rem; } }
     .services .section-services .zigzag-container .text-normal--description {
       max-width: 52rem;
       margin-top: 1rem; }
-    .services .section-services .zigzag-container .text-normal--title {
-      letter-spacing: 10px;
-      font-size: 5rem; }
       @media only screen and (max-width: 37.5em) {
-        .services .section-services .zigzag-container .text-normal--title {
-          letter-spacing: 4px;
-          font-size: 3.2rem; } }
+        .services .section-services .zigzag-container .text-normal--description {
+          margin-top: 3rem; } }
     @media only screen and (max-width: 48em) {
       .services .section-services .zigzag-container {
-        padding-right: 5rem;
-        padding-left: 5rem; } }
+        padding-right: 1rem;
+        padding-left: 1rem; } }
     @media only screen and (max-width: 37.5em) {
       .services .section-services .zigzag-container .card {
         width: 45vw; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services .zigzag-container__image {
+        max-height: initial; } }
+  @media only screen and (max-width: 37.5em) {
+    .services .section-services__row--creative {
+      padding-bottom: 0rem !important; } }
+  @media only screen and (max-width: 90em) {
+    .services .section-services__row--creative .zigzag-container__item-description {
+      min-width: 30%; } }
+  @media only screen and (max-width: 37.5em) {
+    .services .section-services__row--creative .zigzag-container__item-presentation {
+      margin-top: 4rem; } }
   .services .section-services__row--creative .card {
     flex-basis: 25%; }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services__row--creative .card {
+        width: auto;
+        flex-basis: 28%; } }
+    @media only screen and (max-width: 29em) {
+      .services .section-services__row--creative .card {
+        flex-basis: 30%; } }
+    @media only screen and (max-width: 25em) {
+      .services .section-services__row--creative .card {
+        flex-basis: 38%; } }
   .services .section-services__row--creative img.zigzag-container__image {
     width: 45rem;
     transform: translate(8rem, 6rem); }
+    @media only screen and (max-width: 90em) {
+      .services .section-services__row--creative img.zigzag-container__image {
+        width: 35rem;
+        transform: translate(3rem, 6rem); } }
+    @media only screen and (max-width: 48em) {
+      .services .section-services__row--creative img.zigzag-container__image {
+        transform: translate(10rem, 6rem); } }
     @media only screen and (max-width: 37.5em) {
       .services .section-services__row--creative img.zigzag-container__image {
         transform: translate(0, 0);
-        width: 90%; } }
+        width: 80%; } }
   @media only screen and (max-width: 37.5em) {
     .services .section-services__row--collaboration .text-line {
-      width: 60%; } }
+      width: auto; } }
   .services .section-services__row--collaboration .zigzag-container__item-description img.zigzag-container__image {
     display: inline-block; }
     @media only screen and (max-width: 37.5em) {
@@ -1258,7 +1349,7 @@ footer.footer {
       .services .section-services__row--collaboration .zigzag-container__item-presentation img.zigzag-container__image {
         display: inline-block;
         width: 38%;
-        transform: translate(1rem, 2rem); } }
+        transform: translate(3rem, 9rem); } }
   @media only screen and (max-width: 37.5em) {
     .services .section-services__row--collaboration .zigzag-container__item-presentation .text-normal--description {
       text-align: center; } }
@@ -1266,16 +1357,26 @@ footer.footer {
     margin-left: 10rem; }
     @media only screen and (max-width: 37.5em) {
       .services .section-services__row--web {
+        padding-bottom: 0rem !important;
         margin-left: 0; }
         .services .section-services__row--web img.zigzag-container__image {
-          width: 90%; } }
+          width: 70%; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services__row--web .zigzag-container__item-presentation {
+        margin-top: 4rem; } }
   .services .section-services__row--personalised {
-    transform: translateX(-30rem); }
+    transform: translateX(-26rem); }
+    @media only screen and (max-width: 90em) {
+      .services .section-services__row--personalised {
+        transform: translateX(-20rem); } }
+    @media only screen and (max-width: 64em) {
+      .services .section-services__row--personalised {
+        transform: translateX(-12rem); } }
     @media only screen and (max-width: 37.5em) {
       .services .section-services__row--personalised {
         transform: translateX(0rem); }
         .services .section-services__row--personalised .text-line {
-          width: 62%; } }
+          width: auto; } }
     .services .section-services__row--personalised .zigzag-container__item-description img.zigzag-container__image {
       display: inline-block; }
       @media only screen and (max-width: 37.5em) {
@@ -1288,21 +1389,30 @@ footer.footer {
         .services .section-services__row--personalised .zigzag-container__item-presentation img.zigzag-container__image {
           display: inline-block;
           width: 37%;
-          transform: translate(1rem, 2rem); } }
+          transform: translate(3rem, 11rem); } }
     @media only screen and (max-width: 37.5em) {
       .services .section-services__row--personalised .zigzag-container__item-presentation .text-normal--description {
         text-align: center; } }
   .services .section-services__row--merchandise {
     margin-left: 15rem; }
+    @media only screen and (max-width: 75em) {
+      .services .section-services__row--merchandise {
+        margin-left: 12rem; } }
     @media only screen and (max-width: 37.5em) {
       .services .section-services__row--merchandise {
         margin-left: 0; } }
     .services .section-services__row--merchandise img.zigzag-container__image {
       width: 50rem; }
+      @media only screen and (max-width: 56.25em) {
+        .services .section-services__row--merchandise img.zigzag-container__image {
+          width: 35rem; } }
       @media only screen and (max-width: 37.5em) {
         .services .section-services__row--merchandise img.zigzag-container__image {
           transform: translate(0, 0);
-          width: 90%; } }
+          width: 80%; } }
+    @media only screen and (max-width: 37.5em) {
+      .services .section-services__row--merchandise .zigzag-container__item-presentation {
+        margin-top: 4rem; } }
   .services .section-services__title {
     margin-top: 7rem; }
     .services .section-services__title .text-normal {
@@ -1310,6 +1420,9 @@ footer.footer {
       .services .section-services__title .text-normal--description {
         max-width: 60vw;
         font-size: 2rem; }
+        @media only screen and (max-width: 37.5em) {
+          .services .section-services__title .text-normal--description {
+            max-width: 85vw; } }
       .services .section-services__title .text-normal:not(:first-child) {
         padding-top: 2rem; }
 
@@ -2610,6 +2723,9 @@ footer.footer {
       .card__title {
         font-size: 2rem;
         letter-spacing: 2px; } }
+    @media only screen and (max-width: 37.5em) {
+      .card__title {
+        font-size: 1.8rem; } }
   .card__body {
     text-align: center; }
   .card__text {
@@ -2635,7 +2751,7 @@ footer.footer {
       align-items: stretch;
       justify-content: start; }
       .card-container__row .card {
-        max-width: 40%; }
+        max-width: 45%; }
         .card-container__row .card:not(:last-child) {
           margin-right: 1.5rem; }
         @media only screen and (max-width: 75em) {

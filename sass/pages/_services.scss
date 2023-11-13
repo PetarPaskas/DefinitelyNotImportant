@@ -33,6 +33,7 @@
         background-color: $color-light;
         padding-top:3.7rem;
         padding-bottom:20rem;
+        overflow:hidden;
     
         .logos{
             margin-top:12rem;
@@ -51,16 +52,40 @@
             bottom:0;
             left:0;
             width: 35rem;
+            @include respond('phone'){
+                width: 20rem;
+            }
+
         }
         &__personalised-wave{
             position:absolute;
-            top:60%;
+            top:62%;
             right:0;
+            width:35rem;
+            @include respond('phone'){
+                top:66%;
+                width:18rem;
+            }
+            @include respond('phone-med'){
+                width:14rem;
+            }
         }
         &__creative-wave{
             top:20%;
             left:0;
             position:absolute;
+            @include respond('big-laptop'){
+                width:30rem;
+            }
+            @include respond('tab-generic'){
+                top:25%;
+            }
+            @include respond('phone'){
+                top:16%;
+            }
+            @include respond('phone-med'){
+                top:15%;
+            }
         }
     
         .zigzag-container{
@@ -68,10 +93,14 @@
             padding-left:12rem;
             margin-top:10rem;
 
+            @include respond('phone-med'){
+                margin-top:5rem;
+            }
+
             .card{
                 &-container{
                     &__row{
-                        @include respond('phone'){
+                        @include respond('tab-generic'){
                             justify-content: center;
                             flex-wrap:wrap;
                             align-content:center;
@@ -80,6 +109,9 @@
 
                     }
                 }
+                @include respond('laptop'){
+                    padding-top:1.2rem;
+                }
             }
 
             &__item{
@@ -87,7 +119,7 @@
                     padding-bottom: 12rem;
                 }
                 &-presentation{
-                    min-width:none;
+                    min-width:initial;
                 }
                 &-description{
                     min-width: 36%;
@@ -98,8 +130,14 @@
                 }
                 @include respond('phone'){
                     flex-direction: column;
-                    &:not(:last-child){
+
+                }
+                &:not(:last-child){
+                    @include respond('phone'){
                         padding-bottom: 10rem;
+                    }
+                    @include respond('phone-med'){
+                        padding-bottom: 7rem;
                     }
                 }
             }
@@ -109,20 +147,18 @@
                     //max-width: none;
                     max-width: 52rem;
                     margin-top:1rem;
+                    @include respond('phone'){
+                        margin-top:3rem;
+                    }
                 }
                 &--title{
-                    letter-spacing: 10px;
-                    font-size: $text-h2;
-                    @include respond('phone'){
-                        letter-spacing: 4px;
-                        font-size:$text-large;
-                    }
+
                 }
             }
 
             @include respond('tab-generic'){
-                padding-right:5rem;
-                padding-left:5rem;
+                padding-right:1rem;
+                padding-left:1rem;
             }
 
             @include respond('phone'){
@@ -133,29 +169,61 @@
 
             @include respond('phone'){
                 &__image{
-                    
+                    max-height: initial;
                 }
             }
         }
 
         &__row{
             &--creative{
+                @include respond('phone'){
+                    padding-bottom: 0rem !important;
+                }
+                .zigzag-container{
+                    @include respond('big-laptop'){
+                        &__item-description{
+                            min-width: 30%;
+                        }
+                    }
+                    @include respond('phone'){
+                        &__item-presentation{
+                            margin-top:4rem;
+                        }
+                    }
+                }
                 .card{
                     flex-basis: 25%;
+                    @include respond('phone'){
+                        width:auto;
+                        flex-basis: 28%;
+                    }
+                    @include respond('phone-med'){
+                        flex-basis: 30%;
+                    }
+                    @include respond('phone-sm'){
+                        flex-basis: 38%;
+                    }
                 }
                 img.zigzag-container__image{
                     width: 45rem;
                     transform:translate(8rem,6rem);
+                    @include respond('big-laptop'){
+                        width: 35rem;
+                        transform:translate(3rem,6rem);
+                    }
+                    @include respond('tab-generic'){
+                        transform:translate(10rem,6rem);
+                    }
                     @include respond('phone'){
                         transform:translate(0,0);
-                        width:90%;
+                        width:80%;
                     }
                 }
             }
             &--collaboration{
                 @include respond('phone'){
                     .text-line{
-                        width: 60%;
+                        width: auto;
                     }
                 }
 
@@ -175,7 +243,7 @@
                             @include respond('phone'){
                                 display:inline-block;
                                 width:38%;
-                                transform:translate(1rem,2rem);
+                                transform:translate(3rem,9rem);
                             }
                         }
                         .text-normal--description{
@@ -189,19 +257,32 @@
             &--web{
                 margin-left:10rem;
                 @include respond('phone'){
+                    padding-bottom: 0rem !important;
                     margin-left:0;
                     img.zigzag-container__image{
-                        width:90%;
+                        width:70%;
+                    }
+                }
+                .zigzag-container{
+                    &__item-presentation{
+                        @include respond('phone'){
+                            margin-top:4rem;
+                        }
                     }
                 }
             }
             &--personalised{
-                transform:translateX(-30rem);
-
+                transform:translateX(-26rem);
+                @include respond('big-laptop'){
+                    transform:translateX(-20rem);
+                }
+                @include respond('laptop'){
+                    transform:translateX(-12rem);
+                }
                 @include respond('phone'){
                     transform:translateX(-0rem);
                     .text-line{
-                        width: 62%;
+                        width: auto;
                     }
                 }
 
@@ -221,7 +302,7 @@
                             @include respond('phone'){
                                 display:inline-block;
                                 width:37%;
-                                transform:translate(1rem,2rem);
+                                transform:translate(3rem,11rem);
                             }
                         }
                         .text-normal--description{
@@ -234,14 +315,27 @@
             }
             &--merchandise{
                 margin-left:15rem;
+                @include respond('tab-land'){
+                    margin-left:12rem;
+                }
                 @include respond('phone'){
                     margin-left:0;
                 }
                 img.zigzag-container__image{
                     width:50rem;
+                    @include respond('tab-port'){
+                        width:35rem;
+                    }
                     @include respond('phone'){
                     transform:translate(0,0);
-                    width:90%;
+                    width:80%;
+                    }
+                }
+                .zigzag-container{
+                    &__item-presentation{
+                        @include respond('phone'){
+                            margin-top:4rem;
+                        }
                     }
                 }
             }
@@ -254,6 +348,9 @@
                 &--description{
                     max-width: 60vw;
                     font-size: $text-small;
+                    @include respond('phone'){
+                        max-width: 85vw;
+                    }
                 }
                 &:not(:first-child){
                     padding-top:2rem;

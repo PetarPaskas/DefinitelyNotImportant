@@ -41,6 +41,9 @@
             font-size:$text-small;
             letter-spacing: 2px;
         }
+        @include respond('phone'){
+            font-size:$text-small-med-med-med;
+        }
     }
     &__body{
         text-align: center;
@@ -75,7 +78,7 @@
             justify-content: start;
 
             & .card{
-                max-width: 40%;
+                max-width: 45%;
                 //width:33rem;
                 &:not(:last-child){
                     margin-right:1.5rem;
