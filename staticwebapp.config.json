@@ -61,10 +61,6 @@
             "route":"/testimonials",
             "redirect":"/"
         },
-        {
-            "route":"/index.html",
-            "redirect":"/"
-        },
 
         {
             "route":"/services",
