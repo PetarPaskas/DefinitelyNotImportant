@@ -41,14 +41,6 @@
             "rewrite":"/links/contact.html"
         },
         {
-            "route":"/portfolio",
-            "rewrite":"/links/portfolio.html"
-        },
-        {
-            "route":"/portfolio",
-            "rewrite":"/links/portfolio.html"
-        },
-        {
             "route":"/blogs/typingwithtoddlers",
             "rewrite":"/blogs/typingwithtoddlers.html"
         },
