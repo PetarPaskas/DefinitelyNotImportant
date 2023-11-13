@@ -14,13 +14,17 @@
   },
   "homepage": "https://github.com/PetarPaskas/DefinitelyNotImportant#readme",
   "devDependencies": {
-    "node-sass": "^9.0.0"
+    "autoprefixer": "^10.4.16",
+    "node-sass": "^9.0.0",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0"
   },
-
-
-  "scripts":{
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile-sass":"node-sass sass/main.scss css/style.css -w",
-    "build":"echo \"Building...\""
+    "compile-sass":"node-sass sass/main.scss css/style.dev.css -w",
+    "build":"echo \"Building...\"",
+    "prefix-css":"postcss --use autoprefixer -b \"last 10 versions\" css/style.dev.css -o css/style.prefix.css",
+    "compress-css":"node-sass ./css/style.prefix.css ./css/style.css --output-style compressed",
+    "build-css":"npm-run-all compile-sass prefix-css compress-css"
   }
 }

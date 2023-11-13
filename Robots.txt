@@ -1,0 +1,15 @@
+User-agent: *
+Crawl-delay: 10
+Sitemap: https://blue-coast-0d88ab010.4.azurestaticapps.net/sitemap.xml
+Disallow: /package-lock.json
+Disallow: /package.json
+Disallow: /.gitignore
+Disallow: /fonts/
+Disallow: /sass/
+Disallow: /css/
+Allow: /css/style.css
+Allow: /scripts/index.js
+Allow: /index.html
+Allow: /blogs/
+Allow: /case-studies/
+Allow: /links/

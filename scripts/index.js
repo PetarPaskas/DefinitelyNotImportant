@@ -141,7 +141,7 @@ function enableTestimonials(e,testimonialsState){
     return;
 
     testimonialsState.nextCardSlot = parseInt(index);
-    console.log(`Next:${testimonialsState.nextCardSlot} --- Current:${testimonialsState.currentCardIndex}`);
+    //console.log(`Next:${testimonialsState.nextCardSlot} --- Current:${testimonialsState.currentCardIndex}`);
     
     if(testimonialsState.currentCardIndex > testimonialsState.nextCardSlot)
     nextCard(testimonialsState);
