@@ -286,11 +286,7 @@
             </div>
             <div class="u-padding-top-btm-med">
                 <ul class="button-slider">
-                    <li class="button-slider__item"><button class="button-slider__button button-slider__button--selected"></button></li>
-                    <li class="button-slider__item"><button class="button-slider__button "></button></li>
-                    <li class="button-slider__item"><button class="button-slider__button"></button></li>
-                    <li class="button-slider__item"><button class="button-slider__button"></button></li>
-                    <li class="button-slider__item"><button class="button-slider__button"></button></li>
+                    <li class="button-slider__item"><button data-item="0" class="button-slider__button button-slider__button--selected"></button></li>
                 </ul>
             </div>
         </section>
@@ -367,6 +363,19 @@
 
     const navigation = document.getElementById('navi-toggle');
     navigation.addEventListener('change',enableScroll)
+
+    const testimonialsState = {
+    nextCardSlot:0,
+    currentCardIndex:0,
+    isAnimating: false,
+    quotes: document.querySelectorAll('.quote'),
+    buttonSelectedClass: "button-slider__button--selected"
+    }
+    showCard(testimonialsState,testimonialsState.currentCardIndex); // Show the initial card
+    deselectSelectButton(testimonialsState,testimonialsState.currentCardIndex);
+
+    document.querySelector('.button-slider').addEventListener('click',(e)=>enableTestimonials(e,testimonialsState))
+
 
 
 </script>
