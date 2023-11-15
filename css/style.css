@@ -482,7 +482,7 @@ footer.footer {
     position: absolute;
     bottom: 0;
     left: 0;
-    padding-top: 20rem; }
+    margin-top: 20rem; }
     .header__background--stacked {
       z-index: 10; }
     .header__background--tablet, .header__background--phone {
@@ -558,6 +558,7 @@ footer.footer {
     display: flex;
     margin: 0 auto;
     padding: 7rem 0;
+    padding-top: 4rem;
     justify-content: space-around;
     max-width: 114rem; }
     @media only screen and (max-width: 90em) {
@@ -615,23 +616,46 @@ footer.footer {
       .header__content-box .composition {
         margin-left: 0; } }
   .header__offerings {
-    padding-top: 4rem;
-    text-align: center; }
+    padding-top: 8rem;
+    text-align: center;
+    transform: translateY(-3rem); }
+    @media only screen and (max-width: 1800px) {
+      .header__offerings {
+        transform: translateY(-5rem); } }
+    @media only screen and (max-width: 1498px) {
+      .header__offerings {
+        transform: translateY(-3rem); } }
     @media only screen and (max-width: 90em) {
       .header__offerings {
-        transform: translateY(2rem); } }
+        transform: translateY(-1rem); } }
+    @media only screen and (max-width: 1274px) {
+      .header__offerings {
+        transform: translateY(0rem); } }
     @media only screen and (max-width: 75em) {
       .header__offerings {
         padding-bottom: 3rem;
-        transform: translateY(5.5rem); } }
-    @media only screen and (max-width: 64em) {
+        transform: translateY(2.7rem); } }
+    @media only screen and (max-width: 1085px) {
       .header__offerings {
-        transform: translateY(8rem); } }
+        transform: translateY(4.7rem); } }
+    @media only screen and (max-width: 986px) {
+      .header__offerings {
+        transform: translateY(5.7rem); } }
+    @media only screen and (max-width: 907px) {
+      .header__offerings {
+        transform: translateY(6.7rem); } }
     @media only screen and (max-width: 56.25em) {
       .header__offerings {
         transform: none; } }
+    @media only screen and (max-width: 48em) {
+      .header__offerings {
+        transform: translateY(-2rem); } }
+    @media only screen and (max-width: 674px) {
+      .header__offerings {
+        transform: translateY(-4rem); } }
     @media only screen and (max-width: 37.5em) {
       .header__offerings {
+        transform: none;
         padding-top: 1rem; } }
     @media only screen and (max-width: 29em) {
       .header__offerings {

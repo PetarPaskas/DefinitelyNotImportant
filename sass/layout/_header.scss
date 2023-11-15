@@ -10,10 +10,12 @@
         position:absolute;
         bottom:0;
         left:0;
-        padding-top:20rem;
+        margin-top:20rem;
 
         &--stacked{
             z-index: $z-background-layer;
+        }
+        &--big{
         }
 
         &--tablet,
@@ -109,6 +111,7 @@
                 position:relative;
             }
         }
+
     }
 
     &__main{
@@ -116,6 +119,7 @@
         display:flex;
         margin:0 auto;
         padding:7rem 0;
+        padding-top:4rem;
         justify-content: space-around;
         max-width: 114rem;
 
@@ -188,28 +192,51 @@
         }
     }
     &__offerings{
-        padding-top:4rem;
+        padding-top:8rem;
         text-align: center;
-        
+        transform:translateY(-3rem);
+        @media only screen and (max-width:1800px){
+            transform:translateY(-5rem);
+        }
+        @media only screen and (max-width:1498px){
+            transform:translateY(-3rem);
+        }
         @include respond('big-laptop'){
-            transform:translateY(2rem);
+            transform:translateY(-1rem);
+        }
+        @media only screen and (max-width:1274px){
+            transform:translateY(0rem);
         }
         @include respond('tab-land'){
             padding-bottom:3rem;
-            transform:translateY(5.5rem);
+            transform:translateY(2.7rem);
+        }
+        @media only screen and (max-width:1085px){
+            transform:translateY(4.7rem);
+        }
+        @media only screen and (max-width:986px){
+            transform:translateY(5.7rem);
+        }
+        @media only screen and (max-width:907px){
+            transform:translateY(6.7rem);
         }
         @include respond('laptop'){
-            transform:translateY(8rem);
         }
         @include respond('tab-port'){
             transform:none;
         }
+        @include respond('tab-generic'){
+            transform:translateY(-2rem);
+        }
+        @media only screen and (max-width:674px){
+            transform:translateY(-4rem);
+        }
         @include respond('phone'){
+            transform:none;
             padding-top:1rem;
         }
         @include respond('phone-med'){
             padding-bottom: 1rem;
-            //transform:translateY(2.5rem);
         }
     }
 
