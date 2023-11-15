@@ -145,7 +145,7 @@
             .text-normal{
                 &--description{
                     //max-width: none;
-                    max-width: 52rem;
+                    max-width: 44rem;
                     margin-top:1rem;
                     @include respond('phone'){
                         margin-top:3rem;

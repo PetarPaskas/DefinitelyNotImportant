@@ -1318,7 +1318,7 @@ footer.footer {
       .services .section-services .zigzag-container__item:not(:last-child) {
         padding-bottom: 7rem; } }
     .services .section-services .zigzag-container .text-normal--description {
-      max-width: 52rem;
+      max-width: 44rem;
       margin-top: 1rem; }
       @media only screen and (max-width: 37.5em) {
         .services .section-services .zigzag-container .text-normal--description {
@@ -2194,7 +2194,7 @@ footer.footer {
   white-space: nowrap; }
   .logos__slide {
     display: inline-block;
-    animation: 8s spin linear infinite; }
+    animation: 18s spin linear infinite; }
   .logos__image {
     height: 15rem;
     margin: 0 4rem; }
