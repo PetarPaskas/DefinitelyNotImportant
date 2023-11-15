@@ -206,3 +206,36 @@ function prevCard(testimonialsState) {
 }
 
 /*  TESTIMONIAL CARDS */
+
+/* ANIMATING TEXT */
+
+function fadingTextAnimation(elementId, lines,colors) {
+    const middleLine = document.getElementById(elementId);
+    let index = 0;
+    let haveColors = colors.length > 0;
+    let colorsIndex = 0;
+    if(haveColors){
+        middleLine.classList.add(colors[colorsIndex]);
+    }
+  
+    function updateMiddleLine() {
+      middleLine.style.opacity = 0;
+      setTimeout(() => {
+
+        middleLine.textContent = lines[index];
+        middleLine.style.opacity = 1;
+
+        if(haveColors){
+            let currentIndex = colorsIndex % colors.length;
+            colorsIndex = colorsIndex+1;
+            let nextIndex = colorsIndex % colors.length;
+
+            middleLine.classList.remove(colors[currentIndex])
+            middleLine.classList.add(colors[nextIndex]);
+        }
+      }, 800); 
+  
+      index = (index + 1) % lines.length;
+    }
+    setInterval(updateMiddleLine, 2400);
+  }

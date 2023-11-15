@@ -140,7 +140,7 @@
                 </div>
                 <div class="header__main">
                     <div class="header__text-box">
-                        <h1 class="heading-primary">Bringing <br class="u-text-break"> products to life</h1>
+                        <h1 class="heading-primary">Bringing <br class="u-text-break"> <span class="u-text-fading" id="middleline">products</span> to life</h1>
                     </div>
                     <div class="header__content-box">
                         <div class="composition">
@@ -452,5 +452,15 @@
 
         document.querySelector('.form button[type=submit]').addEventListener('click',submitForm);
     });
+
+    document.addEventListener("DOMContentLoaded",()=>{fadingTextAnimation(
+        'middleline',
+        ["PRODUCTS", "APPS", "MERCH", "DESIGN", "WEBSITES"],
+        [
+        'u-color-black',
+        'u-color-orange',
+        'u-color-purple',
+        'u-color-green'
+    ])});
 </script>
 </html>
