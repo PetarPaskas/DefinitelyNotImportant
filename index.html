@@ -437,18 +437,19 @@
 
     window.addEventListener('load', function(event) {
         enableScroll();
-    });
 
-    const navigation = document.getElementById('navi-toggle');
-    navigation.addEventListener('change',enableScroll)
 
-    const inquireBtn = document.getElementById("inquireBtn-responsive");
-    inquireBtn.addEventListener('click',(e)=>{
         const navigation = document.getElementById('navi-toggle');
-        navigation.checked = false;
-        enableScroll();
-    });
+        navigation.addEventListener('change',enableScroll)
 
-    document.querySelector('.form button[type=submit]').addEventListener('click',submitForm);
+        const inquireBtn = document.getElementById("inquireBtn-responsive");
+        inquireBtn.addEventListener('click',(e)=>{
+            const navigation = document.getElementById('navi-toggle');
+            navigation.checked = false;
+            enableScroll();
+        });
+
+        document.querySelector('.form button[type=submit]').addEventListener('click',submitForm);
+    });
 </script>
 </html>
