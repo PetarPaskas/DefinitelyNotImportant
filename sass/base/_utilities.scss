@@ -168,10 +168,20 @@
 }
 
 .u-color{
+    &-black{
+        color:$color-black !important;
+    }
     &-purple{
         color:$color-purple !important;
     }
     &-orange{
         color:$color-orange !important;
     }
+    &-green{
+        color:$color-green !important;
+    }
+}
+.u-text-fading{
+    opacity:1;
+    transition: opacity 1s ease-in-out;
 }

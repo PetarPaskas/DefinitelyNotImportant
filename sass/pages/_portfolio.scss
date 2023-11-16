@@ -46,6 +46,7 @@
                 }
             }
             &__description{
+                //width:80%;
                 @include respond('laptop'){
                     font-size:$text-small-med-med;
                 }

@@ -40,13 +40,14 @@ function submitForm(e){
 }
 
 function sendRequest(data){
-    const uri = "";
+    let uri = "https://fwrd-mail-app-windows.azurewebsites.net/api/FWRD-MailFunction";
     data.clientTime = new Date().toISOString();
 
     fetch(uri,{
         method:'POST',
         headers:{
             'Content-Type':'application/json',
+            'x-functions-key':'BIDNECFI05ieB-ewSCUf8ivl56g1Frml1gHG91r8GclqAzFuFphkpA=='
         },
         body: JSON.stringify(data)
     }).then(response=>{
@@ -206,3 +207,36 @@ function prevCard(testimonialsState) {
 }
 
 /*  TESTIMONIAL CARDS */
+
+/* ANIMATING TEXT */
+
+function fadingTextAnimation(elementId, lines,colors) {
+    const middleLine = document.getElementById(elementId);
+    let index = 0;
+    let haveColors = colors.length > 0;
+    let colorsIndex = 0;
+    if(haveColors){
+        middleLine.classList.add(colors[colorsIndex]);
+    }
+  
+    function updateMiddleLine() {
+      middleLine.style.opacity = 0;
+      setTimeout(() => {
+
+        middleLine.textContent = lines[index];
+        middleLine.style.opacity = 1;
+
+        if(haveColors){
+            let currentIndex = colorsIndex % colors.length;
+            colorsIndex = colorsIndex+1;
+            let nextIndex = colorsIndex % colors.length;
+
+            middleLine.classList.remove(colors[currentIndex])
+            middleLine.classList.add(colors[nextIndex]);
+        }
+      }, 800); 
+  
+      index = (index + 1) % lines.length;
+    }
+    setInterval(updateMiddleLine, 2400);
+  }

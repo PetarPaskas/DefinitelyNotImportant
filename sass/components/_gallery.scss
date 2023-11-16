@@ -1,13 +1,13 @@
 .gallery{
     display:grid;
-    grid-template-columns: [start] repeat(7, [col] 1fr [col]) [end];
-    grid-template-rows: repeat(12, 3rem);
+    grid-template-columns: [start] repeat(6, [col] 1fr [col]) [end];
+    grid-template-rows: repeat(12, 4rem);
     grid-row-gap: 4.5rem;
     grid-column-gap:4rem;
 
     @include respond('phone'){
-        grid-template-columns: [start] repeat(8, [col] 1fr [col]) [end];
-        grid-template-rows: repeat(12, 12rem);
+        // grid-template-columns: [start] repeat(8, [col] 1fr [col]) [end];
+        // grid-template-rows: repeat(12, 12rem);
     }
     @include respond('phone-med'){
         grid-row-gap: 2rem;
