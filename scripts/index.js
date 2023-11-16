@@ -40,13 +40,14 @@ function submitForm(e){
 }
 
 function sendRequest(data){
-    const uri = "";
+    let uri = "https://fwrd-mail-app-windows.azurewebsites.net/api/FWRD-MailFunction";
     data.clientTime = new Date().toISOString();
 
     fetch(uri,{
         method:'POST',
         headers:{
             'Content-Type':'application/json',
+            'x-functions-key':'BIDNECFI05ieB-ewSCUf8ivl56g1Frml1gHG91r8GclqAzFuFphkpA=='
         },
         body: JSON.stringify(data)
     }).then(response=>{

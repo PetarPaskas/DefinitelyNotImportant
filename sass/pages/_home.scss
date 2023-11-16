@@ -44,6 +44,78 @@
     & .gallery{
         margin:0 auto; 
         padding-bottom:7rem;
+        max-width:70vw;
+        
+        @include respond('big-laptop'){
+            max-width: 90vw;
+        }
+        @include respond('tab-generic'){
+            max-width: 90vw;
+        }
+        @media only screen and (max-width:674px) {
+            grid-template-rows: repeat(19, 4rem);
+        }
+        @include respond('phone-med'){
+            padding-bottom:0rem;
+        }
+    }
+    & .gallery__item{
+        &--1{
+            grid-column: start / span 2;
+            grid-row: 1 / 7;
+        }
+        &--2{
+            grid-column: 3 / span 2;
+            grid-row: 1 / 7;
+        }
+        &--3{
+            grid-column: 5 / span 2;
+            grid-row: 1 / 7;
+        }
+        &--4{
+            grid-column: start / span 2;
+            grid-row: 7 / 13;
+        }
+        &--5{
+            grid-column: 3 / span 2;
+            grid-row: 7 / 13;
+        }
+        &--6{
+            grid-column: 5 / span 2;
+            grid-row: 7 / 13;
+        }
+        @media only screen and (max-width:674px) {
+            &--1{
+                grid-column: 1/4;
+                grid-row: 1 / 7;
+            }
+            &--2{
+                grid-column: 4/7;
+                grid-row: 1 / 7;
+            }
+            &--3{
+                grid-column: 1/4;
+                grid-row: 7 / 13;
+            }
+            &--4{
+                grid-column: 4/7;
+                grid-row: 7 / 13;
+            }
+            &--5{
+                grid-column: 1/4;
+                grid-row: 13 / 20;
+            }
+            &--6{
+                grid-column: 4/7;
+                grid-row: 13 / 20;
+            }
+        }
+    }
+
+    /*  OLD GALLERY ---
+    & .gallery{
+        margin:0 auto; 
+        padding-bottom:7rem;
         width:140rem;
         
         @include respond('big-laptop'){
@@ -118,7 +190,7 @@
            } 
        }
     }
-
+      OLD GALLERY --- */
     &__button{
         transition:background-color .2s;
 
