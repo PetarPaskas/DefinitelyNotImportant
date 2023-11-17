@@ -3,9 +3,12 @@
     background-color: $color-green;
     color:$color-white;
     padding:0 2rem;
-    visibility: hidden;
-    display: none;
     transition: transform 0.5s, visibility .5s;
+
+    &--hidden{
+        visibility: hidden;
+        display: none;
+    }
 
     &--orange{
         background-color: $color-orange;

@@ -1,0 +1,23 @@
+.circle-box{
+    &__item{
+        width: 5rem;
+        height: 5rem;
+        border-radius:50%;
+        @include respond('phone'){
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+    &__row{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:4rem;
+        &:not(:last-child){
+            margin-bottom:2rem;
+        }
+        @include respond('tab-land'){
+            gap:2rem;
+        }
+    }
+}
