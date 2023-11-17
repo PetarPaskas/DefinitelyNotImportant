@@ -35,6 +35,7 @@
 }
 
 .section-brief{
+    overflow: hidden;
     padding:10rem 15rem;
     padding-top:14rem;
 
@@ -118,3 +119,438 @@
     }
 }
 
+// -------------------------------------------- PIXEL -- is in standard
+.case-studies--pixel{
+    .section-gallery{
+        background-color: $color-light;
+        .gallery-case{
+            max-width: 90vw;
+            margin:0 auto;
+            &__left,
+            &__right{
+                width:49%;
+                @include respond('phone'){
+                    width:100%;
+                    float:none;
+                }
+            }
+            &__left{
+                float:left;
+            }
+            &__right{
+                float:right;
+            }
+            &__full{
+                clear:both;
+                width:100%;
+                margin-top:2%;
+            }
+            &::after{
+                clear:both;
+                display:inline-block;
+                content:'';
+            }
+            &__image{
+                width:100%;
+                height: auto;
+                object-position:center;
+            }
+
+            &__item{
+                margin-top:2%;
+            }
+        }
+    }
+}
+
+// -------------------------------------------- NYP -- is in standard
+.case-studies--name-your-price{
+    .section-gallery{
+        background-color: $color-light;
+        .gallery-case{
+            max-width: 90vw;
+            margin:0 auto;
+            &__left,
+            &__right{
+                width:49%;
+                @include respond('phone'){
+                    width:100%;
+                    float:none;
+                }
+            }
+            &__left{
+                float:left;
+            }
+            &__right{
+                float:right;
+            }
+            &__full{
+                clear:both;
+                width:100%;
+                margin-top:2%;
+            }
+            &::after{
+                clear:both;
+                display:inline-block;
+                content:'';
+            }
+            &__image{
+                width:100%;
+                height: auto;
+                object-position:center;
+            }
+
+            &__item{
+                margin-top:2%;
+            }
+        }
+    }
+}
+
+// -------------------------------------------- IAN BICK -- is in standard
+
+.case-studies--ian-bick{
+    .section-gallery{
+        background-color: $color-light;
+        .gallery-case{
+            max-width: 90vw;
+            margin:0 auto;
+            &__left,
+            &__right{
+                width:49%;
+                @include respond('phone'){
+                    width:100%;
+                    float:none;
+                }
+            }
+            &__left{
+                float:left;
+            }
+            &__right{
+                float:right;
+            }
+            &__full{
+                clear:both;
+                width:100%;
+                margin-top:2%;
+            }
+            &::after{
+                clear:both;
+                display:inline-block;
+                content:'';
+            }
+            &__image{
+                width:100%;
+                height: auto;
+                object-position:center;
+            }
+
+            &__item{
+                margin-top:2%;
+            }
+        }
+    }
+}
+
+// -------------------------------------------- KREEK
+
+.case-studies--kreekcraft{
+    .section-gallery{
+        background-color: $color-light;
+
+        &--banner{
+            max-width: 90vw;
+            margin:0 auto;
+            &-image{
+                width: 100%;
+            }
+            margin-bottom:8rem;
+        }
+        .gallery-case{
+            max-width: 70vw;
+            margin:0 auto;
+            display: flex;
+            flex-direction: column;
+            gap:1rem;
+
+            @include respond('tab-port'){
+                max-width: 90vw;
+            }
+
+            &__row{
+                display:flex;
+                @include respond('phone'){
+                    flex-direction: column;
+                }
+
+                &--3-items{
+                    align-items: stretch;
+                    justify-content: space-between;
+                    gap:1.5rem;
+                    .gallery-case__item{
+                        flex-basis:calc(1/3*100%);
+                        @include respond('phone'){
+                            flex-basis: 100%;
+                        }
+                    }
+                }
+
+                &--2-items{
+                    align-items: stretch;
+                    justify-content: space-between;
+                    gap:1.5rem;
+                    .gallery-case__item{
+                        flex-basis:calc(1/2*100%);
+                        @include respond('phone'){
+                            flex-basis: 100%;
+                        }
+                    }
+                }
+                &--1-items{
+                    display:block;
+                    .galler-case__item{
+                        width:100%;
+                    }
+                }
+            }
+            &__item{
+
+            }
+            &__image{
+                width: 100%;
+                height:100%;
+            }
+            &__video{
+                width:100%;
+                display: block;
+            }
+        }
+    }
+}
+
+// -------------------------------------------- MAYHEM
+
+.case-studies--florida-mayhem{
+    .section-gallery{
+        margin-top:-2%;
+        background-color: $color-light;
+        .gallery-case{
+            max-width: 90vw;
+            margin:0 auto;
+
+            &__left{
+                float:left;
+                width:56%
+            }
+            &__right{
+                float:right;
+                width:42.5%;
+            }
+
+            &__left,
+            &__right{
+                @include respond('phone'){
+                    width:100%;
+                    float:none;
+                }
+            }
+
+            &__full{
+                clear:both;
+                width:100%;
+                margin-top:2%;
+            }
+
+            &__image{
+                width:100%;
+                height: auto;
+                object-position:center;
+            }
+
+            &__item{
+                margin-top:2%;
+            }
+            &__video{
+                width: 100%;;
+            }
+
+            &__flex{
+                &-3-items{
+                        display:flex;
+                        //align-items: stretch;
+                        justify-content: space-between;
+                        gap:1.5rem;
+
+                        .gallery-case{
+                            &__item{
+                                flex-basis:calc(1/3*100%);
+
+                                @include respond('phone'){
+                                    flex-basis: 100%;
+                                }
+                            }
+                            &__image{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: top;
+                            }
+                        }
+                        
+                        @include respond('phone'){
+                            flex-direction: column;
+                        }
+                }
+            }
+        }
+    }
+}
+
+// -------------------------------------------- REACTIV 
+.case-studies--reactiv{
+    .col-1-of-2{
+        float:left;
+        width:calc((100% - 1rem) / 2);
+        &:not(:first-child){
+            margin-left:1rem;
+        }
+    }
+    .col-1-of-3{
+        float:left;
+        width:calc((100% - 2 * 1rem) / 3);
+        &:not(:first-child){
+            margin-left:1rem;
+        }
+        &--small{
+            width:calc((86% - 2 * 1rem) / 3);
+        }
+        &--right{
+            float:right;
+        }
+        @include respond('phone'){
+            width:100%;
+            float:none;
+            &:not(:first-child){
+                margin-left:0rem;
+            }
+        }
+    }
+
+    .section-gallery{
+        background-color: $color-light;
+
+        .gallery-case{
+            max-width: 80vw;
+            margin:0 auto;
+            &__left,
+            &__right{
+                width:49%;
+                @include respond('phone'){
+                    width:100%;
+                    float:none;
+                }
+            }
+
+            &__image{
+                width: 100%;
+                &--small-center{
+                    display: inline-block;
+                    width: 60%;
+                    @include respond('tab-land'){
+                        width: 70%;
+                    }
+                }
+                &--small-center-margin-top{
+                    width: 60%;
+                    margin-top:2rem;
+                    display: inline-block;
+                }
+            }
+            &__row{
+                &:not(:last-child):not(:first-child){
+                    margin-top:2rem;
+                }
+                &::after{
+                    content:'';
+                    display:block;
+                    clear:both;
+                }
+
+                &--flex{
+                    display:flex;
+                    @include respond('phone'){
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .col-1-of-2{
+                        float: none;
+                        @include respond('phone'){
+                            width:100%;
+                        }
+                    }
+                    &>*{
+                        margin-bottom: 8rem;
+                    }
+                }
+            }
+            &__row--wide-image{
+                .gallery-case__image{
+                    height: 100%;
+                    width: auto;
+                }
+            }
+            &__item{
+                margin-top:2%;
+                &--flex-column{
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap:2rem;
+                    @include respond('phone'){
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+            &__flex{
+                &-3-items{
+                        max-width: 80vw;
+                        margin:0 auto;
+                        display:flex;
+                        //align-items: stretch;
+                        justify-content: space-between;
+                        gap:1.5rem;
+    
+                        .gallery-case{
+                            &__item{
+                                flex-basis:calc(1/3*100%);
+    
+                                @include respond('phone'){
+                                    flex-basis: 100%;
+                                }
+                            }
+                            &__image{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: top;
+                            }
+                        }
+                        
+                        @include respond('phone'){
+                            flex-direction: column;
+                        }
+                }
+            }
+        }
+
+        .circle-box{
+            @include respond('phone'){
+                transform: translateY(1rem);
+            }
+        }
+    }
+}
