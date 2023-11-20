@@ -559,6 +559,17 @@
             @include respond('phone'){
                 transform: translateY(1rem);
             }
+            @include respond('phone-med'){
+                &__row{
+                    gap:1rem;
+                }
+            }
+            @include respond('phone-med'){
+                &__item{
+                    width:3rem;
+                    height: 3rem;
+                }
+            }
         }
     }
 }
