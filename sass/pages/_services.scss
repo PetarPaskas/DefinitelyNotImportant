@@ -369,10 +369,24 @@
 
     .section-testimonials{
         background-color: $color-light;
-        padding:16rem 0 8rem 0;
+        padding:10rem 21vw 8rem 21vw;
+
+
+        @include respond('tab-port'){
+            padding:9rem 21vw 15rem 21vw;
+        }
+
+        @include respond('tab-generic'){
+            padding:9rem 1rem 15rem 1rem;
+        }
 
         @include respond('phone-med'){
-            padding:10rem 0 3rem 0;
+            padding:1rem 1rem 3rem 1rem;
+        }
+
+        &__main{
+            padding-top:6rem;
+            overflow: hidden;
         }
         
         .quote{
@@ -388,7 +402,8 @@
             }
             &__close-quote{
                 @include respond('phone'){
-                    bottom:-14%;
+                    bottom:-3rem;
+                    right:3rem;
                 }
             }
         }

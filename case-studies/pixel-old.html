@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="keywords" content="Web design, Merchandise, Digital Commerce, Ecommerce, Creative">
+    <meta name="description" content="FWRD: A product-first creative house, empowering businesses with customised branding, marketing, and merchandising solutions." >
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="../img/ico/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/ico/favicon-16x16.png">
+    <link rel="manifest" href="../img/ico/site.webmanifest">
+    <title>FWRD - Case Study</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <script src="../scripts/index.js"></script>
 </head>
@@ -217,7 +224,7 @@
                 </div>
                 <div class="form__row">
                     <div class="form__group u-center-text">
-                        <button class="button button--orange form__button" type="submit" disabled>
+                        <button class="button button--orange form__button" type="submit" >
                             Submit
                         </button>
                     </div>
@@ -237,23 +244,23 @@
             </div>
             <ul class="footer__list">
                 <div class="footer__list-section">
-                    <li class="footer__list-item"><a href="#" class="footer__link">About</a></li>
-                    <li class="footer__list-item"><a href="#" class="footer__link">Portfolio</a></li>
-                    <li class="footer__list-item"><a href="#" class="footer__link">Blog</a></li>
-                    <li class="footer__list-item"><a href="#" class="footer__link">Testimonials</a></li>
-                    <li class="footer__list-item"><a href="#" class="footer__link">Contact us</a></li>
+                    <li class="footer__list-item"><a href="../links/services.html" class="footer__link">About</a></li>
+                    <li class="footer__list-item"><a href="../links/portfolio.html" class="footer__link">Portfolio</a></li>
+                    <li class="footer__list-item"><a href="../index.html#section-blog" class="footer__link">Blog</a></li>
+                    <!-- <li class="footer__list-item"><a href="../links/testimonials.html" class="footer__link">Testimonials</a></li> -->
+                    <li class="footer__list-item"><a href="../links/contact.html" class="footer__link">Contact us</a></li>
                 </div>
                 <div class="footer__list-section">
                     <li class="footer__list-item">
-                        <a href="" class="footer__link">Follow us</a>
+                        <span href="" class="footer__text">Follow us</span>
                         <ul class="footer__list footer__list--standalone">
                             <li class="footer__list-item">
-                                <a href="#" class="footer__link">
+                                <a href="https://www.instagram.com/fwrd_co/" class="footer__link">
                                     <img src="../img/svg/Shared/instagram.svg" alt="" class="footer__social-media">
                                 </a>
                             </li>
                             <li class="footer__list-item">
-                                <a href="#" class="footer__link">
+                                <a href="https://www.behance.net/FWRD" class="footer__link">
                                     <img src="../img/svg/Shared/behance.svg" alt="" class="footer__social-media">
                                 </a>
                             </li>
@@ -263,12 +270,12 @@
                                 </a>
                             </li>
                             <li class="footer__list-item">
-                                <a href="#" class="footer__link">
+                                <a href="https://www.linkedin.com/company/fwrd-digital-product" class="footer__link">
                                     <img src="../img/svg/Shared/linkedin.svg" alt="" class="footer__social-media">
                                 </a>
                             </li>
                             <li class="footer__list-item">
-                                <a href="#" class="footer__link">
+                                <a href="https://www.facebook.com/FWRDdigitalproduct" class="footer__link">
                                     <img src="../img/svg/Shared/facebook.svg" alt="" class="footer__social-media">
                                 </a>
                             </li>
@@ -280,7 +287,7 @@
                         </span>
                     </li>
                     <li class="footer__list-item u-left-padding-zero">
-                        <a href="" class="button button--green footer__button footer__link">Inquire</a>
+                        <a href="../links/contact.html" class="button button--green footer__button footer__link">Enquire</a>
                     </li>
                 </div>
             </ul>
@@ -326,6 +333,7 @@
 
     window.addEventListener('load', function(event) {
         enableScroll();
+        document.querySelector('.form button[type=submit]').addEventListener('click',submitForm);
     });
 
     const navigation = document.getElementById('navi-toggle');
