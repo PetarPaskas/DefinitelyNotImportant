@@ -65,7 +65,8 @@
         display:inline-block;
         background-color:$color-black;
         height:2px;
-        transition:transform .3s, top .1s, left .1s,background-color .1s;
+        //transition:transform .3s linear, top .1s linear, left .1s linear,background-color .1s linear;
+        transition:transform .2s linear,background-color .1s linear;
         }
 
         &--white{
@@ -99,7 +100,7 @@
         border-radius: 50%; 
         background-color: transparent;
         backface-visibility: hidden;
-        transition:transform .6s cubic-bezier(0.83, 0, 0.17, 1), background-color .4s cubic-bezier(0.83, 0, 0.17, 1);
+        transition:transform .4s cubic-bezier(0.83, 0, 0.17, 1), background-color .4s cubic-bezier(0.83, 0, 0.17, 1);
         z-index: 40;
     }
 
@@ -119,7 +120,7 @@
         opacity: 0;
 
         transition-property: opacity, width, visibility;
-        transition-duration: .6s;
+        transition-duration: .3s;
         transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -160,7 +161,7 @@
     }
 
     &__link{
-        transition:transform .2s;
+        transition:transform .2s linear;
         backface-visibility: hidden;
 
         &,
@@ -193,4 +194,11 @@
         }
     }
 
+    &__background,
+    &__nav{
+        will-change: transform;
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
 }

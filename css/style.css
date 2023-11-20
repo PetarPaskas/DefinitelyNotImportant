@@ -89,6 +89,7 @@ They always point to the browser default font size.
   box-sizing: inherit; }
 
 :root {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
   @media only screen and (min-width: 112.5em) {
     :root {
@@ -1231,6 +1232,7 @@ footer.footer {
       margin-top: 2%; }
 
 .case-studies--name-your-price .section-gallery {
+  margin-top: -2%;
   background-color: #FFF7E1; }
   .case-studies--name-your-price .section-gallery .gallery-case {
     max-width: 90vw;
@@ -1509,17 +1511,17 @@ footer.footer {
 
 .portfolio .section-portfolios {
   position: relative;
-  padding: 20rem 15rem 0 15rem;
+  padding: 20rem 15rem 15rem 15rem;
   background-color: #FFF7E1; }
   @media only screen and (max-width: 90em) {
     .portfolio .section-portfolios {
-      padding: 20rem 10rem 0 10rem; } }
+      padding: 20rem 10rem 15rem 10rem; } }
   @media only screen and (max-width: 56.25em) {
     .portfolio .section-portfolios {
-      padding: 16rem 2rem 0 2rem; } }
+      padding: 16rem 2rem 12rem 2rem; } }
   @media only screen and (max-width: 37.5em) {
     .portfolio .section-portfolios {
-      padding: 14rem 2rem 0 2rem; } }
+      padding: 14rem 2rem 12rem 2rem; } }
   .portfolio .section-portfolios .zigzag-container {
     position: relative;
     z-index: 20;
@@ -2080,7 +2082,7 @@ footer.footer {
       display: inline-block;
       background-color: #232427;
       height: 2px;
-      transition: transform .3s, top .1s, left .1s,background-color .1s; }
+      transition: transform .2s linear,background-color .1s linear; }
     .overlaying-navigation__icon--white, .overlaying-navigation__icon--white::before, .overlaying-navigation__icon--white::after {
       background-color: #FFF; }
     .overlaying-navigation__icon::before, .overlaying-navigation__icon::after {
@@ -2101,7 +2103,7 @@ footer.footer {
     border-radius: 50%;
     background-color: transparent;
     backface-visibility: hidden;
-    transition: transform 0.6s cubic-bezier(0.83, 0, 0.17, 1), background-color 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+    transition: transform 0.4s cubic-bezier(0.83, 0, 0.17, 1), background-color 0.4s cubic-bezier(0.83, 0, 0.17, 1);
     z-index: 40; }
   .overlaying-navigation__nav {
     display: flex;
@@ -2116,7 +2118,7 @@ footer.footer {
     visibility: hidden;
     opacity: 0;
     transition-property: opacity, width, visibility;
-    transition-duration: .6s;
+    transition-duration: .3s;
     transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; }
@@ -2142,7 +2144,7 @@ footer.footer {
         .overlaying-navigation__list-item:not(:last-child) {
           margin-bottom: 2rem; } }
   .overlaying-navigation__link {
-    transition: transform .2s;
+    transition: transform .2s linear;
     backface-visibility: hidden; }
     .overlaying-navigation__link, .overlaying-navigation__link:link, .overlaying-navigation__link:visited {
       display: inline-block;
@@ -2164,6 +2166,11 @@ footer.footer {
     @media only screen and (max-width: 56.25em) {
       .overlaying-navigation__button, .overlaying-navigation__background {
         display: inline-block; } }
+  .overlaying-navigation__background, .overlaying-navigation__nav {
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
 
 .button {
   border-radius: 50px;
