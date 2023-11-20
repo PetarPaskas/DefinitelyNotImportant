@@ -1489,6 +1489,13 @@ footer.footer {
   @media only screen and (max-width: 37.5em) {
     .case-studies--reactiv .section-gallery .circle-box {
       transform: translateY(1rem); } }
+  @media only screen and (max-width: 29em) {
+    .case-studies--reactiv .section-gallery .circle-box__row {
+      gap: 1rem; } }
+  @media only screen and (max-width: 29em) {
+    .case-studies--reactiv .section-gallery .circle-box__item {
+      width: 3rem;
+      height: 3rem; } }
 
 .portfolio .header {
   overflow: visible;
