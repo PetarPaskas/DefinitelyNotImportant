@@ -15,3 +15,40 @@
         transform: translateX(-99%);
     }
 }
+
+@keyframes scroll {
+    0% {
+        transform:translateY(0rem);
+    }
+    30%{
+        transform:translateY(-.5rem);
+    }
+
+    60% {
+        transform:translateY(.5rem);
+    }
+
+    90% {
+        transform:translateY(0rem);
+    }
+}
+
+  @keyframes pulse {
+    0% {
+        transform:scale(1);
+        transform-origin: bottom;
+    }
+    30%{
+        transform:scale(1.03);
+        transform-origin: bottom;
+    }
+
+    50% {
+        transform:translateY(1.5);
+        transform-origin: bottom;
+    }
+    100% {
+        transform:translateY(1);
+        transform-origin: bottom;
+    }
+  }

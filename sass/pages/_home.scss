@@ -10,7 +10,22 @@
 }
 
 .header{
-
+    &__our-work-button{
+        .animator-button{
+            animation:none;
+        }
+        .text-button{
+            animation:none;
+        }
+        &:hover{
+            .animator-button{
+                animation:scroll 1s infinite;
+            }
+            .text-button{
+                animation: pulse 1s infinite;
+            }
+        }
+    }
     // #middleline{
     //     display:inline-block;
     //     @media only screen and (max-width:1200px){

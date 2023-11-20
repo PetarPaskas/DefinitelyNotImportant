@@ -37,6 +37,13 @@
         @include respond('phone-med'){
             height: 5rem;
         }
+        &-link{
+            display: inline-block;
+            animation:none;
+            &:hover{
+                animation:pulse 1s infinite;
+            }
+        }
         &-img{
             &--white{
                 filter: drop-shadow(0 0 0.15rem $color-black);
