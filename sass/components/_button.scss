@@ -53,7 +53,13 @@
         &:hover{
             background-color: $color-purple;
         }
-
+        //Uncomment for samsung devices. Will break other devices.
+        //Samsung touchscreen is considered a touchpad so there will be weird padding 
+        //in the button elements
+        // @include respond('tab-land'){
+        //     padding-top:1rem;
+        //     padding-bottom:0.5rem;
+        // }
         @include respond('tab-port'){
             font-size:$text-small-med-med-med;
         }
