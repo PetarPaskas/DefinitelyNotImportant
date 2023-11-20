@@ -1113,6 +1113,14 @@ footer.footer {
     .case-studies .header {
       padding-top: 1.5rem; } }
 
+@media only screen and (max-width: 37.5em) {
+  .case-studies .overlaying-navigation__button {
+    top: -0.5rem; } }
+
+@media only screen and (max-width: 29em) {
+  .case-studies .overlaying-navigation__button {
+    top: 0.5rem; } }
+
 .study-content__main .paragraph__content {
   line-height: 160%; }
 
@@ -1154,8 +1162,8 @@ footer.footer {
     .section-testimonial {
       padding: 2rem 2rem 10rem 2rem; } }
   .section-testimonial .quote {
-    padding-top: 1rem;
-    padding-bottom: 1rem; }
+    padding-top: 3rem;
+    padding-bottom: 3rem; }
 
 .section-separator {
   padding: 10rem 15rem;
@@ -1845,10 +1853,19 @@ footer.footer {
 
 .services .section-testimonials {
   background-color: #FFF7E1;
-  padding: 16rem 0 8rem 0; }
+  padding: 10rem 21vw 8rem 21vw; }
+  @media only screen and (max-width: 56.25em) {
+    .services .section-testimonials {
+      padding: 9rem 21vw 15rem 21vw; } }
+  @media only screen and (max-width: 48em) {
+    .services .section-testimonials {
+      padding: 9rem 1rem 15rem 1rem; } }
   @media only screen and (max-width: 29em) {
     .services .section-testimonials {
-      padding: 10rem 0 3rem 0; } }
+      padding: 1rem 1rem 3rem 1rem; } }
+  .services .section-testimonials__main {
+    padding-top: 6rem;
+    overflow: hidden; }
   .services .section-testimonials .quote {
     max-width: 80rem;
     margin: 0 auto; }
@@ -1860,7 +1877,8 @@ footer.footer {
         max-width: 90vw; } }
     @media only screen and (max-width: 37.5em) {
       .services .section-testimonials .quote__close-quote {
-        bottom: -14%; } }
+        bottom: -3rem;
+        right: 3rem; } }
 
 .contact .header {
   overflow: visible;
@@ -2763,8 +2781,8 @@ footer.footer {
       .quote--med {
         padding: 1rem 2rem; } }
     .quote--med .quote__title {
-      font-size: 2.8rem;
-      letter-spacing: 4px;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
       font-weight: 600;
       text-align: right; }
       @media only screen and (max-width: 37.5em) {
@@ -2778,15 +2796,15 @@ footer.footer {
           width: 95%;
           font-size: 1.6rem; } }
     .quote--med .quote__quotee {
-      font-size: 3.2rem;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
       font-weight: 600; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 75em) {
         .quote--med .quote__quotee {
-          font-size: 2rem; } }
+          font-size: 1.6rem; } }
       @media only screen and (max-width: 29em) {
         .quote--med .quote__quotee {
-          font-size: 1.8rem;
-          letter-spacing: 3px; } }
+          letter-spacing: 2px; } }
     .quote--med .quote__open-quote,
     .quote--med .quote__close-quote {
       width: 9rem;
@@ -2797,11 +2815,11 @@ footer.footer {
           width: 7rem;
           height: 7rem; } }
     .quote--med .quote__open-quote {
-      top: -10%;
-      right: 7%; }
+      top: -5.5rem;
+      right: 7rem; }
     .quote--med .quote__close-quote {
-      bottom: -10%;
-      right: 7%; }
+      bottom: -4rem;
+      right: 7rem; }
     .quote--med .quote__row {
       padding-bottom: 3rem; }
       @media only screen and (max-width: 29em) {
@@ -2813,7 +2831,7 @@ footer.footer {
     text-transform: uppercase;
     text-align: center; }
   .quote__title {
-    font-size: 6.1rem;
+    font-size: 4rem;
     letter-spacing: 4px; }
     @media only screen and (max-width: 75em) {
       .quote__title {
@@ -2826,8 +2844,8 @@ footer.footer {
       .quote__title {
         font-size: 2.4rem; } }
   .quote__quotee {
-    font-size: 4rem;
-    letter-spacing: 4px;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
     padding-top: 1rem; }
     @media only screen and (max-width: 75em) {
       .quote__quotee {
@@ -2865,8 +2883,8 @@ footer.footer {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 12rem;
-    height: 12rem; }
+    width: 10rem;
+    height: 10rem; }
     @media only screen and (max-width: 75em) {
       .quote__open-quote, .quote__close-quote {
         width: 8rem;
@@ -2880,19 +2898,27 @@ footer.footer {
         height: 5.5rem;
         height: 5.5rem; } }
   .quote__open-quote {
-    top: -15%;
-    left: 7%;
+    top: -5rem;
+    left: 7rem;
     background-image: url(../../img/svg/quote-open.svg); }
+    @media only screen and (max-width: 56.25em) {
+      .quote__open-quote {
+        left: 4rem; } }
     @media only screen and (max-width: 37.5em) {
       .quote__open-quote {
-        top: -10%; } }
+        top: -3rem;
+        left: 2rem; } }
   .quote__close-quote {
-    bottom: -15%;
-    right: 7%;
+    bottom: -5rem;
+    right: 7rem;
     background-image: url(../../img/svg/quote-close.svg); }
+    @media only screen and (max-width: 56.25em) {
+      .quote__close-quote {
+        right: 4rem; } }
     @media only screen and (max-width: 37.5em) {
       .quote__close-quote {
-        bottom: -10%; } }
+        bottom: -3rem;
+        right: 2rem; } }
 
 .quote.visible {
   display: block;

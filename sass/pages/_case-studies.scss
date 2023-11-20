@@ -10,6 +10,14 @@
             padding-top:1.5rem;
         }
     }
+    .overlaying-navigation__button{
+        @include respond('phone'){
+            top:-0.5rem;
+        }
+        @include respond('phone-med'){
+            top:0.5rem;
+        }
+    }
 }
 //Main
 .study-content{
@@ -68,8 +76,8 @@
         padding: 2rem 2rem 10rem 2rem;
     }
     .quote{
-        padding-top:1rem;
-        padding-bottom:1rem;
+        padding-top:3rem;
+        padding-bottom:3rem;
     }
 }
 .section-separator{
