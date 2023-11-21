@@ -262,6 +262,15 @@
 // -------------------------------------------- KREEK
 
 .case-studies--kreekcraft{
+    .section-pregallery{
+        padding-bottom:8rem;
+        padding-top:2rem;
+        .section-gallery{
+            &--banner{
+                margin-bottom: 0;
+            }
+        }
+    }
     .section-gallery{
         background-color: $color-light;
 
@@ -463,6 +472,17 @@
             &:not(:first-child){
                 margin-left:0rem;
             }
+        }
+    }
+
+    .section-pregallery{
+        padding-top:6rem;
+        padding-bottom: 8rem;
+        @include respond('tab-land'){
+            padding-bottom: 3rem;
+        }
+        .section-gallery{
+
         }
     }
 
