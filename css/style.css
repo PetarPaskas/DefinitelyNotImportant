@@ -613,6 +613,9 @@ footer.footer {
     @media only screen and (max-width: 90em) {
       .header__text-box {
         margin-left: 10rem; } }
+    @media only screen and (max-width: 64em) {
+      .header__text-box {
+        min-width: 27rem; } }
     @media only screen and (max-width: 75em) {
       .header__text-box {
         max-width: none;
