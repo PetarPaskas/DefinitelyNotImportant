@@ -86,12 +86,21 @@
             &--left{
                 top:45%;
                 left:0;
+                @include respond('phone'){
+                    top:48%;
+                }
             }
             &--upper{
                 top:10%;
+                @include respond('phone-med'){
+                    top:8%;
+                }
             }
             &--lower{
                 top:30%;
+                @include respond('phone'){
+                    top:32%;
+                }
             }
         }
 
