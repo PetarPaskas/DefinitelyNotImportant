@@ -1328,6 +1328,12 @@ footer.footer {
     .case-studies--ian-bick .section-gallery .gallery-case__item {
       margin-top: 2%; }
 
+.case-studies--kreekcraft .section-pregallery {
+  padding-bottom: 8rem;
+  padding-top: 2rem; }
+  .case-studies--kreekcraft .section-pregallery .section-gallery--banner {
+    margin-bottom: 0; }
+
 .case-studies--kreekcraft .section-gallery {
   background-color: #FFF7E1; }
   .case-studies--kreekcraft .section-gallery--banner {
@@ -1462,6 +1468,13 @@ footer.footer {
       float: none; }
       .case-studies--reactiv .col-1-of-3:not(:first-child) {
         margin-left: 0rem; } }
+
+.case-studies--reactiv .section-pregallery {
+  padding-top: 6rem;
+  padding-bottom: 8rem; }
+  @media only screen and (max-width: 75em) {
+    .case-studies--reactiv .section-pregallery {
+      padding-bottom: 3rem; } }
 
 .case-studies--reactiv .section-gallery {
   background-color: #FFF7E1; }
