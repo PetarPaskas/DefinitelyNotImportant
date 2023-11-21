@@ -2123,6 +2123,63 @@ img.gallery-case__image {
     object-position: bottom;
     margin-bottom: 6rem; }
 
+.alert .alert-box {
+  color: #555;
+  border-radius: 10px;
+  font-family: 'Helvetica';
+  font-size: 2rem;
+  padding: 10px 10px 10px 36px;
+  display: inline-block;
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 100;
+  color: #FFF;
+  transition: opacity .4s;
+  opacity: 0;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .alert .alert-box {
+      width: 80%;
+      padding-left: 10px;
+      right: 1rem; } }
+  .alert .alert-box span {
+    font-weight: bold;
+    text-transform: uppercase; }
+  .alert .alert-box--error {
+    background-color: rgba(250, 72, 45, 0.658);
+    border: 2px solid #fa492d; }
+    @media only screen and (max-width: 56.25em) {
+      .alert .alert-box--error {
+        background-color: rgba(250, 72, 45, 0.76); } }
+  .alert .alert-box--success {
+    background-color: #00a979a1;
+    border: 2px solid #00A979; }
+    @media only screen and (max-width: 56.25em) {
+      .alert .alert-box--success {
+        background-color: #00a979be; } }
+  .alert .alert-box__info {
+    display: inline-block; }
+    @media only screen and (max-width: 56.25em) {
+      .alert .alert-box__info {
+        width: 100%;
+        text-align: center; } }
+  .alert .alert-box__button {
+    margin-left: 1rem;
+    display: inline-block; }
+    @media only screen and (max-width: 56.25em) {
+      .alert .alert-box__button {
+        padding-top: 3rem;
+        width: 100%;
+        text-align: center; } }
+    .alert .alert-box__button .button {
+      padding: 1rem 3rem;
+      box-shadow: 0px 2px 7px 0.5px rgba(0, 0, 0, 0.466); }
+      @media only screen and (max-width: 56.25em) {
+        .alert .alert-box__button .button {
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.466);
+          padding: 1rem 4rem; } }
+
 .overlaying-navigation {
   display: none; }
   @media only screen and (max-width: 56.25em) {
@@ -2292,7 +2349,7 @@ img.gallery-case__image {
       color: #FFF7E1; }
   .button:hover:not([data-status="disabled"]) {
     cursor: pointer;
-    filter: drop-shadow(2px 2px 4px #232427); }
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.466)); }
   .button--testimonial {
     font-size: 3.9rem;
     letter-spacing: 4px;

@@ -51,11 +51,42 @@ function sendRequest(data){
         },
         body: JSON.stringify(data)
     }).then(response=>{
-        console.log(response.status, response);
+        showSuccessMessage();
     }).catch(err=>{
-        alert("Server error");
+        showErrorMessage();
     })
 }
+
+function showSuccessMessage(){
+    let notification = document.getElementById('success-notification');
+    toggleAlert(notification);
+}
+
+function showErrorMessage(){
+    let notification = document.getElementById('error-notification');
+    toggleAlert(notification);
+}
+
+function toggleAlert(notification){
+    notification.style.display = 'inline-block';
+    notification.style.opacity = '100';
+
+    setTimeout(()=>{
+        notification.style.opacity = '0';
+        setTimeout(()=>{
+            notification.style.display = 'none';
+        },400);
+
+    },4500)
+}
+
+function notificationCloseButton(){
+    let notificationError = document.getElementById('error-notification');
+    let notificationSuccess = document.getElementById('success-notification');
+    notificationError.style.display = 'none';
+    notificationSuccess.style.display = 'none';
+}
+
 
 function hideErrors(data){
     for(prop in data){

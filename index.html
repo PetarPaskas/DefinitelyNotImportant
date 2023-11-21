@@ -31,6 +31,30 @@
     <script src="./scripts/index.js"></script>
 </head>
 <body>
+    <div class="alert">
+        <div id="error-notification" class="alert-box alert-box--error">
+            <div class="alert-box__info">
+                <span>error: </span>
+                Email service is currently unavailable. Contact us at <a href="mailto:hello@fwrd.com">hello@fwrd.com</a>
+            </div>
+            <span class="alert-box__button">
+                <button class="button button--orange" onClick="notificationCloseButton()" id="notification-close-button">
+                    X
+                </button>
+            </span>
+        </div>
+        <div id="success-notification" class="alert-box alert-box--success">
+            <div class="alert-box__info">
+                <span>success: </span>
+                Email successfully sent. We will be contacting you soon.
+            </div>
+            <div class="alert-box__button">
+                <button class="button button--green" onClick="notificationCloseButton()" id="notification-close-button">
+                    X
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="overlaying-navigation">
         <input type="checkbox" class="overlaying-navigation__checkbox" id='navi-toggle'>
         <label for="navi-toggle" class="overlaying-navigation__button">
