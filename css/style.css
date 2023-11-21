@@ -1237,7 +1237,7 @@ footer.footer {
 .case-studies--pixel .section-gallery {
   background-color: #FFF7E1; }
   .case-studies--pixel .section-gallery .gallery-case {
-    max-width: 90vw;
+    max-width: 80vw;
     margin: 0 auto; }
     .case-studies--pixel .section-gallery .gallery-case__left, .case-studies--pixel .section-gallery .gallery-case__right {
       width: 49%; }
@@ -1268,7 +1268,7 @@ footer.footer {
   margin-top: -2%;
   background-color: #FFF7E1; }
   .case-studies--name-your-price .section-gallery .gallery-case {
-    max-width: 90vw;
+    max-width: 80vw;
     margin: 0 auto; }
     .case-studies--name-your-price .section-gallery .gallery-case__left, .case-studies--name-your-price .section-gallery .gallery-case__right {
       width: 49%; }
@@ -1298,7 +1298,7 @@ footer.footer {
 .case-studies--ian-bick .section-gallery {
   background-color: #FFF7E1; }
   .case-studies--ian-bick .section-gallery .gallery-case {
-    max-width: 90vw;
+    max-width: 80vw;
     margin: 0 auto; }
     .case-studies--ian-bick .section-gallery .gallery-case__left, .case-studies--ian-bick .section-gallery .gallery-case__right {
       width: 49%; }
@@ -1376,11 +1376,19 @@ footer.footer {
       width: 100%;
       display: block; }
 
+.case-studies--florida-mayhem #controlled-gallery-row img {
+  max-height: 63rem; }
+
+@media only screen and (max-width: 37.5em) {
+  .case-studies--florida-mayhem #controlled-gallery-row img {
+    max-height: initial;
+    height: auto; } }
+
 .case-studies--florida-mayhem .section-gallery {
   margin-top: -2%;
   background-color: #FFF7E1; }
   .case-studies--florida-mayhem .section-gallery .gallery-case {
-    max-width: 90vw;
+    max-width: 80vw;
     margin: 0 auto; }
     .case-studies--florida-mayhem .section-gallery .gallery-case__left {
       float: left;
@@ -1421,6 +1429,14 @@ footer.footer {
       @media only screen and (max-width: 37.5em) {
         .case-studies--florida-mayhem .section-gallery .gallery-case__flex-3-items {
           flex-direction: column; } }
+
+.case-studies--reactiv #controlled-gallery-row img {
+  max-height: 50rem; }
+
+@media only screen and (max-width: 37.5em) {
+  .case-studies--reactiv #controlled-gallery-row img {
+    max-height: initial;
+    height: auto; } }
 
 .case-studies--reactiv .col-1-of-2 {
   float: left;
@@ -1507,7 +1523,9 @@ footer.footer {
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      gap: 1.5rem; }
+      align-items: stretch; }
+      .case-studies--reactiv .section-gallery .gallery-case__flex-3-items > *:not(:first-child) {
+        margin-left: 1.5rem; }
       .case-studies--reactiv .section-gallery .gallery-case__flex-3-items .gallery-case__item {
         flex-basis: calc(1/3*100%); }
         @media only screen and (max-width: 37.5em) {
@@ -1516,11 +1534,25 @@ footer.footer {
       .case-studies--reactiv .section-gallery .gallery-case__flex-3-items .gallery-case__image {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: top; }
+        @media only screen and (max-width: 75em) {
+          .case-studies--reactiv .section-gallery .gallery-case__flex-3-items .gallery-case__image {
+            object-fit: cover; } }
+        @media only screen and (max-width: 37.5em) {
+          .case-studies--reactiv .section-gallery .gallery-case__flex-3-items .gallery-case__image {
+            object-fit: contain; } }
       @media only screen and (max-width: 37.5em) {
         .case-studies--reactiv .section-gallery .gallery-case__flex-3-items {
           flex-direction: column; } }
+    .case-studies--reactiv .section-gallery .gallery-case .gallery-case__item.gallery-case__item--3
+img.gallery-case__image {
+      object-fit: cover;
+      object-position: center; }
+      @media only screen and (max-width: 37.5em) {
+        .case-studies--reactiv .section-gallery .gallery-case .gallery-case__item.gallery-case__item--3
+img.gallery-case__image {
+          object-fit: contain; } }
   @media only screen and (max-width: 37.5em) {
     .case-studies--reactiv .section-gallery .circle-box {
       transform: translateY(1rem); } }
@@ -2931,7 +2963,7 @@ footer.footer {
       .quote__title {
         font-size: 4rem; } }
   .quote__quotee {
-    font-size: 6.2rem;
+    font-size: 5.8rem;
     letter-spacing: 3px;
     padding-top: 1rem; }
     @media only screen and (max-width: 75em) {
