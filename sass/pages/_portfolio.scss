@@ -42,13 +42,13 @@
             }   
             &__title{
                 @include respond('tab-port'){
-                    font-size:$text-small-med-med-med;
+                    font-size:$text-helvetica-small-med-med-med;
                 }
             }
             &__description{
                 //width:80%;
                 @include respond('laptop'){
-                    font-size:$text-small-med-med;
+                    font-size:$text-helvetica-small-med-med;
                 }
             }
             /* maybe in container */

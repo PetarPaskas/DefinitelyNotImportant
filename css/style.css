@@ -22,64 +22,55 @@ They always point to the browser default font size.
   font-family: 'Morganite';
   src: url(../fonts/Morganite-Black.woff) format("woff");
   font-style: normal;
-  font-weight: normal;
-  size-adjust: 180%; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-BlackItalic.woff) format("woff");
   font-style: italic;
-  font-weight: bold;
-  size-adjust: 180%; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-Bold.woff) format("woff");
-  font-style: italic;
-  font-weight: bold;
-  size-adjust: 180%; }
+  font-style: normal;
+  font-weight: bold; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-BoldItalic.woff) format("woff");
   font-style: italic;
-  font-weight: bold;
-  size-adjust: 180%; }
+  font-weight: bold; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-Light.woff) format("woff");
   font-style: normal;
-  font-weight: normal;
-  size-adjust: 180%; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-LightItalic.woff) format("woff");
   font-style: italic;
-  font-weight: normal;
-  size-adjust: 180%; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-Medium.woff) format("woff");
   font-style: normal;
-  font-weight: normal;
-  size-adjust: 180%; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-MediumItalic.woff) format("woff");
   font-style: italic;
-  font-weight: normal;
-  size-adjust: 180%; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-Thin.woff) format("woff");
   font-style: normal;
-  font-weight: 100;
-  size-adjust: 180%; }
+  font-weight: 100; }
 
 *,
 *::before,
@@ -139,31 +130,37 @@ footer.footer {
   text-transform: uppercase;
   color: #232427;
   font-weight: bold;
-  line-height: 140%;
   letter-spacing: 6px;
-  font-size: 7rem; }
+  font-size: 12.6rem;
+  line-height: 80%; }
   @media only screen and (max-width: 37.5em) {
     .heading-primary {
       letter-spacing: 4px;
-      font-size: 5rem; } }
+      font-size: 9rem; } }
   @media only screen and (max-width: 29em) {
     .heading-primary {
-      font-size: 4.5rem; } }
+      font-size: 8.2rem; } }
+  .heading-primary__line {
+    display: inline-block;
+    width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .heading-primary__line {
+        width: auto; } }
 
 .h-1 {
   color: #232427;
   display: inline-block;
   font-weight: bold;
-  font-size: 6.1rem;
+  font-size: 11rem;
   text-transform: uppercase;
   letter-spacing: 10px; }
   @media only screen and (max-width: 75em) {
     .h-1 {
-      font-size: 5rem;
+      font-size: 9rem;
       letter-spacing: 6px; } }
   @media only screen and (max-width: 29em) {
     .h-1 {
-      font-size: 4.5rem;
+      font-size: 8.2rem;
       letter-spacing: 3px; } }
 
 .h-2 {
@@ -175,12 +172,12 @@ footer.footer {
 .h-3 {
   display: inline-block;
   font-weight: bold;
-  font-size: 2.8rem;
+  font-size: 4.8rem;
   text-transform: uppercase;
   letter-spacing: 4px; }
 
 .h-4 {
-  font-size: 2rem;
+  font-size: 3.6rem;
   text-transform: uppercase;
   letter-spacing: 4px;
   display: inline-block;
@@ -198,17 +195,17 @@ footer.footer {
     display: inline-block; }
   .text--top {
     color: #fa492d;
-    font-size: 1.2rem;
-    letter-spacing: 3.6px;
+    font-size: 2rem;
+    letter-spacing: 2.4px;
     padding-bottom: .1rem;
     font-weight: normal; }
     @media only screen and (max-width: 75em) {
       .text--top {
         letter-spacing: 2.5px;
-        font-size: 1.6rem; } }
+        font-size: 3.6rem; } }
   .text--main {
     color: #FFF7E1;
-    font-size: 2.4rem;
+    font-size: 4rem;
     letter-spacing: 3.6px;
     font-weight: bold; }
 
@@ -220,7 +217,7 @@ footer.footer {
     font-weight: 600;
     letter-spacing: 6px;
     padding-bottom: 1rem;
-    font-size: 5rem;
+    font-size: 9rem;
     text-transform: uppercase; }
     @media only screen and (max-width: 64em) {
       .text-normal--title {
@@ -228,22 +225,22 @@ footer.footer {
     @media only screen and (max-width: 48em) {
       .text-normal--title {
         letter-spacing: 6px;
-        font-size: 4rem; } }
+        font-size: 7rem; } }
     @media only screen and (max-width: 37.5em) {
       .text-normal--title {
         letter-spacing: 4px;
-        font-size: 3.2rem;
+        font-size: 6.2rem;
         width: auto; } }
     @media only screen and (max-width: 25em) {
       .text-normal--title {
-        font-size: 2.8rem;
+        font-size: 4.8rem;
         letter-spacing: 3px; } }
   .text-normal--description {
     display: inline-block;
     font-family: 'Helvetica';
     text-transform: none;
     line-height: 150%;
-    font-size: 1.8rem;
+    font-size: 2rem;
     max-width: 70rem;
     margin: 0 auto; }
     @media only screen and (max-width: 25em) {
@@ -261,25 +258,25 @@ footer.footer {
 
 .text-testimonial .text-title {
   font-family: 'helvetica';
-  font-size: 2.2rem;
+  font-size: 3.9rem;
   font-weight: 400; }
   @media only screen and (max-width: 56.25em) {
     .text-testimonial .text-title {
-      font-size: 1.8rem; } }
+      font-size: 3.8rem; } }
 
 .text-testimonial .text-client {
-  font-size: 6.1rem;
+  font-size: 11rem;
   letter-spacing: 4px;
   padding-bottom: 1rem; }
   @media only screen and (max-width: 90em) {
     .text-testimonial .text-client {
-      font-size: 5rem; } }
+      font-size: 9rem; } }
   @media only screen and (max-width: 64em) {
     .text-testimonial .text-client {
-      font-size: 4.5rem; } }
+      font-size: 8.2rem; } }
   @media only screen and (max-width: 56.25em) {
     .text-testimonial .text-client {
-      font-size: 4rem; } }
+      font-size: 7rem; } }
 
 .text-testimonial .text-description {
   font-family: 'helvetica';
@@ -290,7 +287,7 @@ footer.footer {
   line-height: 148%; }
   @media only screen and (max-width: 64em) {
     .text-testimonial .text-description {
-      font-size: 1.6rem; } }
+      font-size: 3.6rem; } }
 
 .u-center-text {
   text-align: center !important; }
@@ -618,13 +615,12 @@ footer.footer {
         margin-left: 10rem; } }
     @media only screen and (max-width: 75em) {
       .header__text-box {
-        margin-left: 0;
-        text-align: center;
         max-width: none;
         padding-bottom: 5rem; } }
-    @media only screen and (max-width: 64em) {
+    @media only screen and (max-width: 56.25em) {
       .header__text-box {
-        margin-left: 2rem; } }
+        margin-left: 0rem;
+        text-align: center; } }
     @media only screen and (max-width: 37.5em) {
       .header__text-box {
         padding-bottom: 4rem; } }
@@ -716,9 +712,10 @@ footer.footer {
     color: #232427;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3.6rem;
     font-weight: 800;
-    letter-spacing: 1.5px; }
+    letter-spacing: 1.5px;
+    line-height: 80%; }
   .navigation__link:hover {
     color: #fa492d;
     cursor: pointer; }
@@ -838,7 +835,7 @@ footer.footer {
           padding: .5rem .5rem; } }
   .footer__link, .footer__text {
     color: #FFF7E1;
-    font-size: 2rem;
+    font-size: 3.6rem;
     text-transform: uppercase;
     letter-spacing: 2px; }
   .footer__link {
@@ -857,7 +854,7 @@ footer.footer {
       .footer__social-media {
         width: 2.7rem; } }
   .footer__button.footer__link {
-    font-size: 2rem;
+    font-size: 3.6rem;
     letter-spacing: 3px;
     padding: 0.6rem 3rem; }
   .footer__button:hover {
@@ -887,6 +884,10 @@ footer.footer {
 @media only screen and (max-width: 29em) {
   .overlaying-navigation__button {
     padding-top: 0; } }
+
+@media only screen and (max-width: 75em) {
+  .header__content {
+    padding: 0 4rem; } }
 
 .header__our-work-button .animator-button {
   animation: none; }
@@ -1063,7 +1064,7 @@ footer.footer {
         .section-projects__button.button {
           padding: 1rem 2.6rem 0.5rem 2.6rem; } }
     .section-projects__button .button__text {
-      font-size: 2rem;
+      font-size: 3.6rem;
       letter-spacing: 4px; }
     .section-projects__button:hover {
       background-color: #fa492d; }
@@ -1112,7 +1113,7 @@ footer.footer {
         .section-blog__button.button {
           padding: 1rem 2.6rem 0.5rem 2.6rem; } }
     .section-blog__button .button__text {
-      font-size: 2rem;
+      font-size: 3.6rem;
       letter-spacing: 4px; }
     .section-blog__button:hover {
       background-color: #fa492d; }
@@ -1164,11 +1165,7 @@ footer.footer {
 @media only screen and (max-width: 29em) {
   .study-content .paragraph__title {
     letter-spacing: 2px;
-    font-size: 1.8rem; } }
-
-@media only screen and (max-width: 37.5em) {
-  .study-content .paragraph__content {
-    font-size: 1.6rem !important; } }
+    font-size: 3.8rem; } }
 
 .section-brief {
   overflow: hidden;
@@ -1225,7 +1222,7 @@ footer.footer {
     .view-more-projects-section__button.button {
       padding: 0.7rem 2.6rem; }
     .view-more-projects-section__button .button__text {
-      font-size: 2rem;
+      font-size: 3.6rem;
       letter-spacing: 4px; }
     .view-more-projects-section__button:hover {
       background-color: #2f2c96; }
@@ -1565,16 +1562,16 @@ footer.footer {
     /* maybe in container */ }
     @media only screen and (max-width: 90em) {
       .portfolio .section-portfolios .zigzag-container__client {
-        font-size: 5rem; } }
+        font-size: 9rem; } }
     @media only screen and (max-width: 64em) {
       .portfolio .section-portfolios .zigzag-container__client {
-        font-size: 4.5rem; } }
+        font-size: 8.2rem; } }
     @media only screen and (max-width: 56.25em) {
       .portfolio .section-portfolios .zigzag-container__client {
-        font-size: 4rem; } }
+        font-size: 7rem; } }
     @media only screen and (max-width: 56.25em) {
       .portfolio .section-portfolios .zigzag-container__title {
-        font-size: 1.8rem; } }
+        font-size: 2rem; } }
     @media only screen and (max-width: 64em) {
       .portfolio .section-portfolios .zigzag-container__description {
         font-size: 1.6rem; } }
@@ -1612,11 +1609,11 @@ footer.footer {
     .portfolio .section-portfolios__button.button {
       padding: 0.7rem 2.6rem; }
     .portfolio .section-portfolios__button .button__text {
-      font-size: 2rem;
+      font-size: 3.6rem;
       letter-spacing: 4px; }
       @media only screen and (max-width: 56.25em) {
         .portfolio .section-portfolios__button .button__text {
-          font-size: 1.8rem;
+          font-size: 3.8rem;
           letter-spacing: 3px; } }
     .portfolio .section-portfolios__button:hover {
       background-color: #2f2c96; }
@@ -1712,7 +1709,11 @@ footer.footer {
         top: 16%; } }
     @media only screen and (max-width: 29em) {
       .services .section-services__creative-wave {
-        top: 15%; } }
+        top: 15%;
+        width: 25rem; } }
+    @media only screen and (max-width: 25em) {
+      .services .section-services__creative-wave {
+        width: 20rem; } }
   .services .section-services .zigzag-container {
     padding-right: 8rem;
     padding-left: 12rem;
@@ -1883,8 +1884,7 @@ footer.footer {
     .services .section-services__title .text-normal {
       display: block; }
       .services .section-services__title .text-normal--description {
-        max-width: 60vw;
-        font-size: 2rem; }
+        max-width: 60vw; }
         @media only screen and (max-width: 37.5em) {
           .services .section-services__title .text-normal--description {
             max-width: 85vw; } }
@@ -2188,14 +2188,14 @@ footer.footer {
       color: #232427;
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 3.2rem;
+      font-size: 6.2rem;
       font-weight: 800;
       letter-spacing: 4px; }
     .overlaying-navigation__link:hover {
       color: #fa492d;
       cursor: pointer; }
     .overlaying-navigation__link--mid {
-      font-size: 2.2rem;
+      font-size: 3.9rem;
       letter-spacing: 3px; }
   .overlaying-navigation__button, .overlaying-navigation__background {
     display: none; }
@@ -2237,7 +2237,7 @@ footer.footer {
     cursor: pointer;
     filter: drop-shadow(2px 2px 4px #232427); }
   .button--testimonial {
-    font-size: 2.2rem;
+    font-size: 3.9rem;
     letter-spacing: 4px;
     padding: 0.7rem 2rem 0.7rem 2.4rem;
     width: auto;
@@ -2246,7 +2246,7 @@ footer.footer {
       background-color: #2f2c96; }
     @media only screen and (max-width: 56.25em) {
       .button--testimonial {
-        font-size: 1.8rem; } }
+        font-size: 3.8rem; } }
   @media only screen and (max-width: 75em) {
     .button {
       padding: 0.9rem 1.7rem 0.6rem 1.7rem; } }
@@ -2434,8 +2434,9 @@ footer.footer {
   .offerings__link {
     text-decoration: none;
     color: inherit;
-    font-size: 2.4rem;
-    letter-spacing: 1.5px; }
+    font-size: 4rem;
+    letter-spacing: 1.5px;
+    line-height: 80%; }
   .offerings__item {
     display: inline-block;
     padding: 0rem 1rem; }
@@ -2443,7 +2444,7 @@ footer.footer {
       display: inline-block;
       font-weight: 600;
       text-transform: uppercase;
-      font-size: 1.3rem;
+      font-size: 2.35rem;
       color: #FFF7E1; }
     .offerings__item-icon {
       display: inline-block;
@@ -2482,7 +2483,7 @@ footer.footer {
   .gallery__description {
     padding-top: .5rem;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3.6rem;
     color: #2f2c96;
     font-weight: bold;
     letter-spacing: 2px; }
@@ -2512,7 +2513,7 @@ footer.footer {
       background-color: #2f2c96; }
     .gallery__button .button__text {
       text-transform: uppercase;
-      font-size: 1.3rem;
+      font-size: 2.35rem;
       letter-spacing: 2.5px;
       font-weight: bold; }
 
@@ -2529,15 +2530,15 @@ footer.footer {
   .notch-title__text {
     display: inline-block;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3.6rem;
     color: #FFF7E1;
     font-weight: bold;
     letter-spacing: 4px; }
   .notch-title__text--mid {
-    font-size: 2.6rem; }
+    font-size: 4.6rem; }
     @media only screen and (max-width: 25em) {
       .notch-title__text--mid {
-        font-size: 2rem; } }
+        font-size: 3.6rem; } }
   .notch-title--top-center {
     top: 0;
     left: 50%;
@@ -2595,8 +2596,11 @@ footer.footer {
     justify-content: start;
     align-items: center;
     vertical-align: middle;
-    font-size: 1.6rem;
+    font-size: 3rem;
     color: #00A979; }
+    @media only screen and (max-width: 75em) {
+      .content-items__decorative-text {
+        font-size: 3rem; } }
     .content-items__decorative-text::before {
       content: '';
       display: inline-block;
@@ -2604,17 +2608,20 @@ footer.footer {
       width: 10rem; }
   .content-items__description {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3.6rem;
     font-weight: 500;
     color: #FFF7E1;
     letter-spacing: 3px; }
     @media only screen and (max-width: 75em) {
       .content-items__description {
-        font-size: 1.8rem; } }
+        font-size: 3.4rem; } }
     @media only screen and (max-width: 48em) {
       .content-items__description {
         letter-spacing: 2px;
-        font-size: 1.6rem; } }
+        font-size: 3.6rem; } }
+    @media only screen and (max-width: 29em) {
+      .content-items__description {
+        font-size: 2.8rem; } }
 
 .carousel {
   display: flex;
@@ -2696,7 +2703,7 @@ footer.footer {
     padding-left: .5rem;
     border-bottom: 4px solid #00A979;
     background-color: transparent;
-    font-size: 2.4rem;
+    font-size: 4rem;
     letter-spacing: 3px;
     color: #232427; }
     @media only screen and (max-width: 75em) {
@@ -2706,18 +2713,18 @@ footer.footer {
       outline: none; }
     .form__input::placeholder {
       color: rgba(35, 36, 39, 0.4);
-      font-size: 2.4rem;
+      font-size: 4rem;
       text-transform: uppercase;
       font-weight: bold;
       overflow: visible;
       letter-spacing: 4px; }
       @media only screen and (max-width: 75em) {
         .form__input::placeholder {
-          font-size: 2rem;
+          font-size: 3.6rem;
           letter-spacing: 2px; } }
   .form__label {
     display: inline-block;
-    font-size: 2.4rem;
+    font-size: 4rem;
     padding-left: .5rem;
     letter-spacing: 2px;
     color: #232427;
@@ -2727,7 +2734,7 @@ footer.footer {
     transform: translateY(-3rem); }
     @media only screen and (max-width: 75em) {
       .form__label {
-        font-size: 2rem; } }
+        font-size: 3.6rem; } }
   .form__input:placeholder-shown + .form__label {
     visibility: hidden;
     opacity: 0; }
@@ -2740,7 +2747,7 @@ footer.footer {
         transform: translateY(-9.5rem); } }
   .form__button {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3.6rem;
     letter-spacing: 5px;
     padding: 0.7rem 2.7rem 0.7rem 2.8rem; }
     .form__button:hover:not(:disabled) {
@@ -2753,7 +2760,7 @@ footer.footer {
         padding: 1rem 2.7rem 0.5rem 2.8rem; } }
   .form__error {
     color: #fa492d;
-    font-size: 1.3rem;
+    font-size: 2.35rem;
     display: block;
     transform: translateY(-3rem);
     visibility: hidden;
@@ -2796,7 +2803,7 @@ footer.footer {
   .paragraph__title {
     display: inline-block;
     width: 100%;
-    font-size: 2rem;
+    font-size: 3.6rem;
     letter-spacing: 4px;
     font-weight: bold;
     text-transform: uppercase;
@@ -2807,10 +2814,10 @@ footer.footer {
     width: 100%; }
   .paragraph__content {
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 3.6rem;
     letter-spacing: 2px; }
     .paragraph__content--helvetica {
-      font-size: 1.6rem;
+      font-size: 3.6rem;
       font-weight: 400;
       font-family: 'Helvetica';
       letter-spacing: 0.64px; }
@@ -2836,27 +2843,27 @@ footer.footer {
       .quote--med {
         padding: 1rem 2rem; } }
     .quote--med .quote__title {
-      font-size: 1.8rem;
+      font-size: 3.8rem;
       letter-spacing: 3px;
       font-weight: 600;
       text-align: right; }
       @media only screen and (max-width: 37.5em) {
         .quote--med .quote__title {
-          font-size: 1.8rem; } }
+          font-size: 3.8rem; } }
     .quote--med .quote__text {
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-family: 'Helvetica'; }
       @media only screen and (max-width: 29em) {
         .quote--med .quote__text {
           width: 95%;
           font-size: 1.6rem; } }
     .quote--med .quote__quotee {
-      font-size: 1.8rem;
+      font-size: 3.8rem;
       letter-spacing: 3px;
       font-weight: 600; }
       @media only screen and (max-width: 75em) {
         .quote--med .quote__quotee {
-          font-size: 1.6rem; } }
+          font-size: 3.6rem; } }
       @media only screen and (max-width: 29em) {
         .quote--med .quote__quotee {
           letter-spacing: 2px; } }
@@ -2864,17 +2871,33 @@ footer.footer {
     .quote--med .quote__close-quote {
       width: 9rem;
       height: 9rem; }
-      @media only screen and (max-width: 29em) {
+      @media only screen and (max-width: 64em) {
         .quote--med .quote__open-quote,
         .quote--med .quote__close-quote {
           width: 7rem;
           height: 7rem; } }
+      @media only screen and (max-width: 29em) {
+        .quote--med .quote__open-quote,
+        .quote--med .quote__close-quote {
+          width: 6rem;
+          height: 6rem; } }
+      @media only screen and (max-width: 22.5em) {
+        .quote--med .quote__open-quote,
+        .quote--med .quote__close-quote {
+          width: 5rem;
+          height: 5rem; } }
     .quote--med .quote__open-quote {
       top: -5.5rem;
       right: 7rem; }
+      @media only screen and (max-width: 64em) {
+        .quote--med .quote__open-quote {
+          top: -3.5rem; } }
     .quote--med .quote__close-quote {
       bottom: -4rem;
       right: 7rem; }
+      @media only screen and (max-width: 64em) {
+        .quote--med .quote__close-quote {
+          bottom: -3.5rem; } }
     .quote--med .quote__row {
       padding-bottom: 3rem; }
       @media only screen and (max-width: 29em) {
@@ -2886,33 +2909,33 @@ footer.footer {
     text-transform: uppercase;
     text-align: center; }
   .quote__title {
-    font-size: 4rem;
+    font-size: 7rem;
     letter-spacing: 4px; }
     @media only screen and (max-width: 75em) {
       .quote__title {
-        font-size: 3.2rem; } }
+        font-size: 6.2rem; } }
     @media only screen and (max-width: 37.5em) {
       .quote__title {
-        font-size: 2.6rem;
+        font-size: 4.6rem;
         letter-spacing: 2px; } }
     @media only screen and (max-width: 29em) {
       .quote__title {
-        font-size: 2.4rem; } }
+        font-size: 4rem; } }
   .quote__quotee {
-    font-size: 3.2rem;
+    font-size: 6.2rem;
     letter-spacing: 3px;
     padding-top: 1rem; }
     @media only screen and (max-width: 75em) {
       .quote__quotee {
-        font-size: 2.8rem;
+        font-size: 4.8rem;
         letter-spacing: 3px; } }
     @media only screen and (max-width: 37.5em) {
       .quote__quotee {
         letter-spacing: 2px;
-        font-size: 2.4rem; } }
+        font-size: 4rem; } }
     @media only screen and (max-width: 29em) {
       .quote__quotee {
-        font-size: 2.2rem; } }
+        font-size: 3.9rem; } }
   .quote__row {
     padding-bottom: 1.8rem;
     text-align: center; }
@@ -3005,7 +3028,7 @@ footer.footer {
   .page-notch__heading {
     display: inline-block;
     text-align: center;
-    font-size: 5rem;
+    font-size: 9rem;
     text-transform: uppercase;
     letter-spacing: 8px;
     padding-left: 8px;
@@ -3015,18 +3038,18 @@ footer.footer {
       text-wrap: wrap; }
       @media only screen and (max-width: 37.5em) {
         .page-notch__heading--long {
-          font-size: 2rem; } }
+          font-size: 3.6rem; } }
     @media only screen and (max-width: 90em) {
       .page-notch__heading {
-        font-size: 4rem;
+        font-size: 7rem;
         letter-spacing: 6px; } }
     @media only screen and (max-width: 56.25em) {
       .page-notch__heading {
-        font-size: 4rem;
+        font-size: 7rem;
         letter-spacing: 6px; } }
     @media only screen and (max-width: 29em) {
       .page-notch__heading {
-        font-size: 3.2rem;
+        font-size: 6.2rem;
         letter-spacing: 5px; } }
     @media only screen and (max-width: 37.5em) {
       .page-notch__heading {
@@ -3034,25 +3057,25 @@ footer.footer {
   .page-notch__sub-heading {
     display: inline-block;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 4.8rem;
     text-transform: uppercase;
     letter-spacing: 7px;
     width: 100%; }
   .page-notch__sub-text {
     display: inline-block;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 3.9rem;
     font-weight: 600;
     letter-spacing: 2px;
     width: 100%; }
     @media only screen and (max-width: 29em) {
       .page-notch__sub-text {
-        font-size: 1.8rem;
+        font-size: 3.8rem;
         letter-spacing: 2px; } }
   .page-notch__sup-text {
     display: inline-block;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 3.6rem;
     font-weight: 600;
     letter-spacing: 2px;
     width: 100%;
@@ -3060,7 +3083,7 @@ footer.footer {
     text-transform: uppercase; }
     @media only screen and (max-width: 29em) {
       .page-notch__sup-text {
-        font-size: 1.3rem; } }
+        font-size: 2.35rem; } }
   .page-notch--med {
     transform: translate(-50%, 70%); }
     @media only screen and (max-width: 56.25em) {
@@ -3070,31 +3093,31 @@ footer.footer {
       .page-notch--med {
         max-width: fit-content; } }
     .page-notch--med .page-notch__heading {
-      font-size: 4rem; }
+      font-size: 7rem; }
       @media only screen and (max-width: 90em) {
         .page-notch--med .page-notch__heading {
-          font-size: 3.2rem;
+          font-size: 6.2rem;
           letter-spacing: 5px; } }
       @media only screen and (max-width: 75em) {
         .page-notch--med .page-notch__heading {
-          font-size: 2.8rem;
+          font-size: 4.8rem;
           letter-spacing: 4px; } }
       @media only screen and (max-width: 29em) {
         .page-notch--med .page-notch__heading {
           letter-spacing: 3px;
           padding: 0 1.5rem; } }
       .page-notch--med .page-notch__heading--long {
-        font-size: 3.2rem;
+        font-size: 6.2rem;
         letter-spacing: 5px;
         text-wrap: wrap; }
         @media only screen and (max-width: 37.5em) {
           .page-notch--med .page-notch__heading--long {
-            font-size: 2rem; } }
+            font-size: 3.6rem; } }
     .page-notch--med .page-notch__sub-heading {
-      font-size: 2.4rem; }
+      font-size: 4rem; }
       @media only screen and (max-width: 90em) {
         .page-notch--med .page-notch__sub-heading {
-          font-size: 2rem;
+          font-size: 3.6rem;
           letter-spacing: 5px; } }
       @media only screen and (max-width: 75em) {
         .page-notch--med .page-notch__sub-heading {
@@ -3103,7 +3126,7 @@ footer.footer {
         .page-notch--med .page-notch__sub-heading {
           letter-spacing: 3px; } }
     .page-notch--med .page-notch__sub-text {
-      font-size: 1.8rem; }
+      font-size: 3.8rem; }
   .page-notch--color-white .page-notch__content {
     color: #FFF7E1; }
 
@@ -3161,7 +3184,7 @@ footer.footer {
     font-family: 'helvetica';
     font-size: 2.2rem; }
   .zigzag-container__client {
-    font-size: 6.1rem;
+    font-size: 11rem;
     letter-spacing: 4px;
     padding-bottom: 1rem; }
   .zigzag-container__description {
@@ -3172,7 +3195,7 @@ footer.footer {
     padding-bottom: 2rem;
     line-height: 148%; }
   .zigzag-container__button {
-    font-size: 2.2rem;
+    font-size: 3.9rem;
     letter-spacing: 4px;
     padding: 0.7rem 2rem 0.7rem 2.4rem;
     width: auto;
@@ -3182,7 +3205,7 @@ footer.footer {
       background-color: #2f2c96; }
     @media only screen and (max-width: 56.25em) {
       .zigzag-container__button {
-        font-size: 1.8rem;
+        font-size: 3.8rem;
         letter-spacing: 3px; } }
   .zigzag-container__image {
     width: 100%;
@@ -3210,16 +3233,16 @@ footer.footer {
     padding-bottom: 2rem; }
   .card__title {
     font-weight: bold;
-    font-size: 2.2rem;
+    font-size: 3.9rem;
     letter-spacing: 3px;
     text-transform: uppercase; }
     @media only screen and (max-width: 75em) {
       .card__title {
-        font-size: 2rem;
+        font-size: 3.6rem;
         letter-spacing: 2px; } }
     @media only screen and (max-width: 37.5em) {
       .card__title {
-        font-size: 1.8rem; } }
+        font-size: 3.8rem; } }
   .card__body {
     text-align: center; }
   .card__text {
@@ -3377,26 +3400,26 @@ footer.footer {
   .case-study__description {
     text-align: center; }
   .case-study__study-heading {
-    font-size: 2.6rem;
+    font-size: 4.6rem;
     text-transform: uppercase;
     color: #FFF7E1;
     display: inline-block;
     letter-spacing: 3px; }
     @media only screen and (max-width: 37.5em) {
       .case-study__study-heading {
-        font-size: 2rem;
+        font-size: 3.6rem;
         letter-spacing: 2px; } }
   .case-study__study-description {
     max-width: 60%;
     margin: 0 auto;
     text-align: center;
     padding-top: 4rem;
-    font-size: 2rem;
+    font-size: 3.6rem;
     letter-spacing: 2px;
     color: #FFF7E1; }
     @media only screen and (max-width: 37.5em) {
       .case-study__study-description {
-        font-size: 1.6rem;
+        font-size: 3.6rem;
         max-width: 80%;
         letter-spacing: 1.5px; } }
   .case-study__cover, .case-study__description {

@@ -3,15 +3,23 @@
         text-transform: uppercase;
         color: $color-black;
         font-weight: bold;
-        line-height: 140%;
         letter-spacing: 6px;
         font-size: $text-h1;
+        line-height: 80%;
         @include respond('phone'){
             letter-spacing: 4px;
             font-size: $text-h2;
         }
         @include respond('phone-med'){
             font-size: $text-h2-med;
+        }
+
+        &__line{
+            display: inline-block;
+            width: 100%;
+            @include respond('tab-port'){
+                width: auto;
+            }
         }
     }
 }
@@ -74,7 +82,7 @@
     &--top{
         color: $color-orange;
         font-size: $text-small-min;
-        letter-spacing: 3.6px;
+        letter-spacing: 2.4px;
         padding-bottom:.1rem;
         font-weight: normal;
         @include respond('tab-land'){
@@ -127,11 +135,11 @@
         font-family: 'Helvetica';
         text-transform: none;
         line-height: 150%;
-        font-size:$text-small-med-med-med;
+        font-size:$text-helvetica-small-med-med-med;
         max-width: 70rem;
         margin:0 auto;
         @include respond('phone-sm'){
-            font-size:$text-small-med-med;
+            font-size:$text-helvetica-small-med-med;
         }
     }
 }

@@ -34,11 +34,11 @@
             }
         }
         .quote__text{
-            font-size:$text-small-med-med-med;
+            font-size:$text-helvetica-small-med-med-med;
             font-family: 'Helvetica';
             @include respond('phone-med'){
                 width:95%;
-                font-size: $text-small-med-med;
+                font-size: $text-helvetica-small-med-med;
             }
         }
         .quote__quotee{
@@ -56,18 +56,32 @@
        .quote__close-quote{
         width:9rem;
         height: 9rem;
-        @include respond('phone-med'){
+        @include respond('laptop'){
             width: 7rem;
             height: 7rem;
+        }
+        @include respond('phone-med'){
+            width: 6rem;
+            height: 6rem;
+        }
+        @include respond('phone-sm-sm'){
+            width: 5rem;
+            height: 5rem;
         }
        }
        .quote__open-quote{
         top:-5.5rem;
         right:7rem;
+        @include respond('laptop'){
+            top:-3.5rem;
+        }
        }
        .quote__close-quote{
         bottom:-4rem;
         right:7rem;
+        @include respond('laptop'){
+            bottom:-3.5rem;
+        }
        }
        .quote__row{
         padding-bottom:3rem;
@@ -124,15 +138,15 @@
         display:inline-block;
         width:90%;
 
-        font-size: $text-med;
+        font-size: $text-helvetica-med;
         font-family: 'Helvetica';
         line-height: 132%;
         margin:0 auto;
         @include respond('tab-land'){
-            font-size: $text-small-big;
+            font-size: $text-helvetica-mid;
         }
         @include respond('phone'){
-            font-size: $text-small-med-med-med;
+            font-size: $text-helvetica-small-small-med-med;
         }
         @include respond('phone-med'){
 
