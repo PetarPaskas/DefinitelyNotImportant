@@ -16,8 +16,6 @@
         display:inline-block;
         font-size:1.5rem;
         font-weight: 600;
-
-
     }
 
     &--green{
@@ -41,7 +39,7 @@
 
     &:hover:not([data-status="disabled"]){
         cursor: pointer;
-        filter:drop-shadow(2px 2px 4px $color-black);
+        filter:drop-shadow(2px 2px 4px $color-black-transparent);
     }
 
     &--testimonial{

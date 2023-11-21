@@ -11,6 +11,12 @@
         }
 
         &:nth-child(odd){
+            .zigzag-container__image{
+                filter: drop-shadow(30px 15px 6px $color-purple);
+                @include respond('phone'){
+                    filter: drop-shadow(0px 10px 12px $color-purple);
+                }
+            }
             flex-direction: row;
             .zigzag-container__item-description{
                 text-align:end;
@@ -29,6 +35,12 @@
         }
         
         &:nth-child(even){
+            .zigzag-container__image{
+                filter: drop-shadow(-30px -15px 6px $color-purple);
+                @include respond('phone'){
+                    filter: drop-shadow(0px 10px 12px $color-purple);
+                }
+            }
             flex-direction: row-reverse;
             .zigzag-container__item-description{
                 align-items:start;
@@ -126,5 +138,6 @@
         max-height: 50rem;
         object-fit: cover;
         object-position: top;
+        // filter: drop-shadow(30px 10px 4px $color-purple);
     }
 }
