@@ -1600,10 +1600,19 @@ footer.footer {
     .portfolio .section-portfolios__wave--left {
       top: 45%;
       left: 0; }
+      @media only screen and (max-width: 37.5em) {
+        .portfolio .section-portfolios__wave--left {
+          top: 48%; } }
     .portfolio .section-portfolios__wave--upper {
       top: 10%; }
+      @media only screen and (max-width: 29em) {
+        .portfolio .section-portfolios__wave--upper {
+          top: 8%; } }
     .portfolio .section-portfolios__wave--lower {
       top: 30%; }
+      @media only screen and (max-width: 37.5em) {
+        .portfolio .section-portfolios__wave--lower {
+          top: 32%; } }
   .portfolio .section-portfolios__button {
     transition: background-color .2s; }
     .portfolio .section-portfolios__button.button {
