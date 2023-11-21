@@ -6,9 +6,13 @@
         position:absolute;
         bottom:0;
         left:0;
+        @include respond('tab-generic'){
+            transform:scale(1.5);
+        }
     }
     .header{
-        overflow: visible;
+        //overflow: visible;
+        overflow: hidden;
         position:relative;
         padding:5rem 10rem 15rem 10rem;
 
@@ -23,7 +27,7 @@
             position:relative;
         }
         @include respond('tab-generic'){
-            padding:1rem 10rem 8rem 1rem;
+            padding:2rem 10rem 12rem 1rem;
         }
         @include respond('phone-sm-sm'){
         }
@@ -34,7 +38,10 @@
         padding-top:3.7rem;
         padding-bottom:20rem;
         overflow:hidden;
-    
+        
+        @include respond('tab-generic'){
+            padding-top:0rem;
+        }
         .logos{
             margin-top:12rem;
 
