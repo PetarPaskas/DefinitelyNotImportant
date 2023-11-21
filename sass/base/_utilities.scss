@@ -54,7 +54,7 @@
     font-family: 'helvetica' !important;
     letter-spacing: 1px !important;
     font-weight: 400 !important;
-    font-size:1.8rem !important;
+    font-size:$text-helvetica-small-small-med-med !important;
 } 
 .u-center-div{
     margin:0 auto !important;
@@ -184,4 +184,16 @@
 .u-text-fading{
     opacity:1;
     transition: opacity 1s ease-in-out;
+}
+.u-tab-land-center{
+    @include respond('tab-land'){
+        text-align: center !important;
+    }
+}
+.u-clearfix{
+    display: block;
+    clear:both;
+}
+.u-min-height-12{
+    min-height: 12rem;
 }

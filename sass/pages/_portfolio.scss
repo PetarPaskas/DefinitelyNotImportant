@@ -11,17 +11,17 @@
     }
     .section-portfolios{
         position:relative;
-        padding:20rem 15rem 0 15rem;
+        padding:20rem 15rem 15rem 15rem;
         background-color: $color-light;
 
         @include respond('big-laptop'){
-            padding:20rem 10rem 0 10rem;
+            padding:20rem 10rem 15rem 10rem;
         }
         @include respond('tab-port'){
-            padding:16rem 2rem 0 2rem;
+            padding:16rem 2rem 12rem 2rem;
         }
         @include respond('phone'){
-            padding:14rem 2rem 0 2rem;
+            padding:14rem 2rem 12rem 2rem;
         }
 
 
@@ -42,13 +42,13 @@
             }   
             &__title{
                 @include respond('tab-port'){
-                    font-size:$text-small-med-med-med;
+                    font-size:$text-helvetica-small-med-med-med;
                 }
             }
             &__description{
                 //width:80%;
                 @include respond('laptop'){
-                    font-size:$text-small-med-med;
+                    font-size:$text-helvetica-small-med-med;
                 }
             }
             /* maybe in container */
@@ -86,12 +86,21 @@
             &--left{
                 top:45%;
                 left:0;
+                @include respond('phone'){
+                    top:48%;
+                }
             }
             &--upper{
                 top:10%;
+                @include respond('phone-med'){
+                    top:8%;
+                }
             }
             &--lower{
                 top:30%;
+                @include respond('phone'){
+                    top:32%;
+                }
             }
         }
 

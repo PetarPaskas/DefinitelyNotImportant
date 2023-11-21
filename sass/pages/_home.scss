@@ -9,6 +9,40 @@
     }
 }
 
+.header{
+    &__content{
+        @include respond('tab-land'){
+            padding:0 4rem;
+        }
+    }
+    &__our-work-button{
+        .animator-button{
+            animation:none;
+        }
+        .text-button{
+            animation:none;
+        }
+        &:hover{
+            .animator-button{
+                animation:scroll 1s infinite;
+            }
+            .text-button{
+                animation: pulse 1s infinite;
+            }
+        }
+    }
+    // #middleline{
+    //     display:inline-block;
+    //     @media only screen and (max-width:1200px){
+    //         min-width: 28rem;
+    //     }
+    //     @include respond('phone'){
+    //         min-width: 20rem;
+    //     }
+
+    // }
+}
+
 .section-projects{
     background-color: $color-light;
     padding-top:8rem;

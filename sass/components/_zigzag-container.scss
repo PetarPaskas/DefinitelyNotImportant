@@ -90,7 +90,7 @@
 
     &__title{
         font-family: 'helvetica';
-        font-size:$text-small-big;
+        font-size:$text-helvetica-mid;
     }
     &__client{
         font-size:$text-h1-sm;
@@ -111,6 +111,7 @@
         padding: 0.7rem 2rem 0.7rem 2.4rem;
         width:auto;
         transition:background-color .2s;
+        text-decoration: none;
         
         &:hover{
             background-color: $color-purple;

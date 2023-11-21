@@ -3,9 +3,12 @@
     background-color: $color-green;
     color:$color-white;
     padding:0 2rem;
-    visibility: hidden;
-    display: none;
     transition: transform 0.5s, visibility .5s;
+
+    &--hidden{
+        visibility: hidden;
+        display: none;
+    }
 
     &--orange{
         background-color: $color-orange;
@@ -22,8 +25,8 @@
             padding:1rem 2rem;
         }
         .quote__title{
-            font-size:$text-med;
-            letter-spacing: 4px;
+            font-size:$text-small-med-med-med;
+            letter-spacing: 3px;
             font-weight: 600;
             text-align: right;
             @include respond('phone'){
@@ -31,40 +34,54 @@
             }
         }
         .quote__text{
-            font-size:$text-small-med-med-med;
+            font-size:$text-helvetica-small-med-med-med;
             font-family: 'Helvetica';
             @include respond('phone-med'){
                 width:95%;
-                font-size: $text-small-med-med;
+                font-size: $text-helvetica-small-med-med;
             }
         }
         .quote__quotee{
-            font-size:$text-large;
+            font-size:$text-small-med-med-med;
+            letter-spacing: 3px;
             font-weight: 600;
-            @include respond('phone'){
-                font-size:$text-small;
+            @include respond('tab-land'){
+                font-size: $text-small-med-med;
             }
             @include respond('phone-med'){
-                font-size:$text-small-med-med-med;
-                letter-spacing: 3px;
+                letter-spacing: 2px;
             }
         }
        .quote__open-quote,
        .quote__close-quote{
         width:9rem;
         height: 9rem;
-        @include respond('phone-med'){
+        @include respond('laptop'){
             width: 7rem;
             height: 7rem;
         }
+        @include respond('phone-med'){
+            width: 6rem;
+            height: 6rem;
+        }
+        @include respond('phone-sm-sm'){
+            width: 5rem;
+            height: 5rem;
+        }
        }
        .quote__open-quote{
-        top:-10%;
-        right:7%;
+        top:-5.5rem;
+        right:7rem;
+        @include respond('laptop'){
+            top:-3.5rem;
+        }
        }
        .quote__close-quote{
-        bottom:-10%;
-        right:7%;
+        bottom:-4rem;
+        right:7rem;
+        @include respond('laptop'){
+            bottom:-3.5rem;
+        }
        }
        .quote__row{
         padding-bottom:3rem;
@@ -83,7 +100,7 @@
         text-align: center;
     }
     &__title{
-        font-size:$text-h1-sm;
+        font-size:$text-h2-sm;
         letter-spacing: 4px;
         @include respond('tab-land'){
             font-size: $text-large;
@@ -97,8 +114,8 @@
         }
     }
     &__quotee{
-        font-size:$text-h2-sm;
-        letter-spacing: 4px;
+        font-size:$text-large-med;
+        letter-spacing: 3px;
         padding-top:1rem;
         @include respond('tab-land'){
             font-size: $text-med;
@@ -121,15 +138,15 @@
         display:inline-block;
         width:90%;
 
-        font-size: $text-med;
+        font-size: $text-helvetica-med;
         font-family: 'Helvetica';
         line-height: 132%;
         margin:0 auto;
         @include respond('tab-land'){
-            font-size: $text-small-big;
+            font-size: $text-helvetica-mid;
         }
         @include respond('phone'){
-            font-size: $text-small-med-med-med;
+            font-size: $text-helvetica-small-small-med-med;
         }
         @include respond('phone-med'){
 
@@ -149,8 +166,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        width:12rem;
-        height: 12rem;
+        width:10rem;
+        height: 10rem;
         @include respond('tab-land'){
             width: 8rem;
             height: 8rem;
@@ -166,20 +183,28 @@
     }
 
     &__open-quote{
-        top:-15%;
-        left:7%;
+        top:-5rem;
+        left:7rem;
         background-image:url(../../img/svg/quote-open.svg);
+        @include respond('tab-port'){
+            left:4rem;
+        }
         @include respond('phone'){
-            top:-10%;
+            top:-3rem;
+            left:2rem;
         }
 
     }
     &__close-quote{
-        bottom:-15%;
-        right:7%;
+        bottom:-5rem;
+        right:7rem;
         background-image:url(../../img/svg/quote-close.svg);
+        @include respond('tab-port'){
+            right:4rem;
+        }
         @include respond('phone'){
-            bottom:-10%;
+            bottom:-3rem;
+            right:2rem;
         }
 
     }

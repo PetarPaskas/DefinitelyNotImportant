@@ -3,7 +3,7 @@
     src:url(../fonts/Morganite-Black.woff) format('woff');
     font-style: normal;
     font-weight: normal;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
 
@@ -11,16 +11,16 @@
     font-family: 'Morganite';
     src:url(../fonts/Morganite-BlackItalic.woff) format('woff');
     font-style: italic;
-    font-weight: bold;
-    size-adjust: 180%
+    font-weight: normal;
+    //size-adjust: 180%
     
 }
 @font-face{
     font-family: 'Morganite';
     src: url(../fonts/Morganite-Bold.woff) format('woff');
-    font-style: italic;
+    font-style: normal;
     font-weight: bold;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
 
@@ -29,7 +29,7 @@
     src:url(../fonts/Morganite-BoldItalic.woff) format('woff');
     font-style: italic;
     font-weight: bold;
-    size-adjust: 180%
+    //size-adjust: 180%
     
   
 }
@@ -38,7 +38,7 @@
     src: url(../fonts/Morganite-Light.woff) format('woff');
     font-style: normal;
     font-weight: normal;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
 @font-face{
@@ -46,7 +46,7 @@
     src:url(../fonts/Morganite-LightItalic.woff) format('woff');
     font-style: italic;
     font-weight: normal;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
 @font-face{
@@ -54,7 +54,7 @@
     src:url(../fonts/Morganite-Medium.woff) format('woff');
     font-style: normal;
     font-weight: normal;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
 
@@ -63,7 +63,7 @@
     src:url(../fonts/Morganite-MediumItalic.woff) format('woff');
     font-style: italic;
     font-weight: normal;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
 
@@ -72,6 +72,120 @@
     src:url(../fonts/Morganite-Thin.woff) format('woff');
     font-style: normal;
     font-weight: 100;
-    size-adjust: 180%
+    //size-adjust: 180%
     
 }
+
+
+
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-Black.ttf) format('truetype');
+// // // // // //     font-style: normal;
+// // // // // //     font-weight: 400;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-BlackItalic.ttf) format('truetype');
+// // // // // //     font-style: italic;
+// // // // // //     font-weight: 400;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-Bold.ttf) format('truetype');
+// // // // // //     font-style: normal;
+// // // // // //     font-weight: 600;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-BoldItalic.ttf) format('truetype');
+// // // // // //     font-style: italic;
+// // // // // //     font-weight: 600;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-Book.ttf) format('truetype');
+// // // // // //     font-weight: 500;
+// // // // // //     font-style: normal;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-BookItalic.ttf) format('truetype');
+// // // // // //     font-weight: 500;
+// // // // // //     font-style: italic;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-ExtraBold.ttf) format('truetype');
+// // // // // //     font-weight: 900;
+// // // // // //     font-style: normal;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-ExtraBoldItalic.ttf) format('truetype');
+// // // // // //     font-weight: 900;
+// // // // // //     font-style: italic;
+// // // // // // }
+
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite-ExtraLight';
+// // // // // //     src: url(../fonts/Morganite/Morganite-ExtraLight.ttf) format('truetype');
+// // // // // //     font-style: normal;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite-ExtraLight';
+// // // // // //     src: url(../fonts/Morganite/Morganite-ExtraLightItalic.ttf) format('truetype');
+// // // // // //     font-style: italic;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-Light.ttf) format('truetype');
+// // // // // //     font-weight: 300;
+// // // // // //     font-style: italic;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-LightItalic.ttf) format('truetype');
+// // // // // //     font-weight: 300;
+// // // // // //     font-style:italic;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-Medium.ttf) format('truetype');
+// // // // // //     font-weight: 600;
+// // // // // //     font-style: normal;
+// // // // // // }
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-MediumItalic.ttf) format('truetype');
+// // // // // //     font-weight: 600;
+// // // // // //     font-style: italic;
+// // // // // // }
+
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-SemiBold.ttf) format('truetype');
+// // // // // //     font-weight: 500;
+// // // // // //     font-style:normal;
+// // // // // // }
+
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-SemiBoldItalic.ttf) format('truetype');
+// // // // // //     font-style:italic;
+// // // // // //     font-weight: 500;
+// // // // // // }
+
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-Thin.ttf) format('truetype');
+// // // // // //     font-style:normal;
+// // // // // //     font-weight: 200;
+// // // // // // }
+
+// // // // // // @font-face{
+// // // // // //     font-family: 'Morganite';
+// // // // // //     src: url(../fonts/Morganite/Morganite-ThinItalic.ttf) format('truetype');
+// // // // // //     font-style:italic;
+// // // // // //     font-weight: 200;
+// // // // // // }

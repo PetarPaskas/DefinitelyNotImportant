@@ -144,14 +144,17 @@
         @include respond('big-laptop'){
             margin-left:10rem;
         }
+        @include respond('laptop'){
+            min-width: 27rem;
+        }
         @include respond('tab-land'){
-            margin-left:0;
-            text-align: center;
             max-width: none;
             padding-bottom:5rem;
         }
-        @include respond('laptop'){
-            margin-left: 2rem;
+        @include respond('tab-port'){
+            margin-left:0rem;
+            text-align: center;
+
         }
         @include respond('phone'){
             padding-bottom: 4rem;
