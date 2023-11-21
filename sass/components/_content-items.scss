@@ -73,12 +73,13 @@
         display:flex;
         justify-content: start;
         align-items: center;
-        //padding-top:1rem;
-
         vertical-align: middle;
-        font-size: 1.6rem;
+        font-size: $text-small-med;
         color:$color-green;
 
+        @include respond('tab-land'){
+            font-size: $text-min-min;
+        }
         &::before{
             content:'';
             display:inline-block;
@@ -99,6 +100,9 @@
         @include respond('tab-generic'){
             letter-spacing: 2px;
             font-size: $text-small-med-med;
+        }
+        @include respond('phone-med'){
+            font-size: $text-min-min-min;
         }
     }
 }

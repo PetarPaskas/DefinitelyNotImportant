@@ -50,9 +50,9 @@
     }
     &__text{
         font-family: "Helvetica";
-        font-size:$text-small-med-med;
+        font-size:$text-helvetica-small-med-med;
         @include respond('phone'){
-            font-size: $text-small-med;
+            font-size: $text-helvetica-small-med;
         }
     }
     &--orange{

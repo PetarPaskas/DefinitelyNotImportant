@@ -85,6 +85,10 @@
             }
             @include respond('phone-med'){
                 top:15%;
+                width:25rem;
+            }
+            @include respond('phone-sm'){
+                width:20rem;
             }
         }
     
@@ -347,7 +351,6 @@
                 display:block;
                 &--description{
                     max-width: 60vw;
-                    font-size: $text-small;
                     @include respond('phone'){
                         max-width: 85vw;
                     }

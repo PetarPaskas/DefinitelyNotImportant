@@ -10,6 +10,11 @@
 }
 
 .header{
+    &__content{
+        @include respond('tab-land'){
+            padding:0 4rem;
+        }
+    }
     &__our-work-button{
         .animator-button{
             animation:none;

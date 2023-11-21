@@ -15,7 +15,6 @@
     &__link{
         transition:transform .2s;
         backface-visibility: hidden;
-
         &,
         &:link,
         &:visited{
@@ -25,6 +24,7 @@
             @include text-standard($text-small);
             font-weight: 800;
             letter-spacing: 1.5px;
+            line-height: $line-height-8;
         }
 
         &:hover{
