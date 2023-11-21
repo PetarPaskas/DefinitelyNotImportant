@@ -74,7 +74,7 @@
         justify-content: start;
         align-items: center;
         vertical-align: middle;
-        font-size: $text-small-med;
+        font-size: $text-min-min;
         color:$color-green;
 
         @include respond('tab-land'){

@@ -28,12 +28,12 @@ They always point to the browser default font size.
   font-family: 'Morganite';
   src: url(../fonts/Morganite-BlackItalic.woff) format("woff");
   font-style: italic;
-  font-weight: bold; }
+  font-weight: normal; }
 
 @font-face {
   font-family: 'Morganite';
   src: url(../fonts/Morganite-Bold.woff) format("woff");
-  font-style: italic;
+  font-style: normal;
   font-weight: bold; }
 
 @font-face {
@@ -2596,7 +2596,7 @@ footer.footer {
     justify-content: start;
     align-items: center;
     vertical-align: middle;
-    font-size: 2.35rem;
+    font-size: 3rem;
     color: #00A979; }
     @media only screen and (max-width: 75em) {
       .content-items__decorative-text {
