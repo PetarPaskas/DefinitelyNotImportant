@@ -4,24 +4,27 @@
     flex-direction: column;
 
     &--with-image-shadows{
-        .zigzag-container__item{
-            &:nth-child(odd){
-                .zigzag-container__image{
-                    filter: drop-shadow(30px 15px 6px $color-purple);
-                    @include respond('phone'){
-                        filter: drop-shadow(0px 10px 12px $color-purple);
-                    }
-                }
-            }
+        // .zigzag-container__item{
+        //     &:nth-child(odd){
+        //         .zigzag-container__image{
+        //             filter: drop-shadow(30px 15px 6px $color-purple);
+        //             @include respond('phone'){
+        //                 filter: drop-shadow(0px 10px 12px $color-purple);
+        //             }
+        //         }
+        //     }
 
-            &:nth-child(even){
-                .zigzag-container__image{
-                    filter: drop-shadow(-30px -15px 6px $color-purple);
-                    @include respond('phone'){
-                        filter: drop-shadow(0px 10px 12px $color-purple);
-                    }
-                }
-            }
+        //     &:nth-child(even){
+        //         .zigzag-container__image{
+        //             filter: drop-shadow(-30px -15px 6px $color-purple);
+        //             @include respond('phone'){
+        //                 filter: drop-shadow(0px 10px 12px $color-purple);
+        //             }
+        //         }
+        //     }
+        // }
+        .zigzag-container__image{
+            filter: drop-shadow(0px 10px 12px $color-purple);
         }
     }
     
@@ -142,6 +145,9 @@
         @include respond('tab-port'){
             font-size: $text-small-med-med-med;
             letter-spacing: 3px;
+        }
+        @include respond('laptop'){
+            padding: 0.9rem 2rem 0.7rem 2.4rem;
         }
     }
     &__image{
