@@ -6,6 +6,10 @@
     border: none;
     transition: all .2s;
 
+    @include respond('laptop'){
+        padding:0.9rem 1.7rem 0.6rem 1.7rem;
+    }
+
     &__text{
         text-decoration: none;
     }
@@ -62,9 +66,4 @@
             font-size:$text-small-med-med-med;
         }
     }
-
-    @include respond('tab-land'){
-        padding:0.9rem 1.7rem 0.6rem 1.7rem;
-    }
-
 }
