@@ -34,6 +34,54 @@
         },
 
         {
+            "route":"/case-studies/reactiv.html",
+            "redirect:":"/case-studies/reactiv"
+        },
+        {
+            "route":"/reactiv.html",
+            "redirect:":"/case-studies/reactiv"
+        },
+        {
+            "route":"/case-studies/pixel.html",
+            "redirect:":"/case-studies/pixel"
+        },
+        {
+            "route":"/pixel.html",
+            "redirect:":"/case-studies/pixel"
+        },
+        {
+            "route":"/case-studies/name-your-price.html",
+            "redirect:":"/case-studies/name-your-price"
+        },
+        {
+            "route":"/name-your-price.html",
+            "redirect:":"/case-studies/name-your-price"
+        },
+        {
+            "route":"/case-studies/kreekcraft.html",
+            "redirect:":"/case-studies/kreekcraft"
+        },
+        {
+            "route":"/kreekcraft.html",
+            "redirect:":"/case-studies/kreekcraft"
+        },
+        {
+            "route":"/case-studies/ian-bick.html",
+            "redirect:":"/case-studies/ian-bick"
+        },
+        {
+            "route":"/ian-bick.html",
+            "redirect:":"/case-studies/ian-bick"
+        },
+        {
+            "route":"/case-studies/florida-mayhem.html",
+            "redirect:":"/case-studies/florida-mayhem"
+        },
+        {
+            "route":"/florida-mayhem.html",
+            "redirect:":"/case-studies/florida-mayhem"
+        },
+        {
             "route":"/transparency.html",
             "redirect":"/blogs/transparency"
         },
@@ -81,6 +129,30 @@
         {
             "route":"/blogs/transparency",
             "rewrite":"/blogs/transparency.html"
+        },
+        {
+            "route":"/case-studies/reactiv",
+            "rewrite":"/case-studies/reactiv.html"
+        },
+        {
+            "route":"/case-studies/pixel",
+            "rewrite":"/case-studies/pixel.html"
+        },
+        {
+            "route":"/case-studies/name-your-price",
+            "rewrite":"/case-studies/name-your-price.html"
+        },
+        {
+            "route":"/case-studies/kreekcraft",
+            "rewrite":"/case-studies/kreekcraft.html"
+        },
+        {
+            "route":"/case-studies/ian-bick",
+            "rewrite":"/case-studies/ian-bick.html"
+        },
+        {
+            "route":"/case-studies/florida-mayhem",
+            "rewrite":"/case-studies/florida-mayhem.html"
         },
         {
             "route":"/",
